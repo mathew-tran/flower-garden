@@ -52,6 +52,7 @@ TimeToWait = 5.0
 [node name="Stage2" type="Node2D" parent="."]
 script = ExtResource("3_idiwr")
 TimeToWait = 10.0
+ModeToUse = 1
 
 [node name="Stage3" type="Node2D" parent="."]
 script = ExtResource("3_idiwr")
@@ -60,3 +61,4 @@ TimeToWait = 15.0
 [node name="Stage4" type="Node2D" parent="."]
 script = ExtResource("3_idiwr")
 TimeToWait = 20.0
+ModeToUse = 2

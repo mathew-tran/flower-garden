@@ -6,12 +6,18 @@ extends Node2D
 
 var StageTimer
 
+signal StageComplete
+
 func StartStage():
 	StageTimer = Timer.new()
 	StageTimer.wait_time = TimeToWait
 	StageTimer.one_shot = true
 	add_child(StageTimer)
 	StageTimer.start()
+	StageTimer.connect("timeout", Callable(self, "OnTimeout"))
+
+func OnTimeout():
+	emit_signal("StageComplete")
 
 func CleanStage():
 	if is_instance_valid(StageTimer):
@@ -21,6 +27,9 @@ func CanActivate():
 	if is_instance_valid(StageTimer):
 		return StageTimer.time_left == 0.0 and InputManager.CurrentInputMode == ModeToUse
 	return false
+
+func GetInputNeeded():
+	return ModeToUse
 
 func GetTimeLeft():
 	if is_instance_valid(StageTimer):

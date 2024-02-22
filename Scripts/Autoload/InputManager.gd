@@ -5,10 +5,14 @@ var FocusedObject = null
 enum INPUT_MODE {
 	WATER,
 	TEND,
-	CUT
+	MOVE
 }
 
 var CurrentInputMode = INPUT_MODE.WATER
+
+func ChangeInputMode(newMode):
+	CurrentInputMode = newMode
+
 
 func SetFocusedObject(obj):
 	FocusedObject = obj

@@ -1,8 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://c82r4casfug7j"]
+[gd_scene load_steps=3 format=3 uid="uid://c82r4casfug7j"]
 
 [ext_resource type="PackedScene" uid="uid://baf2w7kcqs61m" path="res://Prefabs/PlanterBox.tscn" id="1_30kj7"]
+[ext_resource type="PackedScene" uid="uid://bvcw057rm4u86" path="res://Prefabs/UI/ActionChanger.tscn" id="2_6wpcg"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="PlanterBox" parent="." instance=ExtResource("1_30kj7")]
 position = Vector2(356, 257)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ActionChanger" parent="CanvasLayer" instance=ExtResource("2_6wpcg")]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 44.0
+offset_bottom = 132.0

@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://bvcw057rm4u86"]
+
+[ext_resource type="Script" path="res://Scripts/UI/ActionChanger.gd" id="1_nh4fg"]
+[ext_resource type="Texture2D" uid="uid://dd5pf2rpdtg77" path="res://Art/UI/WaterIcon.png" id="2_xculi"]
+[ext_resource type="Texture2D" uid="uid://b1i403brhb007" path="res://Art/UI/TendIcon.png" id="3_f65yb"]
+[ext_resource type="Texture2D" uid="uid://bvjdtiu7n0ogj" path="res://Art/UI/MoveIcon.png" id="4_58ptp"]
+
+[node name="ActionChanger" type="VBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(3, 3)
+script = ExtResource("1_nh4fg")
+
+[node name="WaterIcon" type="Button" parent="."]
+layout_mode = 2
+icon = ExtResource("2_xculi")
+
+[node name="TendIcon" type="Button" parent="."]
+layout_mode = 2
+icon = ExtResource("3_f65yb")
+
+[node name="MoveIcon" type="Button" parent="."]
+layout_mode = 2
+icon = ExtResource("4_58ptp")
+
+[connection signal="button_up" from="WaterIcon" to="." method="_on_water_icon_button_up"]
+[connection signal="button_up" from="TendIcon" to="." method="_on_tend_icon_button_up"]
+[connection signal="button_up" from="MoveIcon" to="." method="_on_move_icon_button_up"]

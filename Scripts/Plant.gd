@@ -1,6 +1,10 @@
 extends AnimatedSprite2D
 
 var StageIndex = -1
+
+signal UpdateGrowth
+signal FinishGrowth
+
 func _ready():
 	IncrementStage()
 
@@ -19,15 +23,20 @@ func AttemptGrow():
 	else:
 		print("failed to activate")
 
-func _process(delta):
-	print(StageIndex)
 
 func IncrementStage():
 	StageIndex += 1
-	if StageIndex < len(get_children()) and StageIndex >= 0:
+	emit_signal("FinishGrowth")
+
+	if StageIndex < len(get_children()) - 1 and StageIndex >= 0:
 		GetCurrentStage().StartStage()
+		GetCurrentStage().connect("StageComplete", Callable(self, "OnCompleteStage"))
+
 	if StageIndex == len(get_children()):
 		StageIndex =  len(get_children()) - 1
+
+func OnCompleteStage():
+	emit_signal("UpdateGrowth", GetCurrentStage().GetInputNeeded())
 
 func IsCompleted():
 	return StageIndex == len(get_children()) - 1
