@@ -1,14 +1,27 @@
-[gd_scene load_steps=5 format=3 uid="uid://c82r4casfug7j"]
+[gd_scene load_steps=6 format=3 uid="uid://c82r4casfug7j"]
 
 [ext_resource type="PackedScene" uid="uid://baf2w7kcqs61m" path="res://Prefabs/PlanterBox.tscn" id="1_30kj7"]
 [ext_resource type="PackedScene" uid="uid://bvcw057rm4u86" path="res://Prefabs/UI/ActionChanger.tscn" id="2_6wpcg"]
 [ext_resource type="Texture2D" uid="uid://b1i403brhb007" path="res://Art/UI/TendIcon.png" id="3_j7sma"]
 [ext_resource type="Script" path="res://Scripts/Mouse.gd" id="4_m2iry"]
+[ext_resource type="PackedScene" uid="uid://bmygyswdloteq" path="res://Prefabs/UI/MailBox.tscn" id="5_8ij33"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="PlanterBox" parent="." instance=ExtResource("1_30kj7")]
-position = Vector2(356, 257)
+position = Vector2(424, 602)
+
+[node name="PlanterBox2" parent="." instance=ExtResource("1_30kj7")]
+position = Vector2(620, 602)
+
+[node name="PlanterBox3" parent="." instance=ExtResource("1_30kj7")]
+position = Vector2(834, 602)
+
+[node name="PlanterBox4" parent="." instance=ExtResource("1_30kj7")]
+position = Vector2(1042, 604)
+
+[node name="PlanterBox5" parent="." instance=ExtResource("1_30kj7")]
+position = Vector2(1236, 604)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -24,3 +37,6 @@ texture = ExtResource("3_j7sma")
 centered = false
 offset = Vector2(2, 0)
 script = ExtResource("4_m2iry")
+
+[node name="MailBox" parent="." instance=ExtResource("5_8ij33")]
+position = Vector2(756, 795)

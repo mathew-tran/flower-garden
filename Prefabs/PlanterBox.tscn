@@ -1,8 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://baf2w7kcqs61m"]
+[gd_scene load_steps=9 format=3 uid="uid://baf2w7kcqs61m"]
 
 [ext_resource type="Texture2D" uid="uid://dyv3mqbiksoh6" path="res://Art/planter-box.png" id="1_lfvwm"]
 [ext_resource type="Script" path="res://Scripts/PlanterBox.gd" id="2_bw4qh"]
-[ext_resource type="PackedScene" uid="uid://dkp8p50i3prtf" path="res://Prefabs/Flowers/Rose.tscn" id="3_0e4c5"]
 [ext_resource type="Texture2D" uid="uid://se6n0b6e5jw" path="res://Art/UI/Wait.png" id="4_ttdi1"]
 [ext_resource type="PackedScene" uid="uid://bma13yufnmijt" path="res://Prefabs/UI/ActionHint.tscn" id="5_ldncg"]
 
@@ -40,8 +39,6 @@ script = ExtResource("2_bw4qh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_bb57o")
-
-[node name="Flower" parent="." instance=ExtResource("3_0e4c5")]
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="."]
 offset_left = -15.5

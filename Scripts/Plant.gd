@@ -6,6 +6,8 @@ signal UpdateGrowth
 signal FinishGrowth
 
 func _ready():
+	if randi() % 2 == 1:
+		scale.x = -1
 	IncrementStage()
 
 func GetCurrentStage():
@@ -16,9 +18,10 @@ func AttemptGrow():
 		return
 
 	if GetCurrentStage().CanActivate():
-		var frameCount =  sprite_frames.get_frame_count("grow")
-		if frame < frameCount:
-			frame += 1
+		if GetCurrentStage().ShouldIncreaseFrame():
+			var frameCount =  sprite_frames.get_frame_count("grow")
+			if frame < frameCount:
+				frame += 1
 		IncrementStage()
 	else:
 		print("failed to activate")

@@ -2,7 +2,9 @@ extends Node2D
 
 
 @export var TimeToWait = 2.0
+@export var TimeRange = 1.0
 @export var ModeToUse : InputManager.INPUT_MODE
+@export var bIncreaseFrame = false
 
 var StageTimer
 
@@ -10,7 +12,7 @@ signal StageComplete
 
 func StartStage():
 	StageTimer = Timer.new()
-	StageTimer.wait_time = TimeToWait
+	StageTimer.wait_time = TimeToWait + randf_range(0, TimeRange)
 	StageTimer.one_shot = true
 	add_child(StageTimer)
 	StageTimer.start()
@@ -22,6 +24,9 @@ func OnTimeout():
 func CleanStage():
 	if is_instance_valid(StageTimer):
 		StageTimer.queue_free()
+
+func ShouldIncreaseFrame():
+	return bIncreaseFrame
 
 func CanActivate():
 	if is_instance_valid(StageTimer):
