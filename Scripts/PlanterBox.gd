@@ -14,7 +14,7 @@ var StartPosition
 
 signal FlowerBoxComplete
 
-func SetFlower(path):
+func SetPlant(path):
 	Flower = load(path).instantiate()
 	add_child(Flower)
 	Flower.connect("UpdateGrowth", Callable(self, "OnUpdateGrowth"))
@@ -23,9 +23,9 @@ func SetFlower(path):
 
 func _ready():
 	StartPosition = global_position
-	SetFlower("res://Prefabs/Flowers/SimpleRose.tscn")
 	add_to_group("PlanterBox")
 	connect("FlowerBoxComplete", Callable(self, "CheckBoxesComplete"))
+	OnFinishGrowth()
 
 func CheckBoxesComplete():
 	if Game.ArePlanterBoxesCompleted():

@@ -51,3 +51,7 @@ position = Vector2(745, -139)
 [node name="Bouquet" parent="." instance=ExtResource("7_5kcj8")]
 
 [node name="EXPBar" parent="." instance=ExtResource("8_3hpu8")]
+offset_left = 21.0
+offset_top = 1010.0
+offset_right = 442.0
+offset_bottom = 1058.0

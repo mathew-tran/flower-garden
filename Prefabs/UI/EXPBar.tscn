@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://vda87wfmckjj"]
+[gd_scene load_steps=2 format=3 uid="uid://vda87wfmckjj"]
+
+[ext_resource type="Script" path="res://Scripts/UI/EXPBar.gd" id="1_7poiu"]
 
 [node name="EXPBar" type="Control"]
 layout_mode = 3
@@ -7,21 +9,25 @@ offset_left = 658.0
 offset_top = 862.0
 offset_right = 698.0
 offset_bottom = 902.0
+script = ExtResource("1_7poiu")
 metadata/_edit_group_ = true
 
-[node name="Bar" type="ProgressBar" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 25.0
-offset_right = 434.0
-offset_bottom = 48.0
-value = 30.0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="Text" type="Label" parent="."]
+[node name="Text2" type="Label" parent="HBoxContainer"]
 custom_minimum_size = Vector2(70, 0)
-layout_mode = 0
-offset_left = -5.0
-offset_right = 65.0
-offset_bottom = 50.0
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Orders Completed"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text" type="Label" parent="HBoxContainer"]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
 theme_override_font_sizes/font_size = 36
 text = "1
 "
