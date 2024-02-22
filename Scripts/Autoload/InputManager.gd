@@ -10,9 +10,11 @@ enum INPUT_MODE {
 
 var CurrentInputMode = INPUT_MODE.WATER
 
+signal ModeChange(newMode)
+
 func ChangeInputMode(newMode):
 	CurrentInputMode = newMode
-
+	emit_signal("ModeChange", CurrentInputMode)
 
 func SetFocusedObject(obj):
 	FocusedObject = obj
