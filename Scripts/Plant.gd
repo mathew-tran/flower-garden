@@ -4,6 +4,7 @@ var StageIndex = -1
 
 signal UpdateGrowth
 signal FinishGrowth
+signal Completed
 
 func _ready():
 	if randi() % 2 == 1:
@@ -35,8 +36,8 @@ func IncrementStage():
 		GetCurrentStage().StartStage()
 		GetCurrentStage().connect("StageComplete", Callable(self, "OnCompleteStage"))
 
-	if StageIndex == len(get_children()):
-		StageIndex =  len(get_children()) - 1
+	if StageIndex == len(get_children()) - 1:
+		emit_signal("Completed")
 
 func OnCompleteStage():
 	emit_signal("UpdateGrowth", GetCurrentStage().GetInputNeeded())

@@ -79,6 +79,7 @@ script = ExtResource("3_idiwr")
 TimeToWait = 0.1
 TimeRange = 0.1
 ModeToUse = 1
+bIncreaseFrame = true
 
 [node name="Stage8" type="Node2D" parent="."]
 script = ExtResource("3_idiwr")

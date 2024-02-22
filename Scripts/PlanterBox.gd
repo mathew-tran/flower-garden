@@ -12,6 +12,7 @@ func SetFlower(path):
 	add_child(Flower)
 	Flower.connect("UpdateGrowth", Callable(self, "OnUpdateGrowth"))
 	Flower.connect("FinishGrowth", Callable(self, "OnFinishGrowth"))
+	Flower.connect("Completed", Callable(self, "OnCompleted"))
 
 func _ready():
 	SetFlower("res://Prefabs/Flowers/Rose.tscn")
@@ -21,6 +22,9 @@ func OnUpdateGrowth(type):
 
 func OnFinishGrowth():
 	$ActionHint.HideHint()
+
+func OnCompleted():
+	Flower.queue_free()
 
 func _on_area_2d_mouse_entered():
 	InputManager.SetFocusedObject(self)
