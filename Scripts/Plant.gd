@@ -32,15 +32,14 @@ func IncrementStage():
 	StageIndex += 1
 	emit_signal("FinishGrowth")
 
-	if StageIndex < len(get_children()) - 1 and StageIndex >= 0:
+	if StageIndex <= len(get_children()) - 1 and StageIndex >= 0:
 		GetCurrentStage().StartStage()
 		GetCurrentStage().connect("StageComplete", Callable(self, "OnCompleteStage"))
-
-	if StageIndex == len(get_children()) - 1:
+	elif StageIndex >= len(get_children()) - 1:
 		emit_signal("Completed")
 
 func OnCompleteStage():
 	emit_signal("UpdateGrowth", GetCurrentStage().GetInputNeeded())
 
 func IsCompleted():
-	return StageIndex == len(get_children()) - 1
+	return StageIndex == len(get_children())
