@@ -12,6 +12,8 @@ var PushDownTween = null
 
 var StartPosition
 
+signal FlowerBoxComplete
+
 func SetFlower(path):
 	Flower = load(path).instantiate()
 	add_child(Flower)
@@ -21,8 +23,13 @@ func SetFlower(path):
 
 func _ready():
 	StartPosition = global_position
-	SetFlower("res://Prefabs/Flowers/Rose.tscn")
+	SetFlower("res://Prefabs/Flowers/SimpleRose.tscn")
+	add_to_group("PlanterBox")
+	connect("FlowerBoxComplete", Callable(self, "CheckBoxesComplete"))
 
+func CheckBoxesComplete():
+	if Game.ArePlanterBoxesCompleted():
+		Game.SetNewRound()
 
 func OnUpdateGrowth(type):
 	$ActionHint.SetHint(type)
@@ -39,8 +46,12 @@ func OnFinishGrowth():
 	PushDownTween.play()
 
 func OnCompleted():
-	Flower.queue_free()
+	var bouquet = get_tree().get_nodes_in_group("Bouquet")
+	if bouquet:
+		bouquet[0].AddFlower(Flower)
+		Flower = null
 	OnFinishGrowth()
+	emit_signal("FlowerBoxComplete")
 
 func _on_area_2d_mouse_entered():
 	InputManager.SetFocusedObject(self)

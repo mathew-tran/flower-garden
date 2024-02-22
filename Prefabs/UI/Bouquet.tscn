@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0d6wacengpqb"]
+
+[ext_resource type="Texture2D" uid="uid://cs0rmwktosw50" path="res://Art/UI/Bouquet.png" id="1_8padh"]
+[ext_resource type="Script" path="res://Scripts/Bouquet.gd" id="2_gts3g"]
+
+[node name="Bouquet" type="Sprite2D"]
+position = Vector2(1846, 979)
+scale = Vector2(2, 2)
+texture = ExtResource("1_8padh")
+script = ExtResource("2_gts3g")
