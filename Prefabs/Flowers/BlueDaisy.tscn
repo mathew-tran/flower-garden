@@ -1,0 +1,107 @@
+[gd_scene load_steps=10 format=3 uid="uid://bolmo6m1c3yyu"]
+
+[ext_resource type="Texture2D" uid="uid://cg15hwdmibof5" path="res://Art/BlueDaisies.png" id="1_5iq8e"]
+[ext_resource type="Script" path="res://Scripts/Plant.gd" id="2_iwny8"]
+[ext_resource type="Script" path="res://Scripts/PlantStage.gd" id="3_uy4vt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gtpem"]
+atlas = ExtResource("1_5iq8e")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jl1v1"]
+atlas = ExtResource("1_5iq8e")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f8xsv"]
+atlas = ExtResource("1_5iq8e")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tcbkj"]
+atlas = ExtResource("1_5iq8e")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ftmev"]
+atlas = ExtResource("1_5iq8e")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_siid5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gtpem")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jl1v1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f8xsv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tcbkj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ftmev")
+}],
+"loop": true,
+"name": &"grow",
+"speed": 5.0
+}]
+
+[node name="BlueDaisy" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_siid5")
+animation = &"grow"
+script = ExtResource("2_iwny8")
+
+[node name="Stage" type="Node2D" parent="."]
+script = ExtResource("3_uy4vt")
+TimeToWait = 5.0
+TimeRange = 4.0
+bIncreaseFrame = true
+
+[node name="Stage2" type="Node2D" parent="."]
+script = ExtResource("3_uy4vt")
+TimeRange = 3.0
+bIncreaseFrame = true
+
+[node name="Stage3" type="Node2D" parent="."]
+script = ExtResource("3_uy4vt")
+TimeRange = 3.0
+
+[node name="Stage5" type="Node2D" parent="."]
+script = ExtResource("3_uy4vt")
+TimeToWait = 0.1
+TimeRange = 0.1
+ModeToUse = 1
+
+[node name="Stage6" type="Node2D" parent="."]
+script = ExtResource("3_uy4vt")
+TimeToWait = 0.1
+TimeRange = 0.1
+ModeToUse = 1
+
+[node name="Stage7" type="Node2D" parent="."]
+script = ExtResource("3_uy4vt")
+TimeToWait = 0.1
+TimeRange = 0.1
+ModeToUse = 1
+bIncreaseFrame = true
+
+[node name="Stage8" type="Node2D" parent="."]
+script = ExtResource("3_uy4vt")
+TimeToWait = 0.1
+TimeRange = 0.1
+ModeToUse = 1
+bIncreaseFrame = true
+
+[node name="Stage9" type="Node2D" parent="."]
+script = ExtResource("3_uy4vt")
+TimeToWait = 10.0
+TimeRange = 4.0
+bIncreaseFrame = true
+
+[node name="Stage4" type="Node2D" parent="."]
+script = ExtResource("3_uy4vt")
+TimeToWait = 20.0
+TimeRange = 10.0
+ModeToUse = 2
+bIncreaseFrame = true

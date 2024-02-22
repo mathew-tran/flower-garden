@@ -14,7 +14,7 @@ func _ready():
 	Positions.shuffle()
 	Game.connect("CompleteRound", Callable(self, "OnCompleteRound"))
 
-func OnCompleteRound():
+func OnCompleteRound(_x):
 	ClearFlowers()
 	Positions.shuffle()
 
@@ -22,9 +22,13 @@ func AddFlower(flowerObj):
 	flowerObj.reparent(self)
 	flowerObj.show_behind_parent = true
 	flowerObj.position = Positions.pop_back()
+	$AnimationPlayer.play("animate")
 
 func ClearFlowers():
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(2).timeout
 	for child in get_children():
-		Positions.push_back(child.position)
-		child.queue_free()
+		if child is AnimationPlayer:
+			continue
+		else:
+			Positions.push_back(child.position)
+			child.queue_free()

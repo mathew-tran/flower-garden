@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PlantOrder" load_steps=2 format=3 uid="uid://claah6p2xqjd0"]
+
+[ext_resource type="Script" path="res://Scripts/ResourceTypes/PlantOrder.gd" id="1_h6nm1"]
+
+[resource]
+script = ExtResource("1_h6nm1")
+flowers = [6, -1, 6, -1, -1, 6]
+greeting = "My wife loves lavender. Could I get some?"
+thanks = "Smells nice! I might get some more in a couple weeks!"

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cde5mh8jmxtmx"
-path="res://.godot/imported/MailIcon.png-08960699b178527a215231b5a7edb102.ctex"
+uid="uid://d1o745jb36wic"
+path="res://.godot/imported/Lavender.png-86ce5074255f6f8be38a15579be14248.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/UI/MailIcon.png"
-dest_files=["res://.godot/imported/MailIcon.png-08960699b178527a215231b5a7edb102.ctex"]
+source_file="res://Art/Lavender.png"
+dest_files=["res://.godot/imported/Lavender.png-86ce5074255f6f8be38a15579be14248.ctex"]
 
 [params]
 

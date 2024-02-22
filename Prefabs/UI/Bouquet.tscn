@@ -1,10 +1,53 @@
-[gd_scene load_steps=3 format=3 uid="uid://b0d6wacengpqb"]
+[gd_scene load_steps=6 format=3 uid="uid://b0d6wacengpqb"]
 
 [ext_resource type="Texture2D" uid="uid://cs0rmwktosw50" path="res://Art/UI/Bouquet.png" id="1_8padh"]
 [ext_resource type="Script" path="res://Scripts/Bouquet.gd" id="2_gts3g"]
 
+[sub_resource type="Animation" id="Animation_1w70s"]
+resource_name = "animate"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.0872665, 0.0872665, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_21hav"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2g43s"]
+_data = {
+"RESET": SubResource("Animation_21hav"),
+"animate": SubResource("Animation_1w70s")
+}
+
 [node name="Bouquet" type="Sprite2D"]
+self_modulate = Color(1, 1, 1, 0.494118)
 position = Vector2(1846, 979)
 scale = Vector2(2, 2)
 texture = ExtResource("1_8padh")
 script = ExtResource("2_gts3g")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_2g43s")
+}
+speed_scale = 2.0

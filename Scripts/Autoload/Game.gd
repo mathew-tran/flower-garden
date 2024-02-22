@@ -1,7 +1,9 @@
 extends Node
 
 signal CompleteRound
+signal StartNewRound
 
+var CurrentOrder = null
 func ArePlanterBoxesCompleted():
 	var boxes = get_tree().get_nodes_in_group("PlanterBox")
 	for box in boxes:
@@ -29,13 +31,27 @@ func GetPlant(index):
 		return "res://Prefabs/Flowers/Rose.tscn"
 	if index == 1:
 		return "res://Prefabs/Flowers/SimpleRose.tscn"
+	if index == 2:
+		return "res://Prefabs/Flowers/BlueDaisy.tscn"
+	if index == 3:
+		return "res://Prefabs/Flowers/PurpleHydrangea.tscn"
+	if index == 4:
+		return "res://Prefabs/Flowers/YellowDaffodil.tscn"
+	if index == 5:
+		return "res://Prefabs/Flowers/Dandelion.tscn"
+	if index == 6:
+		return "res://Prefabs/Flowers/Lavender.tscn"
 
 func SetNewRound():
-	emit_signal("CompleteRound")
-
+	randomize()
+	if is_instance_valid(CurrentOrder):
+		emit_signal("CompleteRound", CurrentOrder)
+	await get_tree().create_timer(randf_range(3, 5)).timeout
 	var orders = GetAllFilePaths("res://Resources/Orders")
-	var order = load(orders[randi() % len(orders)])
+	CurrentOrder = load(orders[randi() % len(orders)])
 	var boxes = get_tree().get_nodes_in_group("PlanterBox")
-	for x in range(0, len(order.flowers)):
-		if order.flowers[x] != -1:
-			boxes[x].SetPlant(GetPlant(order.flowers[x]))
+	for x in range(0, len(CurrentOrder.flowers)):
+		if CurrentOrder.flowers[x] != -1:
+			boxes[x].SetPlant(GetPlant(CurrentOrder.flowers[x]))
+
+	emit_signal("StartNewRound", CurrentOrder)

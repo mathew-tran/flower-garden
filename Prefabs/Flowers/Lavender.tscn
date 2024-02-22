@@ -1,0 +1,84 @@
+[gd_scene load_steps=10 format=3 uid="uid://bqqyuvymt6xch"]
+
+[ext_resource type="Texture2D" uid="uid://d1o745jb36wic" path="res://Art/Lavender.png" id="1_maiua"]
+[ext_resource type="Script" path="res://Scripts/Plant.gd" id="2_l4ew5"]
+[ext_resource type="Script" path="res://Scripts/PlantStage.gd" id="3_ehe2m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v3350"]
+atlas = ExtResource("1_maiua")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_omhw0"]
+atlas = ExtResource("1_maiua")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qg7rt"]
+atlas = ExtResource("1_maiua")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1calj"]
+atlas = ExtResource("1_maiua")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aahtn"]
+atlas = ExtResource("1_maiua")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_siid5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v3350")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_omhw0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qg7rt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1calj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aahtn")
+}],
+"loop": true,
+"name": &"grow",
+"speed": 5.0
+}]
+
+[node name="Lavender" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_siid5")
+animation = &"grow"
+script = ExtResource("2_l4ew5")
+
+[node name="Stage" type="Node2D" parent="."]
+script = ExtResource("3_ehe2m")
+TimeToWait = 3.0
+TimeRange = 0.0
+bIncreaseFrame = true
+
+[node name="Stage2" type="Node2D" parent="."]
+script = ExtResource("3_ehe2m")
+TimeToWait = 0.25
+TimeRange = 0.0
+bIncreaseFrame = true
+
+[node name="Stage5" type="Node2D" parent="."]
+script = ExtResource("3_ehe2m")
+TimeToWait = 0.25
+TimeRange = 0.0
+bIncreaseFrame = true
+
+[node name="Stage6" type="Node2D" parent="."]
+script = ExtResource("3_ehe2m")
+TimeToWait = 5.0
+TimeRange = 0.0
+bIncreaseFrame = true
+
+[node name="Stage7" type="Node2D" parent="."]
+script = ExtResource("3_ehe2m")
+TimeToWait = 0.25
+TimeRange = 0.0
+ModeToUse = 2
+bIncreaseFrame = true

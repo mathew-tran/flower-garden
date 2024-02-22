@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PlantOrder" load_steps=2 format=3 uid="uid://bemy7u0qk3kkv"]
+
+[ext_resource type="Script" path="res://Scripts/ResourceTypes/PlantOrder.gd" id="1_r8pgu"]
+
+[resource]
+script = ExtResource("1_r8pgu")
+flowers = [5, 5, -1, -1, -1, -1]
+greeting = "I would like a dandelion. Actually I want two!"
+thanks = "Wow these are pretty!"

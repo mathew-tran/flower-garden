@@ -5,5 +5,5 @@
 [resource]
 script = ExtResource("1_a8hd4")
 flowers = [-1, 1, -1, 1, 1, -1]
-greeting = "I need"
-thanks = "thank you!"
+greeting = "I need some flowers for a birthday! Some roses should do!"
+thanks = "Thanks alot!"
