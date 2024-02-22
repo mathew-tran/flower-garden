@@ -7,6 +7,11 @@ var progress = 0.0
 
 var Flower = null
 
+var PushUpTween = null
+var PushDownTween = null
+
+var StartPosition
+
 func SetFlower(path):
 	Flower = load(path).instantiate()
 	add_child(Flower)
@@ -15,16 +20,27 @@ func SetFlower(path):
 	Flower.connect("Completed", Callable(self, "OnCompleted"))
 
 func _ready():
+	StartPosition = global_position
 	SetFlower("res://Prefabs/Flowers/Rose.tscn")
+
 
 func OnUpdateGrowth(type):
 	$ActionHint.SetHint(type)
+	PushUpTween = get_tree().create_tween()
+	PushUpTween.tween_property(self, "position", StartPosition + Vector2(0, 10), .4)
+	PushUpTween.tween_property(self, "modulate", Color.WHITE, .4)
+	PushUpTween.play()
 
 func OnFinishGrowth():
 	$ActionHint.HideHint()
+	PushDownTween = get_tree().create_tween()
+	PushDownTween.tween_property(self, "position", StartPosition, .4)
+	PushDownTween.tween_property(self, "modulate", Color.SILVER, .4)
+	PushDownTween.play()
 
 func OnCompleted():
 	Flower.queue_free()
+	OnFinishGrowth()
 
 func _on_area_2d_mouse_entered():
 	InputManager.SetFocusedObject(self)
