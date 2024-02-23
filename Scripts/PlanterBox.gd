@@ -21,11 +21,14 @@ func SetPlant(path):
 	Flower.connect("FinishGrowth", Callable(self, "OnFinishGrowth"))
 	Flower.connect("Completed", Callable(self, "OnCompleted"))
 
+func _enter_tree():
+	$ActionHint.HideHint()
+
 func _ready():
 	StartPosition = global_position
 	add_to_group("PlanterBox")
 	connect("FlowerBoxComplete", Callable(self, "CheckBoxesComplete"))
-	OnFinishGrowth()
+
 
 func CheckBoxesComplete():
 	if Game.ArePlanterBoxesCompleted():
