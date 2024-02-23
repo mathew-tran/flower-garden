@@ -4,6 +4,8 @@ signal CompleteRound
 signal StartNewRound
 
 var CurrentOrder = null
+
+var bHasDoneTutorial = false
 func ArePlanterBoxesCompleted():
 	var boxes = get_tree().get_nodes_in_group("PlanterBox")
 	for box in boxes:
@@ -17,6 +19,7 @@ func GetAllFilePaths(path: String) -> Array[String]:
 	dir.list_dir_begin()
 	var file_name = dir.get_next()
 	while file_name != "":
+		file_name = file_name.trim_suffix('.remap')
 		var file_path = path + "/" + file_name
 		if dir.current_is_dir():
 			file_paths += GetAllFilePaths(file_path)
@@ -48,7 +51,9 @@ func SetNewRound():
 		emit_signal("CompleteRound", CurrentOrder)
 	await get_tree().create_timer(randf_range(3, 5)).timeout
 	var orders = GetAllFilePaths("res://Resources/Orders")
-	CurrentOrder = load(orders[randi() % len(orders)])
+	for order in orders:
+		print(order)
+	CurrentOrder = load(orders[randi() % len(orders)]) as PlantOrder
 	var boxes = get_tree().get_nodes_in_group("PlanterBox")
 	for x in range(0, len(CurrentOrder.flowers)):
 		if CurrentOrder.flowers[x] != -1:

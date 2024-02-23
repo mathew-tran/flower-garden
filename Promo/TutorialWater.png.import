@@ -2,33 +2,33 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cs0rmwktosw50"
-path="res://.godot/imported/Bouquet.png-81e221e8d86a2961560a982605246be5.ctex"
+uid="uid://bcpb8ec3dnmsw"
+path="res://.godot/imported/TutorialWater.png-a4c832b28621214339ec6afd1241fca9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/UI/Bouquet.png"
-dest_files=["res://.godot/imported/Bouquet.png-81e221e8d86a2961560a982605246be5.ctex"]
+source_file="res://Promo/TutorialWater.png"
+dest_files=["res://.godot/imported/TutorialWater.png-a4c832b28621214339ec6afd1241fca9.ctex"]
 
 [params]
 
-compress/mode=3
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/normal_map=2
+compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
-process/fix_alpha_border=false
+process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1
