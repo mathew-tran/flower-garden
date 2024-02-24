@@ -3,29 +3,30 @@
 [ext_resource type="Script" path="res://Scripts/UI/EXPBar.gd" id="1_7poiu"]
 
 [node name="EXPBar" type="Control"]
+custom_minimum_size = Vector2(1920, 34)
 layout_mode = 3
 anchors_preset = 0
-offset_left = 658.0
-offset_top = 862.0
-offset_right = 698.0
-offset_bottom = 902.0
+offset_right = 1920.0
+offset_bottom = 34.0
 script = ExtResource("1_7poiu")
 metadata/_edit_group_ = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 5.0
+offset_top = -47.0
+offset_right = 398.0
+offset_bottom = 3.0
 
 [node name="Text2" type="Label" parent="HBoxContainer"]
 custom_minimum_size = Vector2(70, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 36
-text = "Orders Completed"
+text = "Level"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Text" type="Label" parent="HBoxContainer"]
+[node name="Level" type="Label" parent="HBoxContainer"]
 custom_minimum_size = Vector2(70, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 36
@@ -33,3 +34,14 @@ text = "0
 "
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -27.0
+grow_horizontal = 2
+grow_vertical = 0
+show_percentage = false

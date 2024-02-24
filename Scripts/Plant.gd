@@ -24,6 +24,7 @@ func AttemptGrow():
 			if frame < frameCount:
 				frame += 1
 		IncrementStage()
+		PlayerProgression.AddXP(2)
 	else:
 		print("failed to activate")
 

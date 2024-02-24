@@ -55,6 +55,7 @@ func OnCompleted():
 		Flower = null
 	OnFinishGrowth()
 	emit_signal("FlowerBoxComplete")
+	PlayerProgression.AddXP(10 + randi() % 5)
 
 func _on_area_2d_mouse_entered():
 	InputManager.SetFocusedObject(self)
@@ -69,6 +70,7 @@ func Click():
 	print(name + " has been clicked")
 	if is_instance_valid(GetPlant()):
 		GetPlant().AttemptGrow()
+
 
 func GetPlant():
 	return Flower
