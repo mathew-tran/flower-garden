@@ -3,9 +3,9 @@ extends Button
 var Level = 0
 var LevelToGoTo = 0
 
-@export var OwnedColor : Color
-@export var AllocatedColor : Color
-@export var UnOwnedColor : Color
+var OwnedColor = Color("ffffff")
+var AllocatedColor = Color("8d973a")
+var UnOwnedColor = Color("585858")
 @export var CategoryName = "test"
 
 @export var PowerUps : Array[LevelPowerUpResource]

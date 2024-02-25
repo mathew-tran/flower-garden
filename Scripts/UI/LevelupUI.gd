@@ -15,7 +15,7 @@ func OnLevelUp():
 func OnPowerUpSelected():
 	visible = false
 	$Panel/VBoxContainer/HBoxContainer2.visible = true
-
+	$Panel/VBoxContainer/SkillPointsRemaining.visible = true
 
 func _on_visibility_changed():
 	get_tree().paused = visible
@@ -38,6 +38,7 @@ func OnSkillPointAllocated():
 
 func _on_accept_button_button_up():
 	$Panel/VBoxContainer/HBoxContainer2.visible = false
+	$Panel/VBoxContainer/SkillPointsRemaining.visible = false
 	PlayerProgression.CompleteSkillTransaction()
 	await get_tree().create_timer(1).timeout
 	PlayerProgression.BroadcastPowerUpSelected()

@@ -17,9 +17,6 @@ offset_bottom = 44.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_uycui")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ug1vf")
 script = ExtResource("1_sxm68")
-OwnedColor = Color(1, 1, 1, 1)
-AllocatedColor = Color(0.701961, 0.701961, 0.701961, 1)
-UnOwnedColor = Color(0.345098, 0.345098, 0.345098, 1)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 modulate = Color(0.337255, 1, 1, 1)
@@ -223,7 +220,7 @@ layout_mode = 2
 texture = ExtResource("2_r1kup")
 
 [node name="Sprite2D39" type="TextureRect" parent="HBoxContainer"]
-modulate = Color(0.560784, 0.560784, 0.560784, 1)
+modulate = Color(0.552941, 0.592157, 0.227451, 1)
 layout_mode = 2
 texture = ExtResource("2_r1kup")
 
