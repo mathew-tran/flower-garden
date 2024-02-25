@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="ProgressionProperty" load_steps=2 format=3 uid="uid://cs5s42npw3hfa"]
+
+[ext_resource type="Script" path="res://Scripts/ResourceTypes/Property.gd" id="1_r6vpx"]
+
+[resource]
+script = ExtResource("1_r6vpx")

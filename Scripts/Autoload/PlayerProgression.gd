@@ -15,8 +15,8 @@ var TempProgress = {}
 
 var EXPCacheReleaseTimer
 
-var SkillPoints = 1
-var AllocatedSkillPoints = 1
+var SkillPoints = 0
+var AllocatedSkillPoints = 0
 
 signal SkillsReset
 signal SkillsCompleteTransaction

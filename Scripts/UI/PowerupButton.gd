@@ -47,7 +47,7 @@ func Increment():
 
 
 func _on_button_down():
-	if PlayerProgression.CanAffordSkill():
+	if PlayerProgression.CanAffordSkill() and CanIncrement():
 		Increment()
 		PlayerProgression.UseAllocatedSkillPoint()
 

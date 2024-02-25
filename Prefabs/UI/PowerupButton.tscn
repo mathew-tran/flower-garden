@@ -274,6 +274,11 @@ modulate = Color(0.560784, 0.560784, 0.560784, 1)
 layout_mode = 2
 texture = ExtResource("2_r1kup")
 
+[node name="Sprite2D50" type="TextureRect" parent="HBoxContainer"]
+modulate = Color(0.560784, 0.560784, 0.560784, 1)
+layout_mode = 2
+texture = ExtResource("2_r1kup")
+
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
 offset_left = -242.0

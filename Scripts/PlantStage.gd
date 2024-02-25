@@ -28,6 +28,10 @@ func CleanStage():
 	var bonus = 0
 	if ModeToUse == InputManager.INPUT_MODE.TEND:
 		bonus += PlayerProgression.GetTempPower(load("res://Resources/Variables/VAR_TEND_BONUS.tres").Get())
+	elif ModeToUse == InputManager.INPUT_MODE.WATER:
+		bonus += PlayerProgression.GetTempPower(load("res://Resources/Variables/VAR_WATER_BONUS.tres").Get())
+	elif ModeToUse == InputManager.INPUT_MODE.MOVE:
+		bonus += PlayerProgression.GetTempPower(load("res://Resources/Variables/VAR_MOVE_BONUS.tres").Get())
 	PlayerProgression.AddXP(2 + bonus)
 
 func ShouldIncreaseFrame():

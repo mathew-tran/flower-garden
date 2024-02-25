@@ -33,6 +33,7 @@ func _ready():
 func CheckBoxesComplete():
 	if Game.ArePlanterBoxesCompleted():
 		Game.SetNewRound()
+		var bonus = PlayerProgression.GetTempPower(load("res://Resources/Variables/VAR_CUSTOMER_BONUS.tres").Get())
 		PlayerProgression.AddXP(35 + randi() % 5)
 
 func OnUpdateGrowth(type):
