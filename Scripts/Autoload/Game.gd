@@ -7,7 +7,6 @@ var CurrentOrder = null
 
 var bHasDoneTutorial = false
 
-
 func ArePlanterBoxesCompleted():
 	var boxes = get_tree().get_nodes_in_group("PlanterBox")
 	for box in boxes:

@@ -24,12 +24,14 @@ func AttemptGrow():
 			if frame < frameCount:
 				frame += 1
 		IncrementStage()
-		PlayerProgression.AddXP(2)
+
 	else:
 		print("failed to activate")
 
 
 func IncrementStage():
+	if StageIndex != -1:
+		GetCurrentStage().CleanStage()
 	StageIndex += 1
 	emit_signal("FinishGrowth")
 

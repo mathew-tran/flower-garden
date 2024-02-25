@@ -3,6 +3,7 @@ extends Node
 var EXP = 0
 var MaxEXP = 100
 var Level = 0
+var MaxLevel = 20
 var XPCache = 0
 
 signal EXPUpdate
@@ -14,14 +15,16 @@ var TempProgress = {}
 
 var EXPCacheReleaseTimer
 
-var SkillPoints = 2
-var AllocatedSkillPoints = 2
+var SkillPoints = 1
+var AllocatedSkillPoints = 1
 
 signal SkillsReset
 signal SkillsCompleteTransaction
 signal SkillsLockin(bCanLockin)
 signal SkillPointAllocated
 
+func GetMaxLevel():
+	return MaxLevel
 func _ready():
 	EXPCacheReleaseTimer = Timer.new()
 	EXPCacheReleaseTimer.wait_time = .05
@@ -31,6 +34,8 @@ func _ready():
 	add_child(EXPCacheReleaseTimer)
 
 func OnEXPCacheReleaseTimeOut():
+	if Level >= MaxLevel:
+		XPCache = 0
 	if XPCache == 0:
 		EXPCacheReleaseTimer.stop()
 		return
@@ -51,7 +56,7 @@ func OnEXPCacheReleaseTimeOut():
 		EXP -= MaxEXP
 		emit_signal("EXPUpdate")
 		MaxEXP *= 1.1
-		AddSkillPoints(2)
+		AddSkillPoints(3)
 		emit_signal("LevelUpdate")
 	emit_signal("EXPUpdate")
 
@@ -84,6 +89,11 @@ func AddTempPower(property,value):
 	else:
 		TempProgress[property] = value
 
+func GetTempPower(property):
+	if TempProgress.has(property):
+		return TempProgress[property]
+	return 0
+
 func BroadcastPowerUpSelected():
 	emit_signal("PowerUpSelected")
 
@@ -99,3 +109,9 @@ func GetMaxEXP():
 
 func GetLevel():
 	return Level
+
+func GetLevelString():
+	if Level < MaxLevel:
+		return str(Level)
+	else:
+		return "MAX"

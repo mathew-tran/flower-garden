@@ -1,13 +1,19 @@
 extends Button
 
-var Level = 2
+var Level = 0
 var LevelToGoTo = 0
 
 @export var OwnedColor : Color
 @export var AllocatedColor : Color
 @export var UnOwnedColor : Color
+@export var CategoryName = "test"
+
+@export var PowerUps : Array[LevelPowerUpResource]
+
+
 
 func _ready():
+	$Label.text = CategoryName
 	UpdateTicks()
 	LevelToGoTo = Level
 	PlayerProgression.connect("SkillsReset", Callable(self, "OnSkillsReset"))
@@ -24,6 +30,10 @@ func GivePowerup():
 
 func SetData():
 	if Level != LevelToGoTo:
+		for x in range(Level, LevelToGoTo):
+			if is_instance_valid(PowerUps[x]):
+				PowerUps[x].ConsumePower()
+				PowerUps[x] = null
 		Level = LevelToGoTo
 		UpdateTicks()
 

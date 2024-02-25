@@ -1,10 +1,23 @@
-[gd_scene load_steps=5 format=3 uid="uid://cgotjfvuatutq"]
+[gd_scene load_steps=10 format=3 uid="uid://cgotjfvuatutq"]
 
 [ext_resource type="Script" path="res://Scripts/UI/LevelupUI.gd" id="1_i6kwi"]
 [ext_resource type="PackedScene" uid="uid://b5agcinq6oeut" path="res://Prefabs/UI/PowerupButton.tscn" id="1_tfmkf"]
+[ext_resource type="Resource" uid="uid://ch5bnwwrh2c7w" path="res://Resources/Variables/VAR_TEND_BONUS.tres" id="3_af5gw"]
+[ext_resource type="Script" path="res://Scripts/ResourceTypes/LevelPowerupPropertyAddBonus.gd" id="4_p3wi3"]
+[ext_resource type="Script" path="res://Scripts/ResourceTypes/LevelPowerup.gd" id="5_dpnd8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uokhy"]
 bg_color = Color(0, 0, 0, 0.796078)
+
+[sub_resource type="Resource" id="Resource_4bvin"]
+script = ExtResource("4_p3wi3")
+PropertyName = ExtResource("3_af5gw")
+PropertyValue = 2
+
+[sub_resource type="Resource" id="Resource_vpcdc"]
+script = ExtResource("5_dpnd8")
+PowerUpDescription = "Description"
+Powerup = SubResource("Resource_4bvin")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_01kt8"]
 bg_color = Color(0.235294, 0.262745, 0.25098, 1)
@@ -56,8 +69,25 @@ layout_mode = 2
 size_flags_horizontal = 0
 alignment = 1
 
-[node name="Button" parent="Panel/VBoxContainer/HBoxContainer" instance=ExtResource("1_tfmkf")]
+[node name="TendButton" parent="Panel/VBoxContainer/HBoxContainer" instance=ExtResource("1_tfmkf")]
 layout_mode = 2
+CategoryName = "Tending"
+PowerUps = Array[ExtResource("5_dpnd8")]([SubResource("Resource_vpcdc"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])
+
+[node name="TendButton2" parent="Panel/VBoxContainer/HBoxContainer" instance=ExtResource("1_tfmkf")]
+layout_mode = 2
+CategoryName = "Watering"
+PowerUps = Array[ExtResource("5_dpnd8")]([SubResource("Resource_vpcdc"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])
+
+[node name="TendButton3" parent="Panel/VBoxContainer/HBoxContainer" instance=ExtResource("1_tfmkf")]
+layout_mode = 2
+CategoryName = "Moving"
+PowerUps = Array[ExtResource("5_dpnd8")]([SubResource("Resource_vpcdc"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])
+
+[node name="TendButton4" parent="Panel/VBoxContainer/HBoxContainer" instance=ExtResource("1_tfmkf")]
+layout_mode = 2
+CategoryName = "Customer Service"
+PowerUps = Array[ExtResource("5_dpnd8")]([SubResource("Resource_vpcdc"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])
 
 [node name="SkillPointsRemaining" type="Label" parent="Panel/VBoxContainer"]
 custom_minimum_size = Vector2(300, 80)

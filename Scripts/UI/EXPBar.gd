@@ -15,7 +15,7 @@ func OnUpdateXP():
 
 func OnLevelUpdate():
 	$ProgressBar.max_value = PlayerProgression.GetMaxEXP()
-	$HBoxContainer/Level.text = str(PlayerProgression.GetLevel())
+	$HBoxContainer/Level.text = str(PlayerProgression.GetLevelString())
 
 
 func OnCompleteRound(_x):
