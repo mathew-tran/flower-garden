@@ -1,0 +1,71 @@
+[gd_scene load_steps=6 format=3 uid="uid://cgotjfvuatutq"]
+
+[ext_resource type="Script" path="res://Scripts/UI/LevelupUI.gd" id="1_i6kwi"]
+[ext_resource type="PackedScene" uid="uid://b5agcinq6oeut" path="res://Prefabs/UI/PowerupButton.tscn" id="1_tfmkf"]
+[ext_resource type="Resource" uid="uid://du77gpch5rvvf" path="res://Resources/Powerups/POW_TendEXPBonus.tres" id="3_5f2kr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uokhy"]
+bg_color = Color(0, 0, 0, 0.796078)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hsgtv"]
+
+[node name="LevelUp" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_i6kwi")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_uokhy")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -654.5
+offset_top = -259.5
+offset_right = 654.5
+offset_bottom = 259.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 26
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_hsgtv")
+text = "Level up!
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Button" parent="Panel/VBoxContainer/HBoxContainer" instance=ExtResource("1_tfmkf")]
+layout_mode = 2
+PowerupContent = ExtResource("3_5f2kr")
+
+[node name="Button2" parent="Panel/VBoxContainer/HBoxContainer" instance=ExtResource("1_tfmkf")]
+layout_mode = 2
+PowerupContent = ExtResource("3_5f2kr")
+
+[node name="Button3" parent="Panel/VBoxContainer/HBoxContainer" instance=ExtResource("1_tfmkf")]
+layout_mode = 2
+PowerupContent = ExtResource("3_5f2kr")

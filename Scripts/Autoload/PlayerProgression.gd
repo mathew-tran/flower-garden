@@ -7,6 +7,19 @@ var Level = 0
 signal EXPUpdate
 signal LevelUpdate
 
+signal PowerUpSelected
+
+var TempProgress = {}
+
+func AddTempPower(property,value):
+	if TempProgress.has(property):
+		TempProgress[property] += value
+	else:
+		TempProgress[property] = value
+
+func BroadcastPowerUpSelected():
+	emit_signal("PowerUpSelected")
+
 func AddXP(amount):
 	EXP += amount
 	while EXP >= MaxEXP:

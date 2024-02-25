@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c82r4casfug7j"]
+[gd_scene load_steps=13 format=3 uid="uid://c82r4casfug7j"]
 
 [ext_resource type="Script" path="res://Scripts/Main.gd" id="1_1pe8g"]
 [ext_resource type="PackedScene" uid="uid://baf2w7kcqs61m" path="res://Prefabs/PlanterBox.tscn" id="1_30kj7"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dv1jsijfll8he" path="res://Art/Tile.png" id="2_uatvg"]
 [ext_resource type="Texture2D" uid="uid://b1i403brhb007" path="res://Art/UI/TendIcon.png" id="3_j7sma"]
 [ext_resource type="Script" path="res://Scripts/Mouse.gd" id="4_m2iry"]
+[ext_resource type="PackedScene" uid="uid://cgotjfvuatutq" path="res://Prefabs/UI/Levelup.tscn" id="5_htyrm"]
 [ext_resource type="PackedScene" uid="uid://b0d6wacengpqb" path="res://Prefabs/UI/Bouquet.tscn" id="7_5kcj8"]
 [ext_resource type="PackedScene" uid="uid://dn8dtqoegkyrk" path="res://Prefabs/UI/Message.tscn" id="8_3a82k"]
 [ext_resource type="PackedScene" uid="uid://vda87wfmckjj" path="res://Prefabs/UI/EXPBar.tscn" id="8_3hpu8"]
@@ -48,6 +49,8 @@ offset_left = 4.0
 offset_top = 4.0
 offset_right = 44.0
 offset_bottom = 132.0
+
+[node name="Levelup" parent="CanvasLayer" instance=ExtResource("5_htyrm")]
 
 [node name="EXPBar" parent="CanvasLayer" instance=ExtResource("8_3hpu8")]
 anchors_preset = 7

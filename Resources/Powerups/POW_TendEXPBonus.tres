@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="LevelPowerUpResource" load_steps=5 format=3 uid="uid://du77gpch5rvvf"]
+
+[ext_resource type="Resource" uid="uid://ch5bnwwrh2c7w" path="res://Resources/Variables/VAR_TEND_BONUS.tres" id="1_3s0mm"]
+[ext_resource type="Script" path="res://Scripts/ResourceTypes/LevelPowerup.gd" id="1_tsidy"]
+[ext_resource type="Script" path="res://Scripts/ResourceTypes/LevelPowerupPropertyAddBonus.gd" id="2_42bii"]
+
+[sub_resource type="Resource" id="Resource_knuyo"]
+script = ExtResource("2_42bii")
+PropertyName = ExtResource("1_3s0mm")
+PropertyValue = 3
+
+[resource]
+script = ExtResource("1_tsidy")
+PowerUpDescription = "+3 XP Gained when tending a plant"
+Powerup = SubResource("Resource_knuyo")

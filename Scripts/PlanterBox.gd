@@ -33,6 +33,7 @@ func _ready():
 func CheckBoxesComplete():
 	if Game.ArePlanterBoxesCompleted():
 		Game.SetNewRound()
+		PlayerProgression.AddXP(35 + randi() % 5)
 
 func OnUpdateGrowth(type):
 	$ActionHint.SetHint(type)

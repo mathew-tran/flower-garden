@@ -6,6 +6,8 @@ signal StartNewRound
 var CurrentOrder = null
 
 var bHasDoneTutorial = false
+
+
 func ArePlanterBoxesCompleted():
 	var boxes = get_tree().get_nodes_in_group("PlanterBox")
 	for box in boxes:
@@ -53,10 +55,11 @@ func SetNewRound():
 	var orders = GetAllFilePaths("res://Resources/Orders")
 	for order in orders:
 		print(order)
-	CurrentOrder = load(orders[randi() % len(orders)]) as PlantOrder
+	CurrentOrder = load(orders[randi() % len(orders)]) as PlantOrderResource
 	var boxes = get_tree().get_nodes_in_group("PlanterBox")
 	for x in range(0, len(CurrentOrder.flowers)):
 		if CurrentOrder.flowers[x] != -1:
 			boxes[x].SetPlant(GetPlant(CurrentOrder.flowers[x]))
 
 	emit_signal("StartNewRound", CurrentOrder)
+

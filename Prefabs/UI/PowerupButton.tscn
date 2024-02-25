@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5agcinq6oeut"]
+
+[ext_resource type="Script" path="res://Scripts/UI/PowerupButton.gd" id="1_sxm68"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uycui"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ug1vf"]
+bg_color = Color(0.0392157, 0.0392157, 0.0392157, 1)
+
+[node name="Button" type="Button"]
+custom_minimum_size = Vector2(400, 400)
+theme_override_styles/normal = SubResource("StyleBoxFlat_uycui")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ug1vf")
+script = ExtResource("1_sxm68")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 401.0
+offset_bottom = 400.0
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 17
+text = "Increase XP Gained when Tending by 10%
+"
+horizontal_alignment = 1
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
