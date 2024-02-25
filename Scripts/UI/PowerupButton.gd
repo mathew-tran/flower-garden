@@ -3,6 +3,7 @@ extends Button
 @export var PowerupContent : LevelPowerUpResource
 
 func _ready():
+	return
 	if is_instance_valid(PowerupContent):
 		$VBoxContainer/Label.text = PowerupContent.GetDescription()
 
