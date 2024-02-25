@@ -58,14 +58,6 @@ func OnCompleted():
 	emit_signal("FlowerBoxComplete")
 	PlayerProgression.AddXP(10 + randi() % 5)
 
-func _on_area_2d_mouse_entered():
-	InputManager.SetFocusedObject(self)
-	self_modulate = Color.SILVER
-
-
-func _on_area_2d_mouse_exited():
-	InputManager.SetFocusedObject(null)
-	self_modulate = Color.WHITE
 
 func Click():
 	print(name + " has been clicked")
@@ -90,3 +82,19 @@ func UpdateUI():
 			$TextureProgressBar.value = GetPlant().GetCurrentStage().GetTimeLeft()
 			$TextureProgressBar.max_value = GetPlant().GetCurrentStage().GetMaxTime()
 
+func _on_button_button_up():
+	Click()
+
+
+func _on_button_focus_entered():
+	InputManager.SetFocusedObject(self)
+	self_modulate = Color.SILVER
+	$Timer.start()
+
+func _on_button_focus_exited():
+	InputManager.SetFocusedObject(null)
+	self_modulate = Color.WHITE
+	$Button.release_focus()
+
+func _on_timer_timeout():
+	_on_button_focus_exited()

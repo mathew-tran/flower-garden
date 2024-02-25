@@ -22,4 +22,5 @@ func SetFocusedObject(obj):
 func _input(event):
 	if event.is_action_pressed("mouse_left_click"):
 		if is_instance_valid(FocusedObject):
-			FocusedObject.Click()
+			pass
+			#FocusedObject.Click()

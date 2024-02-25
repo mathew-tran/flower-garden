@@ -10,6 +10,7 @@ bg_color = Color(0, 0, 0, 0.796078)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hsgtv"]
 
 [node name="LevelUp" type="Control"]
+process_mode = 3
 visible = false
 layout_mode = 3
 anchors_preset = 15
@@ -69,3 +70,5 @@ PowerupContent = ExtResource("3_5f2kr")
 [node name="Button3" parent="Panel/VBoxContainer/HBoxContainer" instance=ExtResource("1_tfmkf")]
 layout_mode = 2
 PowerupContent = ExtResource("3_5f2kr")
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
