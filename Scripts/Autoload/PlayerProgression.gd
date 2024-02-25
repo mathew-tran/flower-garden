@@ -14,6 +14,14 @@ var TempProgress = {}
 
 var EXPCacheReleaseTimer
 
+var SkillPoints = 2
+var AllocatedSkillPoints = 2
+
+signal SkillsReset
+signal SkillsCompleteTransaction
+signal SkillsLockin(bCanLockin)
+signal SkillPointAllocated
+
 func _ready():
 	EXPCacheReleaseTimer = Timer.new()
 	EXPCacheReleaseTimer.wait_time = .05
@@ -43,8 +51,32 @@ func OnEXPCacheReleaseTimeOut():
 		EXP -= MaxEXP
 		emit_signal("EXPUpdate")
 		MaxEXP *= 1.1
+		AddSkillPoints(2)
 		emit_signal("LevelUpdate")
 	emit_signal("EXPUpdate")
+
+func AddSkillPoints(amount):
+	SkillPoints = amount
+	AllocatedSkillPoints = amount
+	emit_signal("SkillPointAllocated")
+
+func UseAllocatedSkillPoint():
+	AllocatedSkillPoints -= 1
+	emit_signal("SkillPointAllocated")
+
+func ResetAllocatedSkillPoints():
+	AllocatedSkillPoints = SkillPoints
+	emit_signal("SkillsReset")
+	emit_signal("SkillPointAllocated")
+
+func CanAffordSkill():
+	return AllocatedSkillPoints > 0
+
+func CompleteSkillTransaction():
+	AllocatedSkillPoints = 0
+	SkillPoints = 0
+	emit_signal("SkillsCompleteTransaction")
+	emit_signal("SkillPointAllocated")
 
 func AddTempPower(property,value):
 	if TempProgress.has(property):

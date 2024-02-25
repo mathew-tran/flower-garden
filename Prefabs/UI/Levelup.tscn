@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://cgotjfvuatutq"]
+[gd_scene load_steps=5 format=3 uid="uid://cgotjfvuatutq"]
 
 [ext_resource type="Script" path="res://Scripts/UI/LevelupUI.gd" id="1_i6kwi"]
 [ext_resource type="PackedScene" uid="uid://b5agcinq6oeut" path="res://Prefabs/UI/PowerupButton.tscn" id="1_tfmkf"]
-[ext_resource type="Resource" uid="uid://du77gpch5rvvf" path="res://Resources/Powerups/POW_TendEXPBonus.tres" id="3_5f2kr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uokhy"]
 bg_color = Color(0, 0, 0, 0.796078)
@@ -59,17 +58,8 @@ alignment = 1
 
 [node name="Button" parent="Panel/VBoxContainer/HBoxContainer" instance=ExtResource("1_tfmkf")]
 layout_mode = 2
-PowerupContent = ExtResource("3_5f2kr")
 
-[node name="Button2" parent="Panel/VBoxContainer/HBoxContainer" instance=ExtResource("1_tfmkf")]
-layout_mode = 2
-PowerupContent = ExtResource("3_5f2kr")
-
-[node name="Button3" parent="Panel/VBoxContainer/HBoxContainer" instance=ExtResource("1_tfmkf")]
-layout_mode = 2
-PowerupContent = ExtResource("3_5f2kr")
-
-[node name="Label2" type="Label" parent="Panel/VBoxContainer"]
+[node name="SkillPointsRemaining" type="Label" parent="Panel/VBoxContainer"]
 custom_minimum_size = Vector2(300, 80)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -80,16 +70,18 @@ vertical_alignment = 1
 [node name="HBoxContainer2" type="HBoxContainer" parent="Panel/VBoxContainer"]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="Panel/VBoxContainer/HBoxContainer2"]
+[node name="AcceptButton" type="Button" parent="Panel/VBoxContainer/HBoxContainer2"]
 custom_minimum_size = Vector2(200, 100)
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_01kt8")
 text = "ACCEPT"
 
-[node name="Button2" type="Button" parent="Panel/VBoxContainer/HBoxContainer2"]
+[node name="RejectButton" type="Button" parent="Panel/VBoxContainer/HBoxContainer2"]
 custom_minimum_size = Vector2(200, 100)
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_01kt8")
 text = "RESET"
 
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[connection signal="button_up" from="Panel/VBoxContainer/HBoxContainer2/AcceptButton" to="." method="_on_accept_button_button_up"]
+[connection signal="button_up" from="Panel/VBoxContainer/HBoxContainer2/RejectButton" to="." method="_on_reject_button_button_up"]
