@@ -15,6 +15,12 @@ func OnUpdateXP():
 
 func OnLevelUpdate():
 	$ProgressBar.max_value = PlayerProgression.GetMaxEXP()
+	var amount = 0
+	var maxValue = PlayerProgression.GetMaxEXP()
+	while maxValue > 0:
+		maxValue -= 20
+		amount += 1
+	$HSlider.tick_count = amount
 	$HBoxContainer/Level.text = str(PlayerProgression.GetLevelString())
 
 

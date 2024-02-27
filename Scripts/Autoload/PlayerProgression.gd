@@ -25,6 +25,7 @@ signal SkillPointAllocated
 
 func GetMaxLevel():
 	return MaxLevel
+
 func _ready():
 	EXPCacheReleaseTimer = Timer.new()
 	EXPCacheReleaseTimer.wait_time = .05

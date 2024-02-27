@@ -1,8 +1,9 @@
-[gd_scene load_steps=32 format=3 uid="uid://clyw66lfvbumd"]
+[gd_scene load_steps=33 format=3 uid="uid://clyw66lfvbumd"]
 
 [ext_resource type="Script" path="res://Scripts/Tutorial/Tutorial.gd" id="1_atoim"]
 [ext_resource type="Texture2D" uid="uid://dd5pf2rpdtg77" path="res://Art/UI/WaterIcon.png" id="1_x22a0"]
 [ext_resource type="Texture2D" uid="uid://bcpb8ec3dnmsw" path="res://Promo/TutorialWater.png" id="2_44jif"]
+[ext_resource type="FontFile" uid="uid://bgsqsl2uc60cx" path="res://Font/dina10px.ttf" id="2_86t48"]
 [ext_resource type="Texture2D" uid="uid://dv1jsijfll8he" path="res://Art/Tile.png" id="2_ch42o"]
 [ext_resource type="Texture2D" uid="uid://b1i403brhb007" path="res://Art/UI/TendIcon.png" id="2_fw3xe"]
 [ext_resource type="Texture2D" uid="uid://cs0rmwktosw50" path="res://Art/UI/Bouquet.png" id="3_i3vgg"]
@@ -124,6 +125,7 @@ offset_left = 16.0
 offset_top = 16.0
 offset_right = 642.0
 offset_bottom = 210.0
+theme_override_fonts/font = ExtResource("2_86t48")
 theme_override_font_sizes/font_size = 32
 text = "Welcome! You are the store owner of Flower Garden!"
 autowrap_mode = 2
@@ -138,6 +140,7 @@ offset_left = 16.0
 offset_top = 16.0
 offset_right = 642.0
 offset_bottom = 210.0
+theme_override_fonts/font = ExtResource("2_86t48")
 theme_override_font_sizes/font_size = 32
 text = "You take orders from customers to grow specific sets of flowers"
 autowrap_mode = 2
@@ -152,6 +155,7 @@ offset_left = 16.0
 offset_top = 16.0
 offset_right = 642.0
 offset_bottom = 210.0
+theme_override_fonts/font = ExtResource("2_86t48")
 theme_override_font_sizes/font_size = 32
 text = "For flowers to grow. The flower will tell you what is needed after it completes a stage."
 autowrap_mode = 2
@@ -171,6 +175,7 @@ offset_left = 16.0
 offset_top = 16.0
 offset_right = 642.0
 offset_bottom = 210.0
+theme_override_fonts/font = ExtResource("2_86t48")
 theme_override_font_sizes/font_size = 32
 text = "For example. This flower needs water!"
 autowrap_mode = 2
@@ -185,6 +190,7 @@ offset_left = 16.0
 offset_top = 16.0
 offset_right = 642.0
 offset_bottom = 210.0
+theme_override_fonts/font = ExtResource("2_86t48")
 theme_override_font_sizes/font_size = 32
 text = "There are 3 actions you can do to the flower."
 autowrap_mode = 2
@@ -199,14 +205,17 @@ offset_left = 16.0
 offset_top = 16.0
 offset_right = 642.0
 offset_bottom = 210.0
+theme_override_fonts/font = ExtResource("2_86t48")
 theme_override_font_sizes/font_size = 32
 text = "Water
+
 Tend
+
 Move"
 autowrap_mode = 2
 
 [node name="WaterIcon" type="Sprite2D" parent="TabContainer/Panel5"]
-position = Vector2(132, 41)
+position = Vector2(132, 30.5)
 texture = ExtResource("1_x22a0")
 
 [node name="TendIcon" type="Sprite2D" parent="TabContainer/Panel5"]
@@ -214,7 +223,7 @@ position = Vector2(131, 90)
 texture = ExtResource("2_fw3xe")
 
 [node name="MoveIcon" type="Sprite2D" parent="TabContainer/Panel5"]
-position = Vector2(129, 137)
+position = Vector2(129, 153.5)
 texture = ExtResource("3_medms")
 
 [node name="Panel6" type="Panel" parent="TabContainer"]
@@ -227,6 +236,7 @@ offset_left = 16.0
 offset_top = 16.0
 offset_right = 642.0
 offset_bottom = 210.0
+theme_override_fonts/font = ExtResource("2_86t48")
 theme_override_font_sizes/font_size = 32
 text = "Well. That should be it.
 Let's get to work shall we?"
@@ -241,7 +251,8 @@ offset_left = -397.5
 offset_right = 397.5
 offset_bottom = 226.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 80
+theme_override_fonts/font = ExtResource("2_86t48")
+theme_override_font_sizes/font_size = 120
 text = "Tutorial"
 horizontal_alignment = 1
 
@@ -265,14 +276,16 @@ metadata/_edit_group_ = true
 custom_minimum_size = Vector2(300, 80)
 layout_mode = 2
 theme = SubResource("Theme_p3yfc")
-theme_override_font_sizes/font_size = 32
+theme_override_fonts/font = ExtResource("2_86t48")
+theme_override_font_sizes/font_size = 50
 text = "Back
 "
 
 [node name="ContinueButton" type="Button" parent="HBoxContainer"]
 custom_minimum_size = Vector2(300, 80)
 layout_mode = 2
-theme_override_font_sizes/font_size = 32
+theme_override_fonts/font = ExtResource("2_86t48")
+theme_override_font_sizes/font_size = 50
 text = "Continue"
 
 [node name="TileMap" type="TileMap" parent="."]

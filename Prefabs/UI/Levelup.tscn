@@ -1,7 +1,8 @@
-[gd_scene load_steps=166 format=3 uid="uid://cgotjfvuatutq"]
+[gd_scene load_steps=167 format=3 uid="uid://cgotjfvuatutq"]
 
 [ext_resource type="Script" path="res://Scripts/UI/LevelupUI.gd" id="1_i6kwi"]
 [ext_resource type="PackedScene" uid="uid://b5agcinq6oeut" path="res://Prefabs/UI/PowerupButton.tscn" id="1_tfmkf"]
+[ext_resource type="FontFile" uid="uid://bgsqsl2uc60cx" path="res://Font/dina10px.ttf" id="2_lu83k"]
 [ext_resource type="Resource" uid="uid://ch5bnwwrh2c7w" path="res://Resources/Variables/VAR_TEND_BONUS.tres" id="3_af5gw"]
 [ext_resource type="Script" path="res://Scripts/ResourceTypes/LevelPowerupPropertyAddBonus.gd" id="4_p3wi3"]
 [ext_resource type="Script" path="res://Scripts/ResourceTypes/LevelPowerup.gd" id="5_dpnd8"]
@@ -818,10 +819,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -654.5
-offset_top = -259.5
-offset_right = 654.5
-offset_bottom = 259.5
+offset_left = -616.0
+offset_top = -375.0
+offset_right = 694.0
+offset_bottom = 375.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 26
@@ -829,7 +830,8 @@ theme_override_constants/separation = 26
 [node name="Label" type="Label" parent="Panel/VBoxContainer"]
 custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
-theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("2_lu83k")
+theme_override_font_sizes/font_size = 50
 text = "Level Up!"
 vertical_alignment = 1
 
@@ -862,6 +864,7 @@ PowerUps = Array[ExtResource("5_dpnd8")]([SubResource("Resource_1qhgs"), SubReso
 custom_minimum_size = Vector2(300, 80)
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("2_lu83k")
 theme_override_font_sizes/font_size = 40
 text = "3 Skill points Left"
 vertical_alignment = 1
@@ -872,12 +875,16 @@ layout_mode = 2
 [node name="AcceptButton" type="Button" parent="Panel/VBoxContainer/HBoxContainer2"]
 custom_minimum_size = Vector2(200, 100)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_lu83k")
+theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_01kt8")
 text = "ACCEPT"
 
 [node name="RejectButton" type="Button" parent="Panel/VBoxContainer/HBoxContainer2"]
 custom_minimum_size = Vector2(200, 100)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_lu83k")
+theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_01kt8")
 text = "RESET"
 
