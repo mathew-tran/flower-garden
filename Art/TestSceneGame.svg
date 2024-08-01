@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="2.8685466"
-     inkscape:cx="284.46462"
-     inkscape:cy="620.00039"
+     inkscape:zoom="0.50709219"
+     inkscape:cx="-354.96504"
+     inkscape:cy="462.44057"
      inkscape:window-width="1920"
      inkscape:window-height="1001"
      inkscape:window-x="-7"
@@ -34,6 +34,54 @@
      inkscape:current-layer="g7" />
   <defs
      id="defs1">
+    <inkscape:path-effect
+       effect="mirror_symmetry"
+       start_point="594.37242,41.009127"
+       end_point="594.37242,102.22201"
+       center_point="594.37242,71.615568"
+       id="path-effect19"
+       is_visible="true"
+       lpeversion="1.2"
+       lpesatellites=""
+       mode="free"
+       discard_orig_path="false"
+       fuse_paths="true"
+       oposite_fuse="false"
+       split_items="false"
+       split_open="false"
+       link_styles="false" />
+    <inkscape:path-effect
+       effect="mirror_symmetry"
+       start_point="593.99531,47.054586"
+       end_point="593.99531,108.26837"
+       center_point="593.99531,77.661478"
+       id="path-effect18"
+       is_visible="true"
+       lpeversion="1.2"
+       lpesatellites=""
+       mode="free"
+       discard_orig_path="false"
+       fuse_paths="true"
+       oposite_fuse="false"
+       split_items="false"
+       split_open="false"
+       link_styles="false" />
+    <inkscape:path-effect
+       effect="mirror_symmetry"
+       start_point="593.61745,47.054604"
+       end_point="593.61745,108.26835"
+       center_point="593.61745,77.661477"
+       id="path-effect17"
+       is_visible="true"
+       lpeversion="1.2"
+       lpesatellites=""
+       mode="free"
+       discard_orig_path="false"
+       fuse_paths="false"
+       oposite_fuse="false"
+       split_items="false"
+       split_open="false"
+       link_styles="false" />
     <inkscape:path-effect
        effect="tiling"
        id="path-effect14"
@@ -192,6 +240,57 @@
          x="38.019108"
          y="180.29506"
          ry="4.1527271" />
+      <rect
+         style="fill:#bfbdc9;fill-opacity:1;stroke:#bfbdc9;stroke-width:1.79573;stroke-opacity:1"
+         id="rect1"
+         width="263.6358"
+         height="18.35593"
+         x="305.35251"
+         y="255.01723"
+         inkscape:export-filename="Shelf.svg"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+      <rect
+         style="fill:#bfbdc9;fill-opacity:1;stroke:#bfbdc9;stroke-width:1.79573;stroke-opacity:1"
+         id="rect2"
+         width="263.6358"
+         height="18.35593"
+         x="305.35251"
+         y="362.42737" />
+      <rect
+         style="fill:#bfbdc9;fill-opacity:1;stroke:#bfbdc9;stroke-width:1.4484;stroke-opacity:1"
+         id="rect14"
+         width="5.3437881"
+         height="110.08204"
+         x="311.05698"
+         y="263.39365" />
+      <rect
+         style="fill:#bfbdc9;fill-opacity:1;stroke:#bfbdc9;stroke-width:1.4484;stroke-opacity:1"
+         id="rect15"
+         width="5.3437881"
+         height="110.08204"
+         x="557.40564"
+         y="263.39365" />
+      <path
+         id="rect17"
+         d="m 558.47656,42.898437 14.73633,24.939454 -14.73633,36.273439 h 35.51953 0.37696 0.375 35.51953 L 615.53125,67.837891 630.26758,42.898437 h -35.51953 -0.375 -0.37696 z"
+         style="fill:#ffec8c;fill-opacity:1;stroke:#ffcc5d;stroke-width:2.8968;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:path-effect="#path-effect19"
+         inkscape:original-d="m 558.47656,42.898437 14.73665,24.938604 -14.73665,36.274289 h 35.51953 35.51758 V 42.898437 h -35.51758 z"
+         sodipodi:nodetypes="cccccccc"
+         transform="translate(-29.095447,21.160316)"
+         inkscape:export-filename="Light.svg"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+      <circle
+         style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:2.8968;stroke-dasharray:none;stroke-opacity:1"
+         id="path19"
+         cx="914.80084"
+         cy="158.90199"
+         r="85.774879"
+         inkscape:export-filename="LightRadius.svg"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
     </g>
     <g
        id="g8"

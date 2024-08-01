@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="359.36029"
-   height="337.04944"
-   viewBox="0 0 95.080742 89.177664"
+   width="164.28491"
+   height="137.92899"
+   viewBox="0 0 43.467049 36.493711"
    version="1.1"
    id="svg1"
    inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
@@ -67,7 +67,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-8.6826956,-189.13725)">
+     transform="translate(-84.927004,-82.504333)">
     <g
        id="g7"
        transform="matrix(0.69041676,0,0,0.69041676,3.6559463,13.688996)"
@@ -235,39 +235,7 @@
          inkscape:path-effect="#path-effect26"
          inkscape:original-d="m 43.826901,177.41728 c -3.526721,-4.53436 -7.053439,-9.06871 -10.58016,-13.60306 0.251911,-9.32081 0.503815,-18.64124 0.755726,-27.96186 8.061234,-2.51914 16.12203,-5.03814 24.183223,-7.55726 2.772906,6.61798 5.54573,13.23576 8.318596,19.85365 5.036302,-3.84689 10.072578,-7.69376 15.108904,-11.54066 4.534378,3.77865 9.068711,7.55726 13.603066,11.33588 1.007653,5.79402 2.015268,11.5878 3.022902,17.3817 -4.03062,4.53444 -8.061076,9.06871 -12.091613,13.60306 -6.297842,2.26722 -12.595428,4.53435 -18.893144,6.80153 -7.053581,-1.00765 -14.106882,-2.01526 -21.160324,-3.0229 -0.755738,-1.76339 -1.51145,-3.52672 -2.267176,-5.29008 z"
          transform="translate(83.885562,-32.118346)"
-         sodipodi:nodetypes="cccccccccccc"
-         inkscape:export-filename="Flower\Cactus.svg"
-         inkscape:export-xdpi="96"
-         inkscape:export-ydpi="96" />
+         sodipodi:nodetypes="cccccccccccc" />
     </g>
-    <rect
-       style="fill:#f0eabb;fill-opacity:1;stroke:#000000;stroke-width:1.11225;stroke-opacity:0"
-       id="rect5"
-       width="92.784332"
-       height="78.841797"
-       x="9.830904"
-       y="198.91699"
-       ry="4.0526152"
-       rx="0"
-       inkscape:export-filename="Counter.svg"
-       inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96" />
-    <rect
-       style="fill:#784b48;fill-opacity:1;stroke:#784b48;stroke-width:1;stroke-opacity:0"
-       id="rect6"
-       width="94.08075"
-       height="8.8546591"
-       x="9.1826954"
-       y="189.63727"
-       ry="4.0583849"
-       rx="0" />
-    <rect
-       style="fill:#dfc986;fill-opacity:1;stroke:#dfc986;stroke-width:1"
-       id="rect7"
-       width="76.740372"
-       height="68.254662"
-       x="16.60248"
-       y="204.02609"
-       ry="4.0583849" />
   </g>
 </svg>

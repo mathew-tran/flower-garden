@@ -247,7 +247,7 @@ theme_override_constants/separation = 203
 metadata/_edit_group_ = true
 
 [node name="BackButton" type="Button" parent="HBoxContainer"]
-custom_minimum_size = Vector2(300, 80)
+custom_minimum_size = Vector2(600, 80)
 layout_mode = 2
 theme = ExtResource("7_6km2o")
 theme_override_fonts/font = ExtResource("2_86t48")
@@ -257,7 +257,7 @@ text = "Back
 script = ExtResource("8_65kv3")
 
 [node name="ContinueButton" type="Button" parent="HBoxContainer"]
-custom_minimum_size = Vector2(300, 80)
+custom_minimum_size = Vector2(600, 80)
 layout_mode = 2
 theme = ExtResource("7_6km2o")
 theme_override_fonts/font = ExtResource("2_86t48")
