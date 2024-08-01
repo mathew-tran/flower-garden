@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="32.37648"
+   height="44.565826"
+   viewBox="0 0 8.5662769 11.791375"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   sodipodi:docname="TestSceneGame.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="2.0283687"
+     inkscape:cx="299.99476"
+     inkscape:cy="387.257"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-7"
+     inkscape:window-y="-7"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1"
+       is_visible="true"
+       lpeversion="1.3"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-49.850537,-79.254158)">
+    <path
+       style="fill:#d7d6ce;fill-opacity:0.863768;stroke:#d7d6ce;stroke-width:1"
+       d="m 31.385554,45.472201 c 1.132138,8.872001 5.610079,25.583904 8.479263,31.58787 2.869184,6.003967 4.129559,1.300182 6.50684,-7.571949 2.37728,-8.872131 5.871301,-21.911994 4.108891,-28.432054 -1.762409,-6.520061 -8.781035,-6.520061 -13.397274,-6.004002 -4.616238,0.516058 -6.829858,1.548134 -5.69772,10.420135 z"
+       id="path1"
+       inkscape:path-effect="#path-effect1"
+       inkscape:original-d="m 28.03975,37.632298 c 4.477943,16.711904 8.955884,33.423807 13.433825,50.135713 1.260424,-4.703974 2.520801,-9.407758 3.781202,-14.111637 3.494159,-13.040383 6.98818,-26.080246 10.482271,-39.120367 -7.018909,0 -14.037535,0 -21.056304,0 -2.213708,1.032118 -4.427328,2.064194 -6.640994,3.096291 z"
+       transform="matrix(0.41030958,0,0,0.25692406,37.299941,70.429241)"
+       inkscape:export-filename="FlowerHolder.svg"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+  </g>
+</svg>
