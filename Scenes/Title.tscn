@@ -1,13 +1,16 @@
-[gd_scene load_steps=13 format=3 uid="uid://c5dcm8mq3xitx"]
+[gd_scene load_steps=16 format=3 uid="uid://c5dcm8mq3xitx"]
 
 [ext_resource type="FontFile" uid="uid://bgsqsl2uc60cx" path="res://Font/dina10px.ttf" id="1_2hcln"]
+[ext_resource type="Texture2D" uid="uid://1phe7w6c7x3p" path="res://Art/Wall.svg" id="1_425ve"]
 [ext_resource type="Script" path="res://Scripts/Title/StartButton.gd" id="1_cewwg"]
 [ext_resource type="Theme" uid="uid://bbd85hnt660ub" path="res://Themes/Button.tres" id="2_afi0u"]
 [ext_resource type="Texture2D" uid="uid://dv1jsijfll8he" path="res://Art/Tile.png" id="2_meh7u"]
 [ext_resource type="Texture2D" uid="uid://b22o12ee4eky5" path="res://Art/Rose.png" id="4_5qv5h"]
 [ext_resource type="Texture2D" uid="uid://sd81sla07v6x" path="res://Art/FlowerHolderBig.svg" id="5_bwthn"]
+[ext_resource type="Texture2D" uid="uid://crwrlpdt4wmra" path="res://Art/Ground.svg" id="5_iitp6"]
 [ext_resource type="Texture2D" uid="uid://bpa6bsk6iswba" path="res://Art/Title.svg" id="6_731jk"]
 [ext_resource type="Texture2D" uid="uid://dvc0vwps6ljid" path="res://Art/Planter.svg" id="8_y26ky"]
+[ext_resource type="Texture2D" uid="uid://euxcx7t7ec8g" path="res://Art/Counter.svg" id="9_e0c3f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_os6l3"]
 texture = ExtResource("2_meh7u")
@@ -41,6 +44,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Ground" type="Sprite2D" parent="."]
+position = Vector2(973, 1134)
+texture = ExtResource("5_iitp6")
+
+[node name="Wall" type="Sprite2D" parent="."]
+position = Vector2(974, 422)
+texture = ExtResource("1_425ve")
 
 [node name="Label2" type="Label" parent="."]
 layout_mode = 1
@@ -97,21 +108,37 @@ scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_8440k")
 
 [node name="Title" type="Sprite2D" parent="."]
-position = Vector2(794, 36)
+position = Vector2(844, 204)
 texture = ExtResource("6_731jk")
 
 [node name="PlanterBox" type="Sprite2D" parent="."]
 
 [node name="Planter" type="Sprite2D" parent="."]
-position = Vector2(794, 1035)
+position = Vector2(499, 864)
 texture = ExtResource("8_y26ky")
 
 [node name="Planter2" type="Sprite2D" parent="."]
-position = Vector2(1089, 1035)
+position = Vector2(719, 864)
 texture = ExtResource("8_y26ky")
 
 [node name="Planter3" type="Sprite2D" parent="."]
-position = Vector2(1385, 1035)
+position = Vector2(931, 864)
 texture = ExtResource("8_y26ky")
+
+[node name="Planter4" type="Sprite2D" parent="."]
+position = Vector2(1180, 864)
+texture = ExtResource("8_y26ky")
+
+[node name="Counter" type="Sprite2D" parent="."]
+position = Vector2(538, 1125)
+texture = ExtResource("9_e0c3f")
+
+[node name="Counter2" type="Sprite2D" parent="."]
+position = Vector2(894, 1126)
+texture = ExtResource("9_e0c3f")
+
+[node name="Counter3" type="Sprite2D" parent="."]
+position = Vector2(1249, 1126)
+texture = ExtResource("9_e0c3f")
 
 [connection signal="button_up" from="StartButton" to="StartButton" method="_on_button_up"]

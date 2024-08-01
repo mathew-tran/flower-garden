@@ -24,8 +24,8 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="0.50709218"
-     inkscape:cx="659.64338"
-     inkscape:cy="488.07694"
+     inkscape:cx="994.88815"
+     inkscape:cy="277.06994"
      inkscape:window-width="1920"
      inkscape:window-height="1001"
      inkscape:window-x="-7"
@@ -40,14 +40,14 @@
      id="layer1"
      transform="translate(-12.022375,-134.63733)">
     <rect
-       style="fill:#7aa185;fill-opacity:1;stroke:#7aa185;stroke-width:1;stroke-dasharray:none"
+       style="fill:#bdca31;fill-opacity:1;stroke:#bdca31;stroke-width:1;stroke-dasharray:none"
        id="rect18"
        width="114.78846"
        height="28.697115"
        x="12.522376"
        y="135.13733"
        ry="14.348557"
-       inkscape:export-filename="UI\Button.svg"
+       inkscape:export-filename="UI\ButtonHover.svg"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96" />
   </g>

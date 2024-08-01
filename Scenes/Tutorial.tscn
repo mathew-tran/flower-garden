@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://clyw66lfvbumd"]
+[gd_scene load_steps=24 format=3 uid="uid://clyw66lfvbumd"]
 
 [ext_resource type="Script" path="res://Scripts/Tutorial/Tutorial.gd" id="1_atoim"]
 [ext_resource type="Texture2D" uid="uid://dd5pf2rpdtg77" path="res://Art/UI/WaterIcon.png" id="1_x22a0"]
@@ -6,10 +6,13 @@
 [ext_resource type="FontFile" uid="uid://bgsqsl2uc60cx" path="res://Font/dina10px.ttf" id="2_86t48"]
 [ext_resource type="Texture2D" uid="uid://dv1jsijfll8he" path="res://Art/Tile.png" id="2_ch42o"]
 [ext_resource type="Texture2D" uid="uid://b1i403brhb007" path="res://Art/UI/TendIcon.png" id="2_fw3xe"]
+[ext_resource type="Texture2D" uid="uid://crwrlpdt4wmra" path="res://Art/Ground.svg" id="2_wesm5"]
+[ext_resource type="Texture2D" uid="uid://1phe7w6c7x3p" path="res://Art/Wall.svg" id="3_fjnvi"]
 [ext_resource type="Texture2D" uid="uid://cs0rmwktosw50" path="res://Art/UI/Bouquet.png" id="3_i3vgg"]
 [ext_resource type="Texture2D" uid="uid://bvjdtiu7n0ogj" path="res://Art/UI/MoveIcon.png" id="3_medms"]
 [ext_resource type="Texture2D" uid="uid://b22o12ee4eky5" path="res://Art/Rose.png" id="4_hpcpg"]
 [ext_resource type="Theme" uid="uid://bbd85hnt660ub" path="res://Themes/Button.tres" id="7_6km2o"]
+[ext_resource type="Script" path="res://Scripts/UI/CustomButton.gd" id="8_65kv3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2ha53"]
 
@@ -68,6 +71,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_atoim")
+
+[node name="Ground" type="Sprite2D" parent="."]
+position = Vector2(973, 1134)
+texture = ExtResource("2_wesm5")
+
+[node name="Wall" type="Sprite2D" parent="."]
+position = Vector2(974, 422)
+texture = ExtResource("3_fjnvi")
 
 [node name="TabContainer" type="TabContainer" parent="."]
 layout_mode = 0
@@ -243,6 +254,7 @@ theme_override_fonts/font = ExtResource("2_86t48")
 theme_override_font_sizes/font_size = 50
 text = "Back
 "
+script = ExtResource("8_65kv3")
 
 [node name="ContinueButton" type="Button" parent="HBoxContainer"]
 custom_minimum_size = Vector2(300, 80)
@@ -251,6 +263,7 @@ theme = ExtResource("7_6km2o")
 theme_override_fonts/font = ExtResource("2_86t48")
 theme_override_font_sizes/font_size = 50
 text = "Continue"
+script = ExtResource("8_65kv3")
 
 [node name="TileMap" type="TileMap" parent="."]
 modulate = Color(0.27451, 0.27451, 0.27451, 1)

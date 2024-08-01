@@ -9,15 +9,20 @@ func _ready():
 	UpdateButtons()
 
 func UpdateButtons():
+	
 	BackButton.disabled = $TabContainer.current_tab == 0
 	if $TabContainer.current_tab == len($TabContainer.get_children()) -1:
 		ContinueButton.text = "Start"
 	else:
 		ContinueButton.text = "Continue"
+	await get_tree().create_timer(.1).timeout
+	ContinueButton.release_focus()
+	BackButton.release_focus()
 
 func _on_back_button_button_up():
 	$TabContainer.current_tab -= 1
 	UpdateButtons()
+	
 
 
 
