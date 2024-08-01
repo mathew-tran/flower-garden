@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://c5dcm8mq3xitx"]
+[gd_scene load_steps=11 format=3 uid="uid://c5dcm8mq3xitx"]
 
 [ext_resource type="FontFile" uid="uid://bgsqsl2uc60cx" path="res://Font/dina10px.ttf" id="1_2hcln"]
 [ext_resource type="Script" path="res://Scripts/Title/StartButton.gd" id="1_cewwg"]
 [ext_resource type="Texture2D" uid="uid://dv1jsijfll8he" path="res://Art/Tile.png" id="2_meh7u"]
 [ext_resource type="Texture2D" uid="uid://cs0rmwktosw50" path="res://Art/UI/Bouquet.png" id="3_lxln2"]
 [ext_resource type="Texture2D" uid="uid://b22o12ee4eky5" path="res://Art/Rose.png" id="4_5qv5h"]
+[ext_resource type="Texture2D" uid="uid://bpa6bsk6iswba" path="res://Art/Title.svg" id="6_731jk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_os6l3"]
 texture = ExtResource("2_meh7u")
@@ -38,20 +39,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="Label" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -397.5
-offset_right = 397.5
-offset_bottom = 226.0
-grow_horizontal = 2
-theme_override_fonts/font = ExtResource("1_2hcln")
-theme_override_font_sizes/font_size = 100
-text = "Flower Garden"
-horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="."]
 layout_mode = 1
@@ -106,5 +93,9 @@ position = Vector2(9.5, -26)
 rotation = 0.267901
 scale = Vector2(-2, 2)
 sprite_frames = SubResource("SpriteFrames_8440k")
+
+[node name="Title" type="Sprite2D" parent="."]
+position = Vector2(794, 36)
+texture = ExtResource("6_731jk")
 
 [connection signal="button_up" from="StartButton" to="StartButton" method="_on_button_up"]
