@@ -2,15 +2,28 @@ extends Sprite2D
 
 var UseTween = null
 
+var CurrentType : InputManager.INPUT_MODE
 func _ready():
 	InputManager.connect("ModeChange", Callable(self, "OnModeChange"))
 	OnModeChange(InputManager.CurrentInputMode)
 
 func OnModeChange(type):
 	texture = Definitions.GetIcon(type)
+	CurrentType = type
+	var tween = get_tree().create_tween()
+	tween.tween_property(self, "scale", Vector2.ZERO, .05)
+	await tween.finished
+	tween = get_tree().create_tween()
+	tween.tween_property(self, "scale", Vector2(2,2), .1)
+	await tween.finished
 		
 func _process(delta):
-	global_position = get_global_mouse_position() - Vector2(1,1) * 86
+	
+	if CurrentType != InputManager.INPUT_MODE.MOVE:
+		global_position = get_global_mouse_position() - Vector2(1,1) * 86
+	else:
+		global_position = get_global_mouse_position() - Vector2(1,1) * 52
+	
 		
 	if Input.is_action_just_pressed("mouse_left_click"):
 		if is_instance_valid(UseTween):

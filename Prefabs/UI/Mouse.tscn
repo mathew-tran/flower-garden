@@ -10,5 +10,4 @@ z_as_relative = false
 scale = Vector2(2, 2)
 texture = SubResource("CompressedTexture2D_3ggd7")
 centered = false
-offset = Vector2(2, 0)
 script = ExtResource("1_7nvq6")

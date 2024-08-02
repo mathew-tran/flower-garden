@@ -76,6 +76,7 @@ theme_override_fonts/font = ExtResource("2_1db58")
 theme_override_font_sizes/font_size = 30
 text = "I need some flowers to bring for a wedding."
 autowrap_mode = 2
+visible_characters_behavior = 1
 
 [node name="Panel2" type="Panel" parent="."]
 layout_mode = 0

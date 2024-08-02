@@ -21,7 +21,13 @@ func OnCompleteRound(_x):
 func AddFlower(flowerObj):
 	flowerObj.reparent(self)
 	flowerObj.show_behind_parent = true
-	flowerObj.position = Positions.pop_back()
+	var tween = get_tree().create_tween()
+	tween.tween_property(flowerObj, "position", Positions.pop_back(), .5)
+	
+	var originalScale = flowerObj.scale
+	flowerObj.scale *= 3
+	tween.tween_property(flowerObj, "scale", originalScale, .5)
+	await tween.finished
 	$AnimationPlayer.play("animate")
 
 func ClearFlowers():

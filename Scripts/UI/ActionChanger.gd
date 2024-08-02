@@ -1,4 +1,4 @@
-extends VBoxContainer
+extends HBoxContainer
 
 func _on_water_icon_button_up():
 	InputManager.ChangeInputMode(InputManager.INPUT_MODE.WATER)
@@ -12,6 +12,9 @@ func _on_move_icon_button_up():
 	InputManager.ChangeInputMode(InputManager.INPUT_MODE.MOVE)
 	$MoveIcon.grab_focus()
 
+func Animate():
+	pass
+	
 func _input(event):
 	if event.is_action_pressed("f1"):
 		_on_water_icon_button_up()
