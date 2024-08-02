@@ -6,6 +6,7 @@ func _ready():
 	Game.connect("CompleteRound", Callable(self, "OnCompleteRound"))
 	Game.connect("StartNewRound", Callable(self, "OnStartNewRound"))
 	visible = false
+	Game.StartNewRound.emit()
 
 func OnCompleteRound(order):
 	SetMessage(order.thanks)

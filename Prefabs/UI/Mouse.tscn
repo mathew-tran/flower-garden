@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhhpqkdyq4klf"]
+
+[ext_resource type="Script" path="res://Scripts/Mouse.gd" id="1_7nvq6"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3ggd7"]
+
+[node name="Mouse" type="Sprite2D"]
+z_index = 1000
+z_as_relative = false
+scale = Vector2(2, 2)
+texture = SubResource("CompressedTexture2D_3ggd7")
+centered = false
+offset = Vector2(2, 0)
+script = ExtResource("1_7nvq6")
