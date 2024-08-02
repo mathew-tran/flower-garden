@@ -20,5 +20,7 @@ func SetMessage(message):
 	$Label.visible_ratio = 0
 	$AnimationPlayer.play("animate")
 	visible = true
+	var timer = get_tree().create_timer(.5)
+	await timer.timeout
 	var tween = get_tree().create_tween()
 	tween.tween_property($Label, "visible_ratio", 1, 1)
