@@ -22,3 +22,5 @@ func _input(event):
 		_on_tend_icon_button_up()
 	elif event.is_action_pressed("f3"):
 		_on_move_icon_button_up()
+	if Input.is_action_just_pressed("mouse_right_click"):
+		InputManager.IncrementInputMode()

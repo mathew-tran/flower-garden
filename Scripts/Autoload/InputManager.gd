@@ -16,6 +16,15 @@ func ChangeInputMode(newMode):
 	CurrentInputMode = newMode
 	emit_signal("ModeChange", CurrentInputMode)
 
+func IncrementInputMode():
+	if CurrentInputMode == INPUT_MODE.WATER:
+		CurrentInputMode = INPUT_MODE.TEND
+	elif CurrentInputMode == INPUT_MODE.TEND:
+		CurrentInputMode = INPUT_MODE.MOVE
+	elif CurrentInputMode == INPUT_MODE.MOVE:
+		CurrentInputMode = INPUT_MODE.WATER
+	ChangeInputMode(CurrentInputMode)
+		
 func SetFocusedObject(obj):
 	FocusedObject = obj
 
