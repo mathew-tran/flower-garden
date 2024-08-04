@@ -11,3 +11,5 @@ scale = Vector2(2, 2)
 texture = SubResource("CompressedTexture2D_3ggd7")
 centered = false
 script = ExtResource("1_7nvq6")
+
+[node name="SFX" type="AudioStreamPlayer2D" parent="."]

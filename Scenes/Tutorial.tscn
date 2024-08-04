@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://clyw66lfvbumd"]
+[gd_scene load_steps=25 format=3 uid="uid://clyw66lfvbumd"]
 
 [ext_resource type="Script" path="res://Scripts/Tutorial/Tutorial.gd" id="1_atoim"]
 [ext_resource type="Texture2D" uid="uid://bcpb8ec3dnmsw" path="res://Promo/TutorialWater.png" id="2_44jif"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://djpn3533io8vs" path="res://Art/UI/MoveIcon.svg" id="8_37o10"]
 [ext_resource type="Script" path="res://Scripts/UI/CustomButton.gd" id="8_65kv3"]
 [ext_resource type="Texture2D" uid="uid://cprfddyeqab3j" path="res://Art/FlowerHolder.svg" id="12_far46"]
+[ext_resource type="AudioStream" uid="uid://do55s5n4cicqs" path="res://Audio/SFX/Click_Soft_00.mp3" id="14_fcpou"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2ha53"]
 
@@ -290,6 +291,9 @@ position = Vector2(9.5, -50)
 rotation = 0.267901
 scale = Vector2(-2, 2)
 sprite_frames = SubResource("SpriteFrames_8440k")
+
+[node name="SFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_fcpou")
 
 [connection signal="button_up" from="HBoxContainer/BackButton" to="." method="_on_back_button_button_up"]
 [connection signal="button_up" from="HBoxContainer/ContinueButton" to="." method="_on_continue_button_button_up"]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://b0d6wacengpqb"]
+[gd_scene load_steps=7 format=3 uid="uid://b0d6wacengpqb"]
 
 [ext_resource type="Texture2D" uid="uid://cprfddyeqab3j" path="res://Art/FlowerHolder.svg" id="1_kkb1n"]
 [ext_resource type="Script" path="res://Scripts/Bouquet.gd" id="2_gts3g"]
+[ext_resource type="AudioStream" uid="uid://7ntea4rfxda6" path="res://Audio/SFX/Slide_Sharp_00.mp3" id="3_1tq1b"]
 
 [sub_resource type="Animation" id="Animation_21hav"]
 length = 0.001
@@ -51,3 +52,6 @@ libraries = {
 "": SubResource("AnimationLibrary_2g43s")
 }
 speed_scale = 2.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_1tq1b")

@@ -22,7 +22,7 @@ func UpdateButtons():
 func _on_back_button_button_up():
 	$TabContainer.current_tab -= 1
 	UpdateButtons()
-	
+	$SFX.play()
 
 
 
@@ -32,5 +32,5 @@ func _on_continue_button_button_up():
 	else:
 		$TabContainer.current_tab += 1
 		UpdateButtons()
-
+	$SFX.play()
 

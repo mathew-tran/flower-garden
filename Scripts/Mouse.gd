@@ -28,6 +28,15 @@ func _process(delta):
 	if Input.is_action_just_pressed("mouse_left_click"):
 		if is_instance_valid(UseTween):
 			UseTween.stop()
+		if CurrentType == InputManager.INPUT_MODE.MOVE:
+			$SFX.stream = load("res://Audio/SFX/Mouth_33.mp3")
+		if CurrentType == InputManager.INPUT_MODE.WATER:
+			$SFX.stream = load("res://Audio/SFX/Mouth_05.mp3")
+		if CurrentType == InputManager.INPUT_MODE.TEND:
+			$SFX.stream = load("res://Audio/SFX/Mouth_37.mp3")
+		
+		$SFX.pitch_scale = randf_range(.8, 1.1)
+		$SFX.play()
 		UseTween = get_tree().create_tween()
 		UseTween.tween_property(self, "rotation_degrees", 20, .1)
 		await UseTween.finished
@@ -36,3 +45,4 @@ func _process(delta):
 		UseTween.set_trans(Tween.TRANS_QUAD)
 		await UseTween.finished
 		UseTween = null
+		

@@ -31,9 +31,12 @@ func AddFlower(flowerObj):
 	$AnimationPlayer.play("animate")
 
 func ClearFlowers():
+	$AudioStreamPlayer2D.play()
 	await get_tree().create_timer(2).timeout
 	for child in get_children():
 		if child is AnimationPlayer:
+			continue
+		if child is AudioStreamPlayer2D:
 			continue
 		else:
 			Positions.push_back(child.position)

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bkunyck0rvjko"]
+
+[ext_resource type="Script" path="res://Scripts/UI/LittleRobotSoundFactorySite.gd" id="1_t5asb"]
+
+[node name="LittleRobotSoundFactorySite" type="Button"]
+text = "Little Robot Sound Factory Site"
+script = ExtResource("1_t5asb")
+
+[connection signal="button_up" from="." to="." method="_on_button_up"]
