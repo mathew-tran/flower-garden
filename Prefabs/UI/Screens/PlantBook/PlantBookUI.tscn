@@ -1,0 +1,155 @@
+[gd_scene load_steps=9 format=3 uid="uid://oywjhu62v5hd"]
+
+[ext_resource type="Texture2D" uid="uid://b8ekb1hjtlobk" path="res://Art/GameFlowers/Dandelion_Full.svg" id="1_yfhil"]
+[ext_resource type="FontFile" uid="uid://bgsqsl2uc60cx" path="res://Font/dina10px.ttf" id="2_cqyc1"]
+[ext_resource type="PackedScene" uid="uid://ds5ngunvt3pwy" path="res://Prefabs/UI/Screens/PlantBook/PlantBookButton.tscn" id="3_m7d50"]
+[ext_resource type="Resource" uid="uid://bk4packen4wut" path="res://Resources/Plants/Plant_Dandelion.tres" id="4_2agod"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lg6wc"]
+bg_color = Color(0.87451, 0.788235, 0.52549, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x4usf"]
+bg_color = Color(0.815686, 0.690196, 0.431373, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0nunc"]
+bg_color = Color(0.87451, 0.788235, 0.52549, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iqp6a"]
+bg_color = Color(0.87451, 0.788235, 0.52549, 1)
+
+[node name="PlantBookUI" type="Panel"]
+custom_minimum_size = Vector2(1920, 1080)
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_lg6wc")
+
+[node name="LeftSide" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 977.0
+offset_bottom = 1080.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_x4usf")
+
+[node name="FlowerImage" type="TextureRect" parent="LeftSide"]
+layout_mode = 0
+offset_right = 977.0
+offset_bottom = 793.0
+texture = ExtResource("1_yfhil")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Panel" type="Panel" parent="LeftSide"]
+custom_minimum_size = Vector2(800, 100)
+layout_mode = 0
+offset_left = 89.0
+offset_top = 799.0
+offset_right = 889.0
+offset_bottom = 899.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0nunc")
+metadata/_edit_group_ = true
+
+[node name="FlowerTitle" type="Label" parent="LeftSide/Panel"]
+custom_minimum_size = Vector2(800, 0)
+layout_mode = 0
+offset_top = 13.0
+offset_right = 800.0
+offset_bottom = 118.0
+theme_override_fonts/font = ExtResource("2_cqyc1")
+theme_override_font_sizes/font_size = 80
+text = "DANDELION"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel2" type="Panel" parent="LeftSide"]
+custom_minimum_size = Vector2(800, 140)
+layout_mode = 0
+offset_left = 89.0
+offset_top = 918.0
+offset_right = 889.0
+offset_bottom = 1058.0
+metadata/_edit_group_ = true
+
+[node name="FlowerDescription" type="Label" parent="LeftSide/Panel2"]
+custom_minimum_size = Vector2(760, 0)
+layout_mode = 0
+offset_left = 16.0
+offset_top = 10.0
+offset_right = 776.0
+offset_bottom = 133.0
+theme_override_fonts/font = ExtResource("2_cqyc1")
+theme_override_font_sizes/font_size = 30
+text = "Dandelions close their flowers at night and reopen them in the morning, almost like they're going to sleep and waking up with the sun!"
+autowrap_mode = 2
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(943, 0)
+layout_mode = 0
+offset_left = 977.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_iqp6a")
+
+[node name="Panel" type="Panel" parent="Panel"]
+custom_minimum_size = Vector2(800, 0)
+layout_mode = 0
+offset_left = 70.0
+offset_top = 78.0
+offset_right = 870.0
+offset_bottom = 978.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/Panel"]
+custom_minimum_size = Vector2(800, 900)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Panel/ScrollContainer"]
+layout_mode = 2
+
+[node name="PlantBookButton" parent="Panel/Panel/ScrollContainer/VBoxContainer" instance=ExtResource("3_m7d50")]
+layout_mode = 2
+Data = ExtResource("4_2agod")
+
+[node name="PlantBookButton2" parent="Panel/Panel/ScrollContainer/VBoxContainer" instance=ExtResource("3_m7d50")]
+layout_mode = 2
+
+[node name="PlantBookButton3" parent="Panel/Panel/ScrollContainer/VBoxContainer" instance=ExtResource("3_m7d50")]
+layout_mode = 2
+
+[node name="PlantBookButton4" parent="Panel/Panel/ScrollContainer/VBoxContainer" instance=ExtResource("3_m7d50")]
+layout_mode = 2
+
+[node name="PlantBookButton5" parent="Panel/Panel/ScrollContainer/VBoxContainer" instance=ExtResource("3_m7d50")]
+layout_mode = 2
+
+[node name="PlantBookButton6" parent="Panel/Panel/ScrollContainer/VBoxContainer" instance=ExtResource("3_m7d50")]
+layout_mode = 2
+
+[node name="PlantBookButton7" parent="Panel/Panel/ScrollContainer/VBoxContainer" instance=ExtResource("3_m7d50")]
+layout_mode = 2
+
+[node name="PlantBookButton8" parent="Panel/Panel/ScrollContainer/VBoxContainer" instance=ExtResource("3_m7d50")]
+layout_mode = 2
+
+[node name="PlantBookButton9" parent="Panel/Panel/ScrollContainer/VBoxContainer" instance=ExtResource("3_m7d50")]
+layout_mode = 2
+
+[node name="PlantBookButton10" parent="Panel/Panel/ScrollContainer/VBoxContainer" instance=ExtResource("3_m7d50")]
+layout_mode = 2
+
+[node name="PlantBookButton11" parent="Panel/Panel/ScrollContainer/VBoxContainer" instance=ExtResource("3_m7d50")]
+layout_mode = 2
+
+[node name="PlantBookButton12" parent="Panel/Panel/ScrollContainer/VBoxContainer" instance=ExtResource("3_m7d50")]
+layout_mode = 2
+
+[node name="PlantBookButton13" parent="Panel/Panel/ScrollContainer/VBoxContainer" instance=ExtResource("3_m7d50")]
+layout_mode = 2
+
+[node name="PlantBookButton14" parent="Panel/Panel/ScrollContainer/VBoxContainer" instance=ExtResource("3_m7d50")]
+layout_mode = 2
+
+[node name="PlantBookButton15" parent="Panel/Panel/ScrollContainer/VBoxContainer" instance=ExtResource("3_m7d50")]
+layout_mode = 2
+
+[node name="PlantBookButton16" parent="Panel/Panel/ScrollContainer/VBoxContainer" instance=ExtResource("3_m7d50")]
+layout_mode = 2

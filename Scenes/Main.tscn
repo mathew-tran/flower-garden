@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://c82r4casfug7j"]
+[gd_scene load_steps=22 format=3 uid="uid://c82r4casfug7j"]
 
 [ext_resource type="Script" path="res://Scripts/Main.gd" id="1_1pe8g"]
 [ext_resource type="PackedScene" uid="uid://baf2w7kcqs61m" path="res://Prefabs/PlanterBox.tscn" id="1_30kj7"]
@@ -7,7 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://crwrlpdt4wmra" path="res://Art/Ground.svg" id="2_ukplx"]
 [ext_resource type="Texture2D" uid="uid://1phe7w6c7x3p" path="res://Art/Wall.svg" id="3_wir30"]
 [ext_resource type="PackedScene" uid="uid://dhhpqkdyq4klf" path="res://Prefabs/UI/Mouse.tscn" id="6_evbl1"]
+[ext_resource type="Texture2D" uid="uid://camvumrcn7fxq" path="res://Art/UI/PlantBook.svg" id="6_m3lqj"]
 [ext_resource type="PackedScene" uid="uid://b0d6wacengpqb" path="res://Prefabs/UI/Bouquet.tscn" id="7_5kcj8"]
+[ext_resource type="PackedScene" uid="uid://oywjhu62v5hd" path="res://Prefabs/UI/Screens/PlantBook/PlantBookUI.tscn" id="7_uos31"]
 [ext_resource type="PackedScene" uid="uid://dn8dtqoegkyrk" path="res://Prefabs/UI/Message.tscn" id="8_3a82k"]
 [ext_resource type="Texture2D" uid="uid://ckhuqrd1wuufx" path="res://Art/Sidewalk.svg" id="8_jcx78"]
 [ext_resource type="Texture2D" uid="uid://3rm8coa11p7n" path="res://Art/People/PersonPlaceholder.svg" id="9_kvmcc"]
@@ -65,6 +67,17 @@ offset_top = 945.0
 offset_right = 1002.0
 offset_bottom = 1010.0
 scale = Vector2(1.5, 1.5)
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+offset_left = 35.0
+offset_top = 932.0
+offset_right = 226.0
+offset_bottom = 1105.0
+scale = Vector2(0.5, 0.5)
+icon = ExtResource("6_m3lqj")
+
+[node name="PlantBookUI" parent="CanvasLayer" instance=ExtResource("7_uos31")]
+visible = false
 
 [node name="Mouse" parent="." instance=ExtResource("6_evbl1")]
 
