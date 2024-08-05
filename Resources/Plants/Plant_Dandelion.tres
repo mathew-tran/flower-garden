@@ -7,3 +7,4 @@
 script = ExtResource("1_1qrc3")
 PlantScene = ExtResource("1_t0yt2")
 FlowerName = "Dandelion"
+FlowerDescription = "Dandelions close their flowers at night and reopen them in the morning, almost like they're going to sleep and waking up with the sun!"
