@@ -18,7 +18,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 InputManager="*res://Scripts/Autoload/InputManager.gd"
-PlayerProgression="*res://Scripts/Autoload/PlayerProgression.gd"
 Game="*res://Scripts/Autoload/Game.gd"
 Definitions="*res://Scripts/Autoload/Definitions.gd"
 

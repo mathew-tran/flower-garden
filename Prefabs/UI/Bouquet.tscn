@@ -44,7 +44,7 @@ _data = {
 self_modulate = Color(1, 1, 1, 0.494118)
 position = Vector2(1846, 979)
 texture = ExtResource("1_kkb1n")
-offset = Vector2(0, 48)
+offset = Vector2(0, 36)
 script = ExtResource("2_gts3g")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

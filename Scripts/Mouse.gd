@@ -17,7 +17,7 @@ func OnModeChange(type):
 	tween.tween_property(self, "scale", Vector2(2,2), .1)
 	await tween.finished
 		
-func _process(delta):
+func _process(_delta):
 	
 	if CurrentType != InputManager.INPUT_MODE.MOVE:
 		global_position = get_global_mouse_position() - Vector2(1,1) * 86

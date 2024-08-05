@@ -1,7 +1,6 @@
 extends Sprite2D
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	
 	while true:
@@ -11,8 +10,3 @@ func _ready():
 		global_position = Vector2(2225, 475)
 		var timer = get_tree().create_timer(randf_range(1, 10))
 		await timer.timeout
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
