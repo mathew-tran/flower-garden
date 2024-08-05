@@ -1,53 +1,53 @@
 [gd_scene load_steps=11 format=3 uid="uid://xbqj0o3f6ca7"]
 
-[ext_resource type="Texture2D" uid="uid://dlbl3ksaar5xc" path="res://Art/Dandelion.png" id="1_ajwiw"]
+[ext_resource type="Texture2D" uid="uid://c1wewticiavxi" path="res://Art/GameFlowers/Dandelion.svg" id="1_7gp78"]
 [ext_resource type="Script" path="res://Scripts/Plant.gd" id="2_j8r8u"]
 [ext_resource type="Script" path="res://Scripts/PlantStage.gd" id="3_6xjwx"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tguqf"]
-atlas = ExtResource("1_ajwiw")
+[sub_resource type="AtlasTexture" id="AtlasTexture_e76a0"]
+atlas = ExtResource("1_7gp78")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_86us0"]
-atlas = ExtResource("1_ajwiw")
+[sub_resource type="AtlasTexture" id="AtlasTexture_qk33o"]
+atlas = ExtResource("1_7gp78")
 region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_68aer"]
-atlas = ExtResource("1_ajwiw")
+[sub_resource type="AtlasTexture" id="AtlasTexture_jxj0f"]
+atlas = ExtResource("1_7gp78")
 region = Rect2(64, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_holf7"]
-atlas = ExtResource("1_ajwiw")
+[sub_resource type="AtlasTexture" id="AtlasTexture_vogwm"]
+atlas = ExtResource("1_7gp78")
 region = Rect2(96, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_g7q1w"]
-atlas = ExtResource("1_ajwiw")
+[sub_resource type="AtlasTexture" id="AtlasTexture_pp8em"]
+atlas = ExtResource("1_7gp78")
 region = Rect2(128, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_v70j3"]
-atlas = ExtResource("1_ajwiw")
+[sub_resource type="AtlasTexture" id="AtlasTexture_7hahw"]
+atlas = ExtResource("1_7gp78")
 region = Rect2(160, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_siid5"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_tguqf")
+"texture": SubResource("AtlasTexture_e76a0")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_86us0")
+"texture": SubResource("AtlasTexture_qk33o")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_68aer")
+"texture": SubResource("AtlasTexture_jxj0f")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_holf7")
+"texture": SubResource("AtlasTexture_vogwm")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_g7q1w")
+"texture": SubResource("AtlasTexture_pp8em")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_v70j3")
+"texture": SubResource("AtlasTexture_7hahw")
 }],
 "loop": true,
 "name": &"grow",

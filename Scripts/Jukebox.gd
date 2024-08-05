@@ -26,7 +26,7 @@ func StartTimer():
 
 
 func _on_timer_timeout():
-	$Pic
+	PickSong()
 	
 
 

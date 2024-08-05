@@ -14,8 +14,8 @@ var StartPosition
 
 signal FlowerBoxComplete
 
-func SetPlant(path):
-	Flower = load(path).instantiate()
+func SetPlant(packedScene):
+	Flower = packedScene.instantiate()
 	add_child(Flower)
 	Flower.connect("UpdateGrowth", Callable(self, "OnUpdateGrowth"))
 	Flower.connect("FinishGrowth", Callable(self, "OnFinishGrowth"))
@@ -29,12 +29,9 @@ func _ready():
 	add_to_group("PlanterBox")
 	connect("FlowerBoxComplete", Callable(self, "CheckBoxesComplete"))
 
-
 func CheckBoxesComplete():
 	if Game.ArePlanterBoxesCompleted():
 		Game.SetNewRound()
-		var bonus = PlayerProgression.GetTempPower(load("res://Resources/Variables/VAR_CUSTOMER_BONUS.tres").Get())
-		PlayerProgression.AddXP(35 + randi() % 5)
 
 func OnUpdateGrowth(type):
 	$ActionHint.SetHint(type)
@@ -57,7 +54,7 @@ func OnCompleted():
 		Flower = null
 	OnFinishGrowth()
 	emit_signal("FlowerBoxComplete")
-	PlayerProgression.AddXP(10 + randi() % 5)
+
 
 
 func Click():

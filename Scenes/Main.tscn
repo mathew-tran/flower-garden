@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://bvn8acnv1xqpx" path="res://Art/Window.svg" id="11_a2p8j"]
 [ext_resource type="Texture2D" uid="uid://ylk2anmnv45x" path="res://Art/Shelf.svg" id="11_tbtbt"]
 [ext_resource type="Texture2D" uid="uid://bnjhbvbwldoko" path="res://Art/UI/WhiteCube.png" id="15_6qnnv"]
-[ext_resource type="PackedScene" uid="uid://dh7oidkfuxvqy" path="res://Prefabs/jukebox.tscn" id="17_tlhud"]
+[ext_resource type="PackedScene" uid="uid://dh7oidkfuxvqy" path="res://Prefabs/Jukebox.tscn" id="17_tlhud"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jonne"]
 texture = ExtResource("2_uatvg")

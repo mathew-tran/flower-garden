@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="PlantOrder" load_steps=2 format=3 uid="uid://bsg8k705qdsxy"]
+[gd_resource type="Resource" script_class="PlantOrderResource" load_steps=3 format=3 uid="uid://bsg8k705qdsxy"]
 
 [ext_resource type="Script" path="res://Scripts/ResourceTypes/PlantOrder.gd" id="1_a8hd4"]
+[ext_resource type="Resource" uid="uid://bk4packen4wut" path="res://Resources/Plants/Plant_Dandelion.tres" id="1_pb2n5"]
 
 [resource]
 script = ExtResource("1_a8hd4")
-flowers = [-1, 1, -1, 1, 1, -1]
+flowers = Array[Resource("res://Scripts/ResourceTypes/PlantData.gd")]([ExtResource("1_pb2n5"), null, ExtResource("1_pb2n5")])
 greeting = "I need some flowers for a birthday! Some roses should do!"
 thanks = "Thanks alot!"
