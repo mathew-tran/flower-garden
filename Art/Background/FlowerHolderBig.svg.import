@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgeuvu8canhv0"
-path="res://.godot/imported/LightRadius.svg-8c8e8b7dcb39611979fb5fed1c88c0f0.ctex"
+uid="uid://sd81sla07v6x"
+path="res://.godot/imported/FlowerHolderBig.svg-6d4cca73c43e7c2d5cf4a1c20c04d810.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/LightRadius.svg"
-dest_files=["res://.godot/imported/LightRadius.svg-8c8e8b7dcb39611979fb5fed1c88c0f0.ctex"]
+source_file="res://Art/Background/FlowerHolderBig.svg"
+dest_files=["res://.godot/imported/FlowerHolderBig.svg-6d4cca73c43e7c2d5cf4a1c20c04d810.ctex"]
 
 [params]
 

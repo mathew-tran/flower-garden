@@ -3,7 +3,6 @@
 [ext_resource type="Script" path="res://Scripts/UI/ActionHint.gd" id="1_slf04"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_67ph3"]
-load_path = "res://.godot/imported/MoveIcon.png-38f795fc8bd34be0f9a6b6a3c9aaa9f7.ctex"
 
 [sub_resource type="Animation" id="Animation_jyg7u"]
 length = 0.001

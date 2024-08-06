@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyv3mqbiksoh6"
-path="res://.godot/imported/planter-box.png-1caa50d9a9ed371359064ff30327d451.ctex"
+uid="uid://nqugfee3sop3"
+path="res://.godot/imported/PurpleHydrangea.png-b92f2084be3168832de904f7b73f2777.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/planter-box.png"
-dest_files=["res://.godot/imported/planter-box.png-1caa50d9a9ed371359064ff30327d451.ctex"]
+source_file="res://Art/Flower/PurpleHydrangea.png"
+dest_files=["res://.godot/imported/PurpleHydrangea.png-b92f2084be3168832de904f7b73f2777.ctex"]
 
 [params]
 

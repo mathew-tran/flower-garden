@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://bqqyuvymt6xch"]
 
-[ext_resource type="Texture2D" uid="uid://d1o745jb36wic" path="res://Art/Lavender.png" id="1_maiua"]
-[ext_resource type="Script" path="res://Scripts/Plant.gd" id="2_l4ew5"]
-[ext_resource type="Script" path="res://Scripts/PlantStage.gd" id="3_ehe2m"]
+[ext_resource type="Texture2D" uid="uid://d1o745jb36wic" path="res://Art/Flower/Lavender.png" id="1_maiua"]
+[ext_resource type="Script" path="res://Scripts/InGame/Plant.gd" id="2_l4ew5"]
+[ext_resource type="Script" path="res://Scripts/InGame/PlantStage.gd" id="3_ehe2m"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v3350"]
 atlas = ExtResource("1_maiua")

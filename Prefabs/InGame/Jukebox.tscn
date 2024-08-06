@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dh7oidkfuxvqy"]
 
 [ext_resource type="AudioStream" uid="uid://lga63g3gjf80" path="res://Audio/Music/57._summer_sound.mp3" id="1_u2pbm"]
-[ext_resource type="Script" path="res://Scripts/Jukebox.gd" id="1_wrdhg"]
+[ext_resource type="Script" path="res://Scripts/InGame/Jukebox.gd" id="1_wrdhg"]
 
 [node name="Jukebox" type="Node"]
 script = ExtResource("1_wrdhg")

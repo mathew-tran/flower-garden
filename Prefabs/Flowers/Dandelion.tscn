@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=3 uid="uid://xbqj0o3f6ca7"]
 
 [ext_resource type="Texture2D" uid="uid://c1wewticiavxi" path="res://Art/GameFlowers/Dandelion.svg" id="1_7gp78"]
-[ext_resource type="Script" path="res://Scripts/Plant.gd" id="2_j8r8u"]
-[ext_resource type="Script" path="res://Scripts/PlantStage.gd" id="3_6xjwx"]
+[ext_resource type="Script" path="res://Scripts/InGame/Plant.gd" id="2_vtig4"]
+[ext_resource type="Script" path="res://Scripts/InGame/PlantStage.gd" id="3_mjxp0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e76a0"]
 atlas = ExtResource("1_7gp78")
@@ -57,46 +57,46 @@ animations = [{
 [node name="Dandelion" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_siid5")
 animation = &"grow"
-script = ExtResource("2_j8r8u")
+script = ExtResource("2_vtig4")
 
 [node name="Stage" type="Node2D" parent="."]
-script = ExtResource("3_6xjwx")
+script = ExtResource("3_mjxp0")
 TimeToWait = 0.5
 TimeRange = 0.0
 bIncreaseFrame = true
 
 [node name="Stage2" type="Node2D" parent="."]
-script = ExtResource("3_6xjwx")
+script = ExtResource("3_mjxp0")
 TimeToWait = 0.25
 TimeRange = 0.0
 bIncreaseFrame = true
 
 [node name="Stage3" type="Node2D" parent="."]
-script = ExtResource("3_6xjwx")
+script = ExtResource("3_mjxp0")
 TimeToWait = 0.5
 TimeRange = 0.0
 bIncreaseFrame = true
 
 [node name="Stage4" type="Node2D" parent="."]
-script = ExtResource("3_6xjwx")
+script = ExtResource("3_mjxp0")
 TimeToWait = 0.25
 TimeRange = 0.0
 bIncreaseFrame = true
 
 [node name="Stage5" type="Node2D" parent="."]
-script = ExtResource("3_6xjwx")
+script = ExtResource("3_mjxp0")
 TimeToWait = 0.25
 TimeRange = 0.0
 bIncreaseFrame = true
 
 [node name="Stage6" type="Node2D" parent="."]
-script = ExtResource("3_6xjwx")
+script = ExtResource("3_mjxp0")
 TimeToWait = 0.25
 TimeRange = 0.0
 bIncreaseFrame = true
 
 [node name="Stage7" type="Node2D" parent="."]
-script = ExtResource("3_6xjwx")
+script = ExtResource("3_mjxp0")
 TimeToWait = 0.25
 TimeRange = 0.0
 ModeToUse = 2

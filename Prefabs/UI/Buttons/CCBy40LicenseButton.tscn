@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dshrjf5ycg4gx"]
 
-[ext_resource type="Script" path="res://Scripts/UI/CCBy40LicenseButton.gd" id="1_fx6rj"]
+[ext_resource type="Script" path="res://Scripts/Title/CCBy40LicenseButton.gd" id="1_fx6rj"]
 
 [node name="LicenseButton" type="Button"]
 offset_right = 8.0

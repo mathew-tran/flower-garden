@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://baf2w7kcqs61m"]
 
-[ext_resource type="Texture2D" uid="uid://dyv3mqbiksoh6" path="res://Art/planter-box.png" id="1_lfvwm"]
-[ext_resource type="Script" path="res://Scripts/PlanterBox.gd" id="2_bw4qh"]
+[ext_resource type="Texture2D" uid="uid://dyv3mqbiksoh6" path="res://Art/GameFlowers/planter-box.png" id="1_lfvwm"]
+[ext_resource type="Script" path="res://Scripts/InGame/PlanterBox.gd" id="2_bw4qh"]
 [ext_resource type="Texture2D" uid="uid://b0128crkkj0kr" path="res://Art/UI/LoadIcon.svg" id="3_0jfjm"]
-[ext_resource type="PackedScene" uid="uid://bma13yufnmijt" path="res://Prefabs/UI/ActionHint.tscn" id="5_ldncg"]
+[ext_resource type="PackedScene" uid="uid://bma13yufnmijt" path="res://Prefabs/InGame/ActionHint.tscn" id="5_ldncg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f77pt"]
 atlas = ExtResource("1_lfvwm")

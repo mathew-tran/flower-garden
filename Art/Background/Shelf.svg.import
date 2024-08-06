@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bntxtwgny1dpt"
-path="res://.godot/imported/WindowCovering.svg-cc587346ac894d742ddad490869c87b7.ctex"
+uid="uid://ylk2anmnv45x"
+path="res://.godot/imported/Shelf.svg-db1e321b8c2b13d3c1b47e9bb5a66454.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/WindowCovering.svg"
-dest_files=["res://.godot/imported/WindowCovering.svg-cc587346ac894d742ddad490869c87b7.ctex"]
+source_file="res://Art/Background/Shelf.svg"
+dest_files=["res://.godot/imported/Shelf.svg-db1e321b8c2b13d3c1b47e9bb5a66454.ctex"]
 
 [params]
 

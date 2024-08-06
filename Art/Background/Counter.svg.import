@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2dyjil60kbfv"
-path="res://.godot/imported/Light.svg-e5cab54c996aad31e143366663abc6c1.ctex"
+uid="uid://euxcx7t7ec8g"
+path="res://.godot/imported/Counter.svg-8e9b447f306c33eefc7a2a402c8aefc2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Light.svg"
-dest_files=["res://.godot/imported/Light.svg-e5cab54c996aad31e143366663abc6c1.ctex"]
+source_file="res://Art/Background/Counter.svg"
+dest_files=["res://.godot/imported/Counter.svg-8e9b447f306c33eefc7a2a402c8aefc2.ctex"]
 
 [params]
 

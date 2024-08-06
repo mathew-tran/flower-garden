@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dv1jsijfll8he"
-path="res://.godot/imported/Tile.png-d650cadf8897f57f40e5c3330ddc260d.ctex"
+uid="uid://bhjhe6u38im4l"
+path="res://.godot/imported/YellowDaffodil.png-c34e17eed55b864cb1243a259639918d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Tile.png"
-dest_files=["res://.godot/imported/Tile.png-d650cadf8897f57f40e5c3330ddc260d.ctex"]
+source_file="res://Art/Flower/YellowDaffodil.png"
+dest_files=["res://.godot/imported/YellowDaffodil.png-c34e17eed55b864cb1243a259639918d.ctex"]
 
 [params]
 

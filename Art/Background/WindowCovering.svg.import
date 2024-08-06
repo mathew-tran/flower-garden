@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cu6nysbys1htl"
-path="res://.godot/imported/WallPort.svg-0d79aed5a7c65eaf0914a663782397e5.ctex"
+uid="uid://bntxtwgny1dpt"
+path="res://.godot/imported/WindowCovering.svg-97e3dc71ab59079062485e78e037ecd8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/WallPort.svg"
-dest_files=["res://.godot/imported/WallPort.svg-0d79aed5a7c65eaf0914a663782397e5.ctex"]
+source_file="res://Art/Background/WindowCovering.svg"
+dest_files=["res://.godot/imported/WindowCovering.svg-97e3dc71ab59079062485e78e037ecd8.ctex"]
 
 [params]
 

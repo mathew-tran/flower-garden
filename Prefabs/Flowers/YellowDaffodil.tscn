@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=3 uid="uid://bis733immnkip"]
 
-[ext_resource type="Texture2D" uid="uid://bhjhe6u38im4l" path="res://Art/YellowDaffodil.png" id="1_5ki5a"]
-[ext_resource type="Script" path="res://Scripts/Plant.gd" id="2_27q7w"]
-[ext_resource type="Script" path="res://Scripts/PlantStage.gd" id="3_6rvf0"]
+[ext_resource type="Texture2D" uid="uid://bhjhe6u38im4l" path="res://Art/Flower/YellowDaffodil.png" id="1_5ki5a"]
+[ext_resource type="Script" path="res://Scripts/InGame/Plant.gd" id="2_27q7w"]
+[ext_resource type="Script" path="res://Scripts/InGame/PlantStage.gd" id="3_6rvf0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0x0bp"]
 atlas = ExtResource("1_5ki5a")

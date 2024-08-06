@@ -2,36 +2,33 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvn8acnv1xqpx"
-path="res://.godot/imported/Window.svg-70463e8a51ed1c514aaf7e6e8b42ac08.ctex"
+uid="uid://cg15hwdmibof5"
+path="res://.godot/imported/BlueDaisies.png-fe6dff867d6e0c5bc183caf62b837fb7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Window.svg"
-dest_files=["res://.godot/imported/Window.svg-70463e8a51ed1c514aaf7e6e8b42ac08.ctex"]
+source_file="res://Art/Flower/BlueDaisies.png"
+dest_files=["res://.godot/imported/BlueDaisies.png-fe6dff867d6e0c5bc183caf62b837fb7.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=3
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/normal_map=0
+compress/normal_map=2
 compress/channel_pack=0
 mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
-process/fix_alpha_border=true
+process/fix_alpha_border=false
 process/premult_alpha=false
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false
+detect_3d/compress_to=0

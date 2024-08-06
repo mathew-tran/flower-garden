@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://bolmo6m1c3yyu"]
 
-[ext_resource type="Texture2D" uid="uid://cg15hwdmibof5" path="res://Art/BlueDaisies.png" id="1_5iq8e"]
-[ext_resource type="Script" path="res://Scripts/Plant.gd" id="2_iwny8"]
-[ext_resource type="Script" path="res://Scripts/PlantStage.gd" id="3_uy4vt"]
+[ext_resource type="Texture2D" uid="uid://cg15hwdmibof5" path="res://Art/Flower/BlueDaisies.png" id="1_5iq8e"]
+[ext_resource type="Script" path="res://Scripts/InGame/Plant.gd" id="2_iwny8"]
+[ext_resource type="Script" path="res://Scripts/InGame/PlantStage.gd" id="3_uy4vt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gtpem"]
 atlas = ExtResource("1_5iq8e")

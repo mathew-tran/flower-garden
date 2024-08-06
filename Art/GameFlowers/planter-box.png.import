@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cg15hwdmibof5"
-path="res://.godot/imported/BlueDaisies.png-9885bac128f12fb2dacb69b5f6daccf5.ctex"
+uid="uid://dyv3mqbiksoh6"
+path="res://.godot/imported/planter-box.png-0240e4252a6348166cac2fea472d0073.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/BlueDaisies.png"
-dest_files=["res://.godot/imported/BlueDaisies.png-9885bac128f12fb2dacb69b5f6daccf5.ctex"]
+source_file="res://Art/GameFlowers/planter-box.png"
+dest_files=["res://.godot/imported/planter-box.png-0240e4252a6348166cac2fea472d0073.ctex"]
 
 [params]
 

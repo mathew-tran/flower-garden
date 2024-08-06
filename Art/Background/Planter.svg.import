@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sd81sla07v6x"
-path="res://.godot/imported/FlowerHolderBig.svg-09a9f2439a30edcf232413557049fd78.ctex"
+uid="uid://dvc0vwps6ljid"
+path="res://.godot/imported/Planter.svg-369986181351f437d2460d364216de4f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/FlowerHolderBig.svg"
-dest_files=["res://.godot/imported/FlowerHolderBig.svg-09a9f2439a30edcf232413557049fd78.ctex"]
+source_file="res://Art/Background/Planter.svg"
+dest_files=["res://.godot/imported/Planter.svg-369986181351f437d2460d364216de4f.ctex"]
 
 [params]
 

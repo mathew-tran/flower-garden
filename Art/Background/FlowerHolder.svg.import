@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://euxcx7t7ec8g"
-path="res://.godot/imported/Counter.svg-c5f9ae00e090be3793d68f14328c3837.ctex"
+uid="uid://cprfddyeqab3j"
+path="res://.godot/imported/FlowerHolder.svg-9d1f36a4d73ced6219016ccd356fa0ac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Counter.svg"
-dest_files=["res://.godot/imported/Counter.svg-c5f9ae00e090be3793d68f14328c3837.ctex"]
+source_file="res://Art/Background/FlowerHolder.svg"
+dest_files=["res://.godot/imported/FlowerHolder.svg-9d1f36a4d73ced6219016ccd356fa0ac.ctex"]
 
 [params]
 
@@ -32,6 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
+svg/scale=2.0
 editor/scale_with_editor_scale=false
 editor/convert_colors_with_editor_theme=false
