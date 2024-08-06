@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scripts/UI/Screens/PlantBook/PlantBookButton.gd" id="2_06112"]
 
 [node name="PlantBookButton" type="Button"]
-custom_minimum_size = Vector2(800, 60)
+custom_minimum_size = Vector2(800, 80)
 theme_override_fonts/font = ExtResource("1_kt3k2")
 theme_override_font_sizes/font_size = 40
 text = "???"

@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://r4m63q77kcom"]
+
+[ext_resource type="Script" path="res://Scripts/UI/Clock.gd" id="1_g1esj"]
+[ext_resource type="FontFile" uid="uid://bgsqsl2uc60cx" path="res://Font/dina10px.ttf" id="2_1jcm4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tm80p"]
+bg_color = Color(0, 0, 0, 1)
+skew = Vector2(0.1, 0)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+
+[node name="Clock" type="Panel"]
+custom_minimum_size = Vector2(250, 60)
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -150.0
+offset_bottom = 50.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_tm80p")
+script = ExtResource("1_g1esj")
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_1jcm4")
+theme_override_font_sizes/font_size = 40
+text = "asdsadad"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
