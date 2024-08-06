@@ -7,7 +7,6 @@ func _ready():
 func SetHint(type):
 	visible = true
 	$TextureRect.texture = Definitions.GetIcon(type)
-
 	$AnimationPlayer.play("animate")
 
 func HideHint():
