@@ -245,4 +245,3 @@ position = Vector2(1711, 721)
 texture = ExtResource("15_3gt12")
 
 [connection signal="button_up" from="StartButton" to="StartButton" method="_on_button_up"]
-[connection signal="finished" from="StartButton/AudioStreamPlayer2D" to="StartButton" method="_on_audio_stream_player_2d_finished"]
