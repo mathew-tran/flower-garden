@@ -1,39 +1,39 @@
 [gd_scene load_steps=9 format=3 uid="uid://dkp8p50i3prtf"]
 
-[ext_resource type="Texture2D" uid="uid://b22o12ee4eky5" path="res://Art/Rose.png" id="1_ilonb"]
+[ext_resource type="Texture2D" uid="uid://d0ii52q4ng8lg" path="res://Art/GameFlowers/Rose.svg" id="1_cgqsh"]
 [ext_resource type="Script" path="res://Scripts/Plant.gd" id="2_t5y7g"]
 [ext_resource type="Script" path="res://Scripts/PlantStage.gd" id="3_idiwr"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_d5yhb"]
-atlas = ExtResource("1_ilonb")
+[sub_resource type="AtlasTexture" id="AtlasTexture_cmdw3"]
+atlas = ExtResource("1_cgqsh")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_thyb6"]
-atlas = ExtResource("1_ilonb")
+[sub_resource type="AtlasTexture" id="AtlasTexture_51ago"]
+atlas = ExtResource("1_cgqsh")
 region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_575ht"]
-atlas = ExtResource("1_ilonb")
+[sub_resource type="AtlasTexture" id="AtlasTexture_2qyja"]
+atlas = ExtResource("1_cgqsh")
 region = Rect2(64, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_c8v5x"]
-atlas = ExtResource("1_ilonb")
+[sub_resource type="AtlasTexture" id="AtlasTexture_gewc0"]
+atlas = ExtResource("1_cgqsh")
 region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_siid5"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_d5yhb")
+"texture": SubResource("AtlasTexture_cmdw3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_thyb6")
+"texture": SubResource("AtlasTexture_51ago")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_575ht")
+"texture": SubResource("AtlasTexture_2qyja")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_c8v5x")
+"texture": SubResource("AtlasTexture_gewc0")
 }],
 "loop": true,
 "name": &"grow",

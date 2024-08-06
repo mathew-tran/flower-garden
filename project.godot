@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 InputManager="*res://Scripts/Autoload/InputManager.gd"
 Game="*res://Scripts/Autoload/Game.gd"
 Definitions="*res://Scripts/Autoload/Definitions.gd"
+Helper="*res://Scripts/Autoload/Helper.gd"
 
 [debug]
 
