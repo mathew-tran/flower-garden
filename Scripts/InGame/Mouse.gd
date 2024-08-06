@@ -6,7 +6,11 @@ var CurrentType : InputManager.INPUT_MODE
 func _ready():
 	InputManager.connect("ModeChange", Callable(self, "OnModeChange"))
 	OnModeChange(InputManager.CurrentInputMode)
+	InputManager.ShowMouse.connect(OnShowMouse)
 
+func OnShowMouse(bShow):
+	visible = bShow
+	
 func OnModeChange(type):
 	texture = Definitions.GetIcon(type)
 	CurrentType = type
@@ -26,6 +30,8 @@ func _process(_delta):
 	
 		
 	if Input.is_action_just_pressed("mouse_left_click"):
+		if visible == false:
+			return
 		if is_instance_valid(UseTween):
 			UseTween.stop()
 		if CurrentType == InputManager.INPUT_MODE.MOVE:

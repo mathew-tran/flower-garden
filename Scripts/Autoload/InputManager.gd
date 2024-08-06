@@ -2,6 +2,8 @@ extends Node
 
 var FocusedObject = null
 
+signal ShowMouse(bShow)
+
 enum INPUT_MODE {
 	WATER,
 	TEND,

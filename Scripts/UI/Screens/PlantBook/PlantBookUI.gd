@@ -25,10 +25,12 @@ func OnPlantDataSelected(plantData : PlantData):
 
 func _on_plant_book_button_button_up():
 	visible = true
+	InputManager.ShowMouse.emit(false)
 
 
 func _on_close_button_button_up():
 	visible = false
+	InputManager.ShowMouse.emit(true)
 
 func _input(event):
 	if event.is_action_pressed("escape"):
