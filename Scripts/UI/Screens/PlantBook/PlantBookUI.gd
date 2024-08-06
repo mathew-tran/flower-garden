@@ -21,3 +21,11 @@ func PopulatePlantData():
 func OnPlantDataSelected(plantData : PlantData):
 	$LeftSide.ShowPlantData(plantData)
 	
+
+
+func _on_plant_book_button_button_up():
+	visible = true
+
+
+func _on_close_button_button_up():
+	visible = false

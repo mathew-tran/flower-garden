@@ -4,7 +4,8 @@ extends CustomButton
 
 func _on_button_up():
 	$AudioStreamPlayer2D.play()
-	modulate = Color.GRAY
+	self_modulate = Color.DARK_GRAY
+	disabled = true
 
 func _on_audio_stream_player_2d_finished():
 	if Game.bHasDoneTutorial:

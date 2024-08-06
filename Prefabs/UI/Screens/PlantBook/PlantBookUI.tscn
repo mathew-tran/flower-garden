@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://oywjhu62v5hd"]
+[gd_scene load_steps=12 format=3 uid="uid://oywjhu62v5hd"]
 
 [ext_resource type="Script" path="res://Scripts/UI/Screens/PlantBook/PlantBookUI.gd" id="1_xsqy3"]
+[ext_resource type="FontFile" uid="uid://bgsqsl2uc60cx" path="res://Font/dina10px.ttf" id="2_cqyc1"]
 [ext_resource type="PackedScene" uid="uid://cs8qb307piin4" path="res://Prefabs/UI/Screens/PlantBook/PlantBookInfo.tscn" id="2_gv8n7"]
 [ext_resource type="PackedScene" uid="uid://ds5ngunvt3pwy" path="res://Prefabs/UI/Screens/PlantBook/PlantBookButton.tscn" id="3_m7d50"]
 [ext_resource type="Resource" uid="uid://bk4packen4wut" path="res://Resources/Plants/Plant_Dandelion.tres" id="4_2agod"]
@@ -10,6 +11,18 @@ bg_color = Color(0.87451, 0.788235, 0.52549, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iqp6a"]
 bg_color = Color(0.87451, 0.788235, 0.52549, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qwdx3"]
+bg_color = Color(5.0056e-06, 0.7112, 0.464554, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ra1kg"]
+bg_color = Color(1.05888e-06, 0.753148, 0.492087, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wmuq1"]
+bg_color = Color(2.26215e-06, 0.607451, 0.393456, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bdh4l"]
+bg_color = Color(8.18223e-06, 0.869315, 0.570729, 1)
 
 [node name="PlantBookUI" type="Panel"]
 custom_minimum_size = Vector2(1920, 1080)
@@ -46,7 +59,7 @@ offset_bottom = 40.0
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel/Panel/ScrollContainer"]
 layout_mode = 2
 
-[node name="PlantBookButton" parent="Panel/Panel/ScrollContainer/VBoxContainer" instance=ExtResource("3_m7d50")]
+[node name="PlantBookButton17" parent="Panel/Panel/ScrollContainer/VBoxContainer" instance=ExtResource("3_m7d50")]
 layout_mode = 2
 Data = ExtResource("4_2agod")
 
@@ -94,3 +107,19 @@ layout_mode = 2
 
 [node name="PlantBookButton16" parent="Panel/Panel/ScrollContainer/VBoxContainer" instance=ExtResource("3_m7d50")]
 layout_mode = 2
+
+[node name="CloseButton" type="Button" parent="Panel/Panel"]
+custom_minimum_size = Vector2(800, 120)
+layout_mode = 2
+offset_top = 850.0
+offset_right = 800.0
+offset_bottom = 970.0
+theme_override_fonts/font = ExtResource("2_cqyc1")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_qwdx3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ra1kg")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wmuq1")
+theme_override_styles/focus = SubResource("StyleBoxFlat_bdh4l")
+text = "CLOSE"
+
+[connection signal="button_up" from="Panel/Panel/CloseButton" to="." method="_on_close_button_button_up"]

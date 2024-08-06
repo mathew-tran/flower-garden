@@ -68,7 +68,7 @@ offset_right = 1002.0
 offset_bottom = 1010.0
 scale = Vector2(1.5, 1.5)
 
-[node name="Button" type="Button" parent="CanvasLayer"]
+[node name="PlantBookButton" type="Button" parent="CanvasLayer"]
 offset_left = 35.0
 offset_top = 932.0
 offset_right = 226.0
@@ -152,3 +152,5 @@ texture = ExtResource("11_tbtbt")
 color = Color(1, 0.787667, 0.51, 1)
 
 [node name="Jukebox" parent="." instance=ExtResource("17_tlhud")]
+
+[connection signal="button_up" from="CanvasLayer/PlantBookButton" to="CanvasLayer/PlantBookUI" method="_on_plant_book_button_button_up"]
