@@ -10,3 +10,4 @@ PlantScene = ExtResource("2_i3qa6")
 PlantPicture = ExtResource("1_agpd7")
 FlowerName = "Lavender"
 FlowerDescription = "Lavender not only smells amazing but also helps repel mosquitoes, making it a fragrant bug deterrent!"
+UnlockID = "002"

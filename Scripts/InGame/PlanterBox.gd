@@ -14,8 +14,11 @@ var StartPosition
 
 signal FlowerBoxComplete
 
-func SetPlant(packedScene):
-	Flower = packedScene.instantiate()
+var Data : PlantData
+
+func SetPlant(plantData : PlantData):
+	Data = plantData
+	Flower = plantData.GetPlantScene().instantiate()
 	add_child(Flower)
 	Flower.connect("UpdateGrowth", Callable(self, "OnUpdateGrowth"))
 	Flower.connect("FinishGrowth", Callable(self, "OnFinishGrowth"))
@@ -49,12 +52,13 @@ func OnFinishGrowth():
 
 func OnCompleted():
 	var bouquet = get_tree().get_nodes_in_group("Bouquet")
+	Data.Unlock()
 	if bouquet:
 		bouquet[0].AddFlower(Flower)
 		Flower = null
 	OnFinishGrowth()
 	emit_signal("FlowerBoxComplete")
-
+	
 
 
 func Click():

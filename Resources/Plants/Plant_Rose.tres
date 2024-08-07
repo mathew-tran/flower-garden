@@ -10,3 +10,4 @@ PlantScene = ExtResource("2_f66xj")
 PlantPicture = ExtResource("1_ocp86")
 FlowerName = "Rose"
 FlowerDescription = "Roses often save their sweetest scents for the early morning, as if they’re greeting the day with their most enchanting fragrance!"
+UnlockID = "003"

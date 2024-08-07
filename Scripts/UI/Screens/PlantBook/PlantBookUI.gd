@@ -2,6 +2,9 @@ extends Panel
 
 @onready var PlantButtonClass = preload("res://Prefabs/UI/Screens/PlantBook/PlantBookButton.tscn")
 @onready var PlantContainer = $Panel/Panel/ScrollContainer/VBoxContainer
+
+var bIsSetup = false
+
 func _ready():
 	PopulatePlantData()
 	
@@ -18,6 +21,9 @@ func PopulatePlantData():
 		PlantContainer.add_child(instance)
 		instance.PlantDataSelected.connect(OnPlantDataSelected)
 		
+	OnPlantDataSelected(PlantContainer.get_child(0).Data)
+	bIsSetup = true
+	
 func OnPlantDataSelected(plantData : PlantData):
 	$LeftSide.ShowPlantData(plantData)
 	
@@ -25,14 +31,20 @@ func OnPlantDataSelected(plantData : PlantData):
 
 func _on_plant_book_button_button_up():
 	visible = true
-	InputManager.ShowMouse.emit(false)
-
 
 func _on_close_button_button_up():
 	visible = false
-	InputManager.ShowMouse.emit(true)
-
+	
 func _input(event):
 	if event.is_action_pressed("escape"):
 		if visible:
 			visible = false
+
+func _on_visibility_changed():
+	if is_visible_in_tree():
+		if visible:
+			for child in PlantContainer.get_children():
+				child.Update()
+			InputManager.ShowMouse.emit(false)
+	else:
+		InputManager.ShowMouse.emit(true)

@@ -29,7 +29,7 @@ func SetNewRound():
 	var boxes = get_tree().get_nodes_in_group("PlanterBox")
 	for x in range(0, len(CurrentOrder.flowers)):
 		if is_instance_valid(CurrentOrder.flowers[x]):
-			boxes[x].SetPlant(CurrentOrder.flowers[x].GetPlantScene())
+			boxes[x].SetPlant(CurrentOrder.flowers[x])
 
 	emit_signal("StartNewRound", CurrentOrder)
 
