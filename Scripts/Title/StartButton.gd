@@ -8,9 +8,9 @@ func _on_button_up():
 	disabled = true
 	var timer = get_tree().create_timer(.2)
 	await timer.timeout
-	if Game.bHasDoneTutorial:
+	if Progression.GetKeyValue("DoneTutorial"):
 		get_tree().change_scene_to_file("res://Scenes/Main.tscn")
 	else:
 		get_tree().change_scene_to_file("res://Scenes/Tutorial.tscn")
-		Game.bHasDoneTutorial = true
+		Progression.UpdateKey("DoneTutorial", true)
 

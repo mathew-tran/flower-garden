@@ -30,6 +30,7 @@ func ClearData():
 func UpdateKey(key, value):
 	if Data.has(key) == false:
 		Data[key] = value
+		Save()
 	
 func GetKeyValue(key):
 	if Data.has(key):

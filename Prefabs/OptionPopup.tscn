@@ -1,0 +1,67 @@
+[gd_scene load_steps=10 format=3 uid="uid://bsct8rd6niev2"]
+
+[ext_resource type="Script" path="res://Scripts/Title/OptionPopup.gd" id="1_1qfev"]
+
+[sub_resource type="Theme" id="Theme_st05l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ewm5"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_5wln5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hp6rg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0gywe"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lvk4j"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gr85g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pift5"]
+
+[node name="OptionPopup" type="Panel"]
+custom_minimum_size = Vector2(1600, 900)
+offset_right = 1600.0
+offset_bottom = 900.0
+theme = SubResource("Theme_st05l")
+theme_override_styles/panel = SubResource("StyleBoxFlat_4ewm5")
+script = ExtResource("1_1qfev")
+
+[node name="CloseButton" type="Button" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -100.0
+offset_bottom = 100.0
+grow_horizontal = 0
+theme = SubResource("Theme_5wln5")
+text = "X"
+
+[node name="Delete Data" type="Button" parent="."]
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1512.0
+offset_top = 675.0
+offset_right = -1112.0
+offset_bottom = 775.0
+grow_horizontal = 0
+theme = SubResource("Theme_5wln5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_hp6rg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0gywe")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_lvk4j")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_gr85g")
+theme_override_styles/focus = SubResource("StyleBoxFlat_pift5")
+text = "DELETE DATA"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="button_up" from="CloseButton" to="." method="_on_close_button_button_up"]
+[connection signal="button_up" from="Delete Data" to="." method="_on_delete_data_button_up"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
