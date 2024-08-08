@@ -21,6 +21,8 @@ func OnModeChange(type):
 	tween.tween_property(self, "scale", Vector2(2,2), .1)
 	await tween.finished
 		
+func IsSwitchButtonPressed():
+	return Input.is_action_just_pressed("f1") or Input.is_action_just_pressed("f2") or Input.is_action_just_pressed("f3")
 func _process(_delta):
 	
 	if CurrentType != InputManager.INPUT_MODE.MOVE:
@@ -28,8 +30,18 @@ func _process(_delta):
 	else:
 		global_position = get_global_mouse_position() - Vector2(1,1) * 52
 	
+	if IsSwitchButtonPressed():
+		var event_lmb = InputEventMouseButton.new()
+		event_lmb.pressed = true
+		event_lmb.button_index = MOUSE_BUTTON_LEFT
+		event_lmb.position = get_global_mouse_position()
+		Input.parse_input_event(event_lmb)
+		await get_tree().process_frame
+		event_lmb.pressed = false
+		Input.parse_input_event(event_lmb)
 		
-	if Input.is_action_just_pressed("mouse_left_click"):
+	if Input.is_action_just_pressed("mouse_left_click") or IsSwitchButtonPressed():
+		
 		if visible == false:
 			return
 		if is_instance_valid(UseTween):
