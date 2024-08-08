@@ -1,46 +1,39 @@
-[gd_scene load_steps=10 format=3 uid="uid://bolmo6m1c3yyu"]
+[gd_scene load_steps=9 format=3 uid="uid://bolmo6m1c3yyu"]
 
-[ext_resource type="Texture2D" uid="uid://cg15hwdmibof5" path="res://Art/Flower/BlueDaisies.png" id="1_5iq8e"]
+[ext_resource type="Texture2D" uid="uid://bh8mpfmm8axy4" path="res://Art/GameFlowers/Daisy_Blue.svg" id="1_b0h53"]
 [ext_resource type="Script" path="res://Scripts/InGame/Plant.gd" id="2_iwny8"]
 [ext_resource type="Script" path="res://Scripts/InGame/PlantStage.gd" id="3_uy4vt"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gtpem"]
-atlas = ExtResource("1_5iq8e")
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ragp"]
+atlas = ExtResource("1_b0h53")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jl1v1"]
-atlas = ExtResource("1_5iq8e")
+[sub_resource type="AtlasTexture" id="AtlasTexture_upf5n"]
+atlas = ExtResource("1_b0h53")
 region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_f8xsv"]
-atlas = ExtResource("1_5iq8e")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ymuke"]
+atlas = ExtResource("1_b0h53")
 region = Rect2(64, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tcbkj"]
-atlas = ExtResource("1_5iq8e")
+[sub_resource type="AtlasTexture" id="AtlasTexture_stqu8"]
+atlas = ExtResource("1_b0h53")
 region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ftmev"]
-atlas = ExtResource("1_5iq8e")
-region = Rect2(128, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_siid5"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gtpem")
+"texture": SubResource("AtlasTexture_2ragp")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jl1v1")
+"texture": SubResource("AtlasTexture_upf5n")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_f8xsv")
+"texture": SubResource("AtlasTexture_ymuke")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_tcbkj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ftmev")
+"texture": SubResource("AtlasTexture_stqu8")
 }],
 "loop": true,
 "name": &"grow",
@@ -84,14 +77,12 @@ script = ExtResource("3_uy4vt")
 TimeToWait = 0.1
 TimeRange = 0.1
 ModeToUse = 1
-bIncreaseFrame = true
 
 [node name="Stage8" type="Node2D" parent="."]
 script = ExtResource("3_uy4vt")
 TimeToWait = 0.1
 TimeRange = 0.1
 ModeToUse = 1
-bIncreaseFrame = true
 
 [node name="Stage9" type="Node2D" parent="."]
 script = ExtResource("3_uy4vt")

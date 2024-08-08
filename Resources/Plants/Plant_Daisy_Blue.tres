@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PlantData" load_steps=4 format=3 uid="uid://bvscphaqqvuwf"]
+
+[ext_resource type="Texture2D" uid="uid://dq6qr7wljjogs" path="res://Art/GameFlowers/Daisy_Blue_Full.svg" id="1_a0fg5"]
+[ext_resource type="PackedScene" uid="uid://bolmo6m1c3yyu" path="res://Prefabs/Flowers/BlueDaisy.tscn" id="2_bu3sw"]
+[ext_resource type="Script" path="res://Scripts/ResourceTypes/PlantData.gd" id="3_vwrnl"]
+
+[resource]
+script = ExtResource("3_vwrnl")
+PlantScene = ExtResource("2_bu3sw")
+PlantPicture = ExtResource("1_a0fg5")
+FlowerName = "Daisy (Blue)"
+FlowerDescription = "Blue daisies symbolize calmness and tranquility, evoking mystery and uniqueness. Their rare hue represents loyalty and trust, adding peaceful elegance to any setting."
+UnlockID = "004"
