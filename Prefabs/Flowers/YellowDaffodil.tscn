@@ -1,53 +1,53 @@
 [gd_scene load_steps=11 format=3 uid="uid://bis733immnkip"]
 
-[ext_resource type="Texture2D" uid="uid://bhjhe6u38im4l" path="res://Art/Flower/YellowDaffodil.png" id="1_5ki5a"]
+[ext_resource type="Texture2D" uid="uid://tujb5fn7f4cj" path="res://Art/GameFlowers/Daffodil.svg" id="1_1npsa"]
 [ext_resource type="Script" path="res://Scripts/InGame/Plant.gd" id="2_27q7w"]
 [ext_resource type="Script" path="res://Scripts/InGame/PlantStage.gd" id="3_6rvf0"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0x0bp"]
-atlas = ExtResource("1_5ki5a")
-region = Rect2(0, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_7qfw6"]
+atlas = ExtResource("1_1npsa")
+region = Rect2(0, 0, 96, 96)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jw1i1"]
-atlas = ExtResource("1_5ki5a")
-region = Rect2(32, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_fvbb4"]
+atlas = ExtResource("1_1npsa")
+region = Rect2(96, 0, 96, 96)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1352s"]
-atlas = ExtResource("1_5ki5a")
-region = Rect2(64, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_h3a84"]
+atlas = ExtResource("1_1npsa")
+region = Rect2(192, 0, 96, 96)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_oa1ps"]
-atlas = ExtResource("1_5ki5a")
-region = Rect2(96, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1efb"]
+atlas = ExtResource("1_1npsa")
+region = Rect2(288, 0, 96, 96)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ui3um"]
-atlas = ExtResource("1_5ki5a")
-region = Rect2(128, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_piuxa"]
+atlas = ExtResource("1_1npsa")
+region = Rect2(384, 0, 96, 96)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_q8xj8"]
-atlas = ExtResource("1_5ki5a")
-region = Rect2(160, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_loli4"]
+atlas = ExtResource("1_1npsa")
+region = Rect2(480, 0, 96, 96)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_siid5"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0x0bp")
+"texture": SubResource("AtlasTexture_7qfw6")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jw1i1")
+"texture": SubResource("AtlasTexture_fvbb4")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1352s")
+"texture": SubResource("AtlasTexture_h3a84")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_oa1ps")
+"texture": SubResource("AtlasTexture_t1efb")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ui3um")
+"texture": SubResource("AtlasTexture_piuxa")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_q8xj8")
+"texture": SubResource("AtlasTexture_loli4")
 }],
 "loop": true,
 "name": &"grow",
@@ -57,6 +57,7 @@ animations = [{
 [node name="YellowDaffodil" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_siid5")
 animation = &"grow"
+offset = Vector2(0, -25.035)
 script = ExtResource("2_27q7w")
 
 [node name="Stage" type="Node2D" parent="."]

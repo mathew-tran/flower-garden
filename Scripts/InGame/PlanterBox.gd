@@ -61,14 +61,11 @@ func OnCompleted():
 	OnFinishGrowth()
 	emit_signal("FlowerBoxComplete")
 	
-
-
 func Click():
 	print(name + " has been clicked")
 	if is_instance_valid(GetPlant()):
 		GetPlant().AttemptGrow()
-
-
+		
 func GetPlant():
 	return Flower
 

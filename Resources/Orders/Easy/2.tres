@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="PlantOrder" load_steps=2 format=3 uid="uid://dwus6lfb6kmhx"]
+[gd_resource type="Resource" script_class="PlantOrderResource" load_steps=3 format=3 uid="uid://dwus6lfb6kmhx"]
 
 [ext_resource type="Script" path="res://Scripts/ResourceTypes/PlantOrder.gd" id="1_2o7rc"]
+[ext_resource type="Resource" uid="uid://chc54222r8dq6" path="res://Resources/Plants/Plant_Hydrangea_Blue.tres" id="1_ys16m"]
 
 [resource]
 script = ExtResource("1_2o7rc")
-flowers = [-1, 2, -1, 0, 2, -1]
-greeting = "I need some flowers for my house. I want some blue daisies please! Also a rose!"
-thanks = "Wow, these look great. Thanks alot!"
+flowers = Array[Resource("res://Scripts/ResourceTypes/PlantData.gd")]([ExtResource("1_ys16m"), ExtResource("1_ys16m")])
+greeting = "Hello! I need some Blue Hydrangeas!"
+thanks = "Awesome. Thanks!"

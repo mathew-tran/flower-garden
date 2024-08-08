@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PlantOrderResource" load_steps=7 format=3 uid="uid://dgtnni0anqaeu"]
+[gd_resource type="Resource" script_class="PlantOrderResource" load_steps=8 format=3 uid="uid://dgtnni0anqaeu"]
 
 [ext_resource type="Script" path="res://Scripts/ResourceTypes/PlantOrder.gd" id="1_6bbbu"]
 [ext_resource type="Resource" uid="uid://bvscphaqqvuwf" path="res://Resources/Plants/Plant_Daisy_Blue.tres" id="1_bsjh5"]
@@ -6,9 +6,10 @@
 [ext_resource type="Resource" uid="uid://dqfhmrekmy07k" path="res://Resources/Plants/Plant_Lavender.tres" id="2_2yxmv"]
 [ext_resource type="Resource" uid="uid://jajjntohk3q8" path="res://Resources/Plants/Plant_Rose.tres" id="3_jq0wv"]
 [ext_resource type="Resource" uid="uid://chc54222r8dq6" path="res://Resources/Plants/Plant_Hydrangea_Blue.tres" id="5_7c333"]
+[ext_resource type="Resource" uid="uid://durnprqy5cvtv" path="res://Resources/Plants/Plant_Daffodil.tres" id="6_fib57"]
 
 [resource]
 script = ExtResource("1_6bbbu")
-flowers = Array[Resource("res://Scripts/ResourceTypes/PlantData.gd")]([ExtResource("1_bsjh5"), ExtResource("2_2yxmv"), ExtResource("3_jq0wv"), ExtResource("1_u6ffv"), ExtResource("5_7c333")])
+flowers = Array[Resource("res://Scripts/ResourceTypes/PlantData.gd")]([ExtResource("1_bsjh5"), ExtResource("2_2yxmv"), ExtResource("3_jq0wv"), ExtResource("1_u6ffv"), ExtResource("5_7c333"), ExtResource("6_fib57")])
 greeting = "I just moved to a new place. Looking for flowers to spruce it up."
 thanks = "These look amazing! I'll be back soon!"
