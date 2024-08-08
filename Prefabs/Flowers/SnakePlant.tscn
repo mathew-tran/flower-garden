@@ -1,0 +1,85 @@
+[gd_scene load_steps=10 format=3 uid="uid://do6mmpfkjkl3x"]
+
+[ext_resource type="Texture2D" uid="uid://bg4f3o7xp36vo" path="res://Art/GameFlowers/Snake_Plant.svg" id="1_5gt8l"]
+[ext_resource type="Script" path="res://Scripts/InGame/Plant.gd" id="2_d5j60"]
+[ext_resource type="Script" path="res://Scripts/InGame/PlantStage.gd" id="3_4dm2v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6k0aa"]
+atlas = ExtResource("1_5gt8l")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ihdj"]
+atlas = ExtResource("1_5gt8l")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y2ec7"]
+atlas = ExtResource("1_5gt8l")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5yued"]
+atlas = ExtResource("1_5gt8l")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_72tqk"]
+atlas = ExtResource("1_5gt8l")
+region = Rect2(384, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_siid5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6k0aa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ihdj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y2ec7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5yued")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_72tqk")
+}],
+"loop": true,
+"name": &"grow",
+"speed": 5.0
+}]
+
+[node name="SnakePlant" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_siid5")
+animation = &"grow"
+offset = Vector2(0, -25.035)
+script = ExtResource("2_d5j60")
+
+[node name="Stage" type="Node2D" parent="."]
+script = ExtResource("3_4dm2v")
+TimeToWait = 3.0
+TimeRange = 0.5
+bIncreaseFrame = true
+
+[node name="Stage2" type="Node2D" parent="."]
+script = ExtResource("3_4dm2v")
+TimeToWait = 3.0
+TimeRange = 0.2
+bIncreaseFrame = true
+
+[node name="Stage3" type="Node2D" parent="."]
+script = ExtResource("3_4dm2v")
+TimeToWait = 3.0
+TimeRange = 0.2
+bIncreaseFrame = true
+
+[node name="Stage6" type="Node2D" parent="."]
+script = ExtResource("3_4dm2v")
+TimeToWait = 3.0
+TimeRange = 0.2
+bIncreaseFrame = true
+
+[node name="Stage4" type="Node2D" parent="."]
+script = ExtResource("3_4dm2v")
+TimeToWait = 0.25
+TimeRange = 0.0
+ModeToUse = 2
+bIncreaseFrame = true
