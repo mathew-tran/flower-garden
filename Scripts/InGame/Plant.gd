@@ -41,8 +41,18 @@ func IncrementStage():
 	elif StageIndex >= len(get_children()) - 1:
 		emit_signal("Completed")
 
+
+
 func OnCompleteStage():
 	emit_signal("UpdateGrowth", GetCurrentStage().GetInputNeeded())
+	var animateTween = get_tree().create_tween()
+	animateTween.tween_property(self, "rotation_degrees", -15, .1)
+	await animateTween.finished
+	animateTween = get_tree().create_tween()
+	animateTween.tween_property(self, "rotation_degrees", 15, .1)
+	await animateTween.finished
+	animateTween = get_tree().create_tween()
+	animateTween.tween_property(self, "rotation_degrees", 0, .1)
 
 func IsCompleted():
 	return StageIndex == len(get_children())

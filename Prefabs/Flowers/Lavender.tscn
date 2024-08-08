@@ -4,43 +4,43 @@
 [ext_resource type="Script" path="res://Scripts/InGame/Plant.gd" id="2_l4ew5"]
 [ext_resource type="Script" path="res://Scripts/InGame/PlantStage.gd" id="3_ehe2m"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_c6qil"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_et1kj"]
 atlas = ExtResource("1_yjyfw")
-region = Rect2(0, 0, 32, 32)
+region = Rect2(0, 0, 96, 96)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0fs53"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ti6bk"]
 atlas = ExtResource("1_yjyfw")
-region = Rect2(32, 0, 32, 32)
+region = Rect2(96, 0, 96, 96)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_crmn0"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ge1wu"]
 atlas = ExtResource("1_yjyfw")
-region = Rect2(64, 0, 32, 32)
+region = Rect2(192, 0, 96, 96)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1dmnd"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_kd56c"]
 atlas = ExtResource("1_yjyfw")
-region = Rect2(96, 0, 32, 32)
+region = Rect2(288, 0, 96, 96)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7bp3p"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_rbjwy"]
 atlas = ExtResource("1_yjyfw")
-region = Rect2(128, 0, 32, 32)
+region = Rect2(384, 0, 96, 96)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_siid5"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_c6qil")
+"texture": SubResource("AtlasTexture_et1kj")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0fs53")
+"texture": SubResource("AtlasTexture_ti6bk")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_crmn0")
+"texture": SubResource("AtlasTexture_ge1wu")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1dmnd")
+"texture": SubResource("AtlasTexture_kd56c")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7bp3p")
+"texture": SubResource("AtlasTexture_rbjwy")
 }],
 "loop": true,
 "name": &"grow",
@@ -50,6 +50,7 @@ animations = [{
 [node name="Lavender" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_siid5")
 animation = &"grow"
+offset = Vector2(0, -15)
 script = ExtResource("2_l4ew5")
 
 [node name="Stage" type="Node2D" parent="."]

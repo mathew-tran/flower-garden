@@ -4,36 +4,36 @@
 [ext_resource type="Script" path="res://Scripts/InGame/Plant.gd" id="2_t5y7g"]
 [ext_resource type="Script" path="res://Scripts/InGame/PlantStage.gd" id="3_idiwr"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cmdw3"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_spdx7"]
 atlas = ExtResource("1_cgqsh")
-region = Rect2(0, 0, 32, 32)
+region = Rect2(0, 0, 96, 96)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_51ago"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ynheg"]
 atlas = ExtResource("1_cgqsh")
-region = Rect2(32, 0, 32, 32)
+region = Rect2(96, 0, 96, 96)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2qyja"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_27ee2"]
 atlas = ExtResource("1_cgqsh")
-region = Rect2(64, 0, 32, 32)
+region = Rect2(192, 0, 96, 96)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gewc0"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_0tfim"]
 atlas = ExtResource("1_cgqsh")
-region = Rect2(96, 0, 32, 32)
+region = Rect2(288, 0, 96, 96)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_siid5"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_cmdw3")
+"texture": SubResource("AtlasTexture_spdx7")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_51ago")
+"texture": SubResource("AtlasTexture_ynheg")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2qyja")
+"texture": SubResource("AtlasTexture_27ee2")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gewc0")
+"texture": SubResource("AtlasTexture_0tfim")
 }],
 "loop": true,
 "name": &"grow",
@@ -43,6 +43,7 @@ animations = [{
 [node name="Rose" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_siid5")
 animation = &"grow"
+offset = Vector2(0, -20)
 script = ExtResource("2_t5y7g")
 
 [node name="Stage" type="Node2D" parent="."]

@@ -4,50 +4,50 @@
 [ext_resource type="Script" path="res://Scripts/InGame/Plant.gd" id="2_vtig4"]
 [ext_resource type="Script" path="res://Scripts/InGame/PlantStage.gd" id="3_mjxp0"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_e76a0"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_p5kpc"]
 atlas = ExtResource("1_7gp78")
-region = Rect2(0, 0, 32, 32)
+region = Rect2(0, 0, 96, 96)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qk33o"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_2xn1r"]
 atlas = ExtResource("1_7gp78")
-region = Rect2(32, 0, 32, 32)
+region = Rect2(96, 0, 96, 96)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jxj0f"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_kucxf"]
 atlas = ExtResource("1_7gp78")
-region = Rect2(64, 0, 32, 32)
+region = Rect2(192, 0, 96, 96)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vogwm"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_cuvd2"]
 atlas = ExtResource("1_7gp78")
-region = Rect2(96, 0, 32, 32)
+region = Rect2(288, 0, 96, 96)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pp8em"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_7r3yk"]
 atlas = ExtResource("1_7gp78")
-region = Rect2(128, 0, 32, 32)
+region = Rect2(384, 0, 96, 96)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7hahw"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_bd1lw"]
 atlas = ExtResource("1_7gp78")
-region = Rect2(160, 0, 32, 32)
+region = Rect2(480, 0, 96, 96)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_siid5"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_e76a0")
+"texture": SubResource("AtlasTexture_p5kpc")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_qk33o")
+"texture": SubResource("AtlasTexture_2xn1r")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jxj0f")
+"texture": SubResource("AtlasTexture_kucxf")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vogwm")
+"texture": SubResource("AtlasTexture_cuvd2")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_pp8em")
+"texture": SubResource("AtlasTexture_7r3yk")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7hahw")
+"texture": SubResource("AtlasTexture_bd1lw")
 }],
 "loop": true,
 "name": &"grow",
@@ -57,6 +57,7 @@ animations = [{
 [node name="Dandelion" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_siid5")
 animation = &"grow"
+offset = Vector2(0, -15)
 script = ExtResource("2_vtig4")
 
 [node name="Stage" type="Node2D" parent="."]
