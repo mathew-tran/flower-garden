@@ -44,6 +44,8 @@ func OnUpdateGrowth(type):
 	PushUpTween.tween_property(self, "position", StartPosition , .4)
 	PushUpTween.tween_property(self, "modulate", Color.WHITE, .4)
 	PushUpTween.play()
+	$AudioStreamPlayer2D.pitch_scale = randf_range(.8, 1.1)
+	$AudioStreamPlayer2D.play()
 
 func OnFinishGrowth():
 	$ActionHint.HideHint()

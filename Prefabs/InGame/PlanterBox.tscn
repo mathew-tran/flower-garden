@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://baf2w7kcqs61m"]
+[gd_scene load_steps=7 format=3 uid="uid://baf2w7kcqs61m"]
 
 [ext_resource type="Texture2D" uid="uid://dstvedbjrgb0s" path="res://Art/Boxes/PlanterBox.svg" id="1_k3dd0"]
 [ext_resource type="Script" path="res://Scripts/InGame/PlanterBox.gd" id="2_bw4qh"]
 [ext_resource type="Texture2D" uid="uid://b0128crkkj0kr" path="res://Art/UI/LoadIcon.svg" id="3_0jfjm"]
 [ext_resource type="PackedScene" uid="uid://bma13yufnmijt" path="res://Prefabs/InGame/ActionHint.tscn" id="5_ldncg"]
 [ext_resource type="Texture2D" uid="uid://dyu6v3bvdaaut" path="res://Art/Particles/DirtParticle.svg" id="5_pjpv2"]
+[ext_resource type="AudioStream" uid="uid://epjfiokqud22" path="res://Audio/SFX/Click_Standard_00.mp3" id="6_a8kvg"]
 
 [node name="PlanterBox" type="Sprite2D"]
 texture = ExtResource("1_k3dd0")
@@ -62,6 +63,10 @@ offset_right = 16.0
 offset_bottom = 27.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_a8kvg")
+volume_db = -10.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
