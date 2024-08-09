@@ -39,6 +39,7 @@ position = Vector2(973, 1134)
 texture = ExtResource("2_ukplx")
 
 [node name="Wall" type="Sprite2D" parent="."]
+modulate = Color(0.625597, 0.625597, 0.625597, 1)
 position = Vector2(974, 422)
 texture = ExtResource("3_wir30")
 

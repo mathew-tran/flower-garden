@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cs8qb307piin4"]
+[gd_scene load_steps=7 format=3 uid="uid://cs8qb307piin4"]
 
 [ext_resource type="Texture2D" uid="uid://b8ekb1hjtlobk" path="res://Art/GameFlowers/Dandelion_Full.svg" id="1_jev5x"]
 [ext_resource type="Script" path="res://Scripts/UI/Screens/PlantBook/PlantBookInfo.gd" id="1_ysahs"]
+[ext_resource type="Texture2D" uid="uid://bjlnl1b575ldi" path="res://Art/UI/PlantBookImageBG.svg" id="2_mwumd"]
 [ext_resource type="FontFile" uid="uid://bgsqsl2uc60cx" path="res://Font/dina10px.ttf" id="2_xhfie"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x4usf"]
@@ -19,9 +20,30 @@ script = ExtResource("1_ysahs")
 
 [node name="FlowerImage" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 977.0
-offset_bottom = 793.0
+offset_left = 50.0
+offset_top = 47.0
+offset_right = 1027.0
+offset_bottom = 840.0
+scale = Vector2(0.9, 0.9)
 texture = ExtResource("1_jev5x")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="FlowerImageBG" type="TextureRect" parent="FlowerImage"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -488.5
+offset_top = -396.5
+offset_right = 488.5
+offset_bottom = 396.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_mwumd")
 expand_mode = 3
 stretch_mode = 5
 

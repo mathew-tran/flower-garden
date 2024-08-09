@@ -1,0 +1,80 @@
+[gd_scene load_steps=9 format=3 uid="uid://b5cqq107qc5f7"]
+
+[ext_resource type="Texture2D" uid="uid://d13r025k8vrp5" path="res://Art/GameFlowers/Aloe_Vera.svg" id="1_gw7d3"]
+[ext_resource type="Script" path="res://Scripts/InGame/Plant.gd" id="2_bd5qi"]
+[ext_resource type="Script" path="res://Scripts/InGame/PlantStage.gd" id="3_ujvql"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dt5m4"]
+atlas = ExtResource("1_gw7d3")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hb4ho"]
+atlas = ExtResource("1_gw7d3")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ltfge"]
+atlas = ExtResource("1_gw7d3")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jkmpc"]
+atlas = ExtResource("1_gw7d3")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_siid5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dt5m4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hb4ho")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ltfge")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jkmpc")
+}],
+"loop": true,
+"name": &"grow",
+"speed": 5.0
+}]
+
+[node name="AloeVeraPlant" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_siid5")
+animation = &"grow"
+offset = Vector2(0, -25.035)
+script = ExtResource("2_bd5qi")
+
+[node name="Stage" type="Node2D" parent="."]
+script = ExtResource("3_ujvql")
+TimeToWait = 6.0
+TimeRange = 0.5
+ModeToUse = 2
+bIncreaseFrame = true
+
+[node name="Stage2" type="Node2D" parent="."]
+script = ExtResource("3_ujvql")
+TimeToWait = 3.0
+TimeRange = 0.2
+ModeToUse = 2
+
+[node name="Stage3" type="Node2D" parent="."]
+script = ExtResource("3_ujvql")
+TimeToWait = 3.0
+TimeRange = 0.2
+ModeToUse = 2
+
+[node name="Stage6" type="Node2D" parent="."]
+script = ExtResource("3_ujvql")
+TimeToWait = 4.0
+TimeRange = 0.2
+ModeToUse = 2
+bIncreaseFrame = true
+
+[node name="Stage4" type="Node2D" parent="."]
+script = ExtResource("3_ujvql")
+TimeToWait = 1.0
+TimeRange = 0.5
+ModeToUse = 2
+bIncreaseFrame = true

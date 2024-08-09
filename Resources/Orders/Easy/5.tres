@@ -5,11 +5,11 @@
 [ext_resource type="Resource" uid="uid://bk4packen4wut" path="res://Resources/Plants/Plant_Dandelion.tres" id="1_u6ffv"]
 [ext_resource type="Resource" uid="uid://dqfhmrekmy07k" path="res://Resources/Plants/Plant_Lavender.tres" id="2_2yxmv"]
 [ext_resource type="Resource" uid="uid://jajjntohk3q8" path="res://Resources/Plants/Plant_Rose.tres" id="3_jq0wv"]
-[ext_resource type="Resource" uid="uid://dibj8cjqxjeoe" path="res://Resources/Plants/Plant_Snake_Plant.tres" id="5_2vcwx"]
+[ext_resource type="Resource" uid="uid://c7tj01f857xgc" path="res://Resources/Plants/Aloe_Vera_Plant.tres" id="5_1yjgo"]
 [ext_resource type="Resource" uid="uid://cn6sj13afai6h" path="res://Resources/Plants/Plant_Spider_Plant.tres" id="6_6g4er"]
 
 [resource]
 script = ExtResource("1_6bbbu")
-flowers = Array[Resource("res://Scripts/ResourceTypes/PlantData.gd")]([ExtResource("1_bsjh5"), ExtResource("2_2yxmv"), ExtResource("3_jq0wv"), ExtResource("1_u6ffv"), ExtResource("5_2vcwx"), ExtResource("6_6g4er")])
+flowers = Array[Resource("res://Scripts/ResourceTypes/PlantData.gd")]([ExtResource("1_bsjh5"), ExtResource("2_2yxmv"), ExtResource("3_jq0wv"), ExtResource("1_u6ffv"), ExtResource("5_1yjgo"), ExtResource("6_6g4er")])
 greeting = "I just moved to a new place. Looking for flowers to spruce it up."
 thanks = "These look amazing! I'll be back soon!"
