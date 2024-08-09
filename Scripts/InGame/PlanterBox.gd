@@ -55,6 +55,7 @@ func OnFinishGrowth():
 func OnCompleted():
 	var bouquet = get_tree().get_nodes_in_group("Bouquet")
 	Data.Unlock()
+	$CPUParticles2D.emitting = true
 	if bouquet:
 		bouquet[0].AddFlower(Flower)
 		Flower = null
