@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://c5dcm8mq3xitx"]
+[gd_scene load_steps=29 format=3 uid="uid://c5dcm8mq3xitx"]
 
 [ext_resource type="FontFile" uid="uid://bgsqsl2uc60cx" path="res://Font/dina10px.ttf" id="1_2hcln"]
 [ext_resource type="Texture2D" uid="uid://1phe7w6c7x3p" path="res://Art/Background/Wall.svg" id="1_425ve"]
@@ -19,7 +19,10 @@
 [ext_resource type="Texture2D" uid="uid://ylk2anmnv45x" path="res://Art/Background/Shelf.svg" id="12_te63p"]
 [ext_resource type="Texture2D" uid="uid://b2dyjil60kbfv" path="res://Art/Background/Light.svg" id="13_qqkp2"]
 [ext_resource type="Texture2D" uid="uid://dgeuvu8canhv0" path="res://Art/Background/LightRadius.svg" id="14_00eql"]
+[ext_resource type="Texture2D" uid="uid://1rxd16xxv3my" path="res://Art/GameFlowers/Snake_Plant_Full.svg" id="14_wm68v"]
 [ext_resource type="Texture2D" uid="uid://cu6nysbys1htl" path="res://Art/Background/WallPort.svg" id="15_3gt12"]
+[ext_resource type="Texture2D" uid="uid://d2w3s1amo64hd" path="res://Art/GameFlowers/Spider_Plant_Full.svg" id="15_vfxid"]
+[ext_resource type="Texture2D" uid="uid://dq6qr7wljjogs" path="res://Art/GameFlowers/Daisy_Blue_Full.svg" id="16_rt03y"]
 [ext_resource type="PackedScene" uid="uid://dshrjf5ycg4gx" path="res://Prefabs/UI/Buttons/CCBy40LicenseButton.tscn" id="17_qdst2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_os6l3"]
@@ -198,12 +201,82 @@ texture = ExtResource("14_00eql")
 position = Vector2(1711, 721)
 texture = ExtResource("15_3gt12")
 
+[node name="Plants" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Plants"]
+position = Vector2(109, 1065)
+texture = ExtResource("14_wm68v")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Plants"]
+position = Vector2(941, 1065)
+texture = ExtResource("14_wm68v")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Plants"]
+position = Vector2(2038, 1044)
+texture = ExtResource("14_wm68v")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Plants"]
+position = Vector2(258, 1099)
+texture = ExtResource("15_vfxid")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Plants"]
+position = Vector2(671, 1099)
+texture = ExtResource("15_vfxid")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Plants"]
+position = Vector2(-50, 789)
+rotation = 1.23895
+texture = ExtResource("15_vfxid")
+
+[node name="Sprite2D9" type="Sprite2D" parent="Plants"]
+position = Vector2(-14, 555)
+rotation = 1.23895
+texture = ExtResource("15_vfxid")
+
+[node name="Sprite2D10" type="Sprite2D" parent="Plants"]
+position = Vector2(-29, 287)
+rotation = 1.23895
+texture = ExtResource("15_vfxid")
+
+[node name="Sprite2D11" type="Sprite2D" parent="Plants"]
+position = Vector2(-65, -2.00006)
+rotation = 1.23895
+texture = ExtResource("15_vfxid")
+
+[node name="Sprite2D12" type="Sprite2D" parent="Plants"]
+position = Vector2(1842.78, 830.78)
+rotation = 4.29172
+texture = ExtResource("15_vfxid")
+
+[node name="Sprite2D13" type="Sprite2D" parent="Plants"]
+position = Vector2(1958, 612)
+rotation = 4.29172
+texture = ExtResource("15_vfxid")
+
+[node name="Sprite2D14" type="Sprite2D" parent="Plants"]
+position = Vector2(2000, 336)
+rotation = 4.29172
+texture = ExtResource("15_vfxid")
+
+[node name="Sprite2D15" type="Sprite2D" parent="Plants"]
+position = Vector2(1890, 3.99993)
+rotation = 4.29172
+texture = ExtResource("15_vfxid")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Plants"]
+position = Vector2(1077, 1099)
+texture = ExtResource("15_vfxid")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Plants"]
+position = Vector2(1413, 1137)
+texture = ExtResource("16_rt03y")
+
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 1133.0
+offset_left = 1103.0
 offset_top = 260.0
-offset_right = 1907.0
-offset_bottom = 428.0
+offset_right = 1877.0
+offset_bottom = 634.0
 metadata/_edit_group_ = true
 
 [node name="Label2" type="Label" parent="VBoxContainer"]
