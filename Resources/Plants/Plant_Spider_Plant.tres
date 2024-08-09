@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PlantData" load_steps=4 format=3 uid="uid://cn6sj13afai6h"]
+
+[ext_resource type="Texture2D" uid="uid://d2w3s1amo64hd" path="res://Art/GameFlowers/Spider_Plant_Full.svg" id="1_rcj6j"]
+[ext_resource type="PackedScene" uid="uid://bo87o4jwxonxq" path="res://Prefabs/Flowers/SpiderPlant.tscn" id="2_2ujla"]
+[ext_resource type="Script" path="res://Scripts/ResourceTypes/PlantData.gd" id="3_a8tsy"]
+
+[resource]
+script = ExtResource("3_a8tsy")
+PlantScene = ExtResource("2_2ujla")
+PlantPicture = ExtResource("1_rcj6j")
+FlowerName = "Spider Plant"
+FlowerDescription = "Spider plants constantly produce baby \"spiderettes\" that dangle like tiny green spiders, making them easy to share!"
+UnlockID = "008"
