@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PlantOrderResource" load_steps=3 format=3 uid="uid://b7rvpn7g0hq4r"]
+
+[ext_resource type="Resource" uid="uid://st0xklfphd5k" path="res://Resources/Plants/Plant_Bamboo.tres" id="1_sp2uc"]
+[ext_resource type="Script" path="res://Scripts/ResourceTypes/PlantOrder.gd" id="2_x03ne"]
+
+[resource]
+script = ExtResource("2_x03ne")
+flowers = Array[Resource("res://Scripts/ResourceTypes/PlantData.gd")]([ExtResource("1_sp2uc"), ExtResource("1_sp2uc")])
+greeting = "Can I get some Bamboo?"
+thanks = "Knew they'd grow really quick. Thanks!"

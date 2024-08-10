@@ -1,0 +1,61 @@
+[gd_scene load_steps=8 format=3 uid="uid://cys8u5dhl6e7g"]
+
+[ext_resource type="Texture2D" uid="uid://do1vcc23xwckw" path="res://Art/GameFlowers/Bamboo.svg" id="1_47eeg"]
+[ext_resource type="Script" path="res://Scripts/InGame/Plant.gd" id="2_enp72"]
+[ext_resource type="Script" path="res://Scripts/InGame/PlantStage.gd" id="3_0flf7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pxj8p"]
+atlas = ExtResource("1_47eeg")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ivd5e"]
+atlas = ExtResource("1_47eeg")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l2e43"]
+atlas = ExtResource("1_47eeg")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_siid5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pxj8p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ivd5e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l2e43")
+}],
+"loop": true,
+"name": &"grow",
+"speed": 5.0
+}]
+
+[node name="Bamboo" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_siid5")
+animation = &"grow"
+offset = Vector2(0, -25.035)
+script = ExtResource("2_enp72")
+
+[node name="Stage" type="Node2D" parent="."]
+script = ExtResource("3_0flf7")
+TimeToWait = 1.5
+TimeRange = 0.5
+ModeToUse = 2
+bIncreaseFrame = true
+
+[node name="Stage2" type="Node2D" parent="."]
+script = ExtResource("3_0flf7")
+TimeToWait = 1.5
+TimeRange = 0.2
+ModeToUse = 2
+bIncreaseFrame = true
+
+[node name="Stage4" type="Node2D" parent="."]
+script = ExtResource("3_0flf7")
+TimeToWait = 0.25
+TimeRange = 0.0
+ModeToUse = 2
+bIncreaseFrame = true

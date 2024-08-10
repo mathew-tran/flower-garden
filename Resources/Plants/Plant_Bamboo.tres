@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PlantData" load_steps=4 format=3 uid="uid://st0xklfphd5k"]
+
+[ext_resource type="Texture2D" uid="uid://d5ql0paf0im6" path="res://Art/GameFlowers/Bamboo_Full.svg" id="1_rd2r5"]
+[ext_resource type="PackedScene" uid="uid://cys8u5dhl6e7g" path="res://Prefabs/Flowers/Bamboo.tscn" id="2_v3qdc"]
+[ext_resource type="Script" path="res://Scripts/ResourceTypes/PlantData.gd" id="3_wkwl2"]
+
+[resource]
+script = ExtResource("3_wkwl2")
+PlantScene = ExtResource("2_v3qdc")
+PlantPicture = ExtResource("1_rd2r5")
+FlowerName = "Bamboo"
+FlowerDescription = "Bamboo can grow up to 3 feet in just 24 hours, making it one of the fastest-growing plants on Earth—some people say you can almost hear it grow!"
+UnlockID = "011"
