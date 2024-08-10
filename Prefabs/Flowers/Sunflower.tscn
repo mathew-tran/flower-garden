@@ -1,0 +1,76 @@
+[gd_scene load_steps=9 format=3 uid="uid://chkby85lhgh0m"]
+
+[ext_resource type="Texture2D" uid="uid://1teh2t5oam5l" path="res://Art/GameFlowers/Sunflower.svg" id="1_n3uvc"]
+[ext_resource type="Script" path="res://Scripts/InGame/Plant.gd" id="2_u1dfk"]
+[ext_resource type="Script" path="res://Scripts/InGame/PlantStage.gd" id="3_5orpk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s6ru5"]
+atlas = ExtResource("1_n3uvc")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jtbov"]
+atlas = ExtResource("1_n3uvc")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ubyf"]
+atlas = ExtResource("1_n3uvc")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2g8o"]
+atlas = ExtResource("1_n3uvc")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_siid5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s6ru5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jtbov")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ubyf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n2g8o")
+}],
+"loop": true,
+"name": &"grow",
+"speed": 5.0
+}]
+
+[node name="Sunflower" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_siid5")
+animation = &"grow"
+offset = Vector2(0, -29.59)
+script = ExtResource("2_u1dfk")
+
+[node name="Stage" type="Node2D" parent="."]
+script = ExtResource("3_5orpk")
+TimeToWait = 5.0
+TimeRange = 2.0
+bIncreaseFrame = true
+
+[node name="Stage2" type="Node2D" parent="."]
+script = ExtResource("3_5orpk")
+TimeToWait = 5.0
+TimeRange = 2.0
+bIncreaseFrame = true
+
+[node name="Stage3" type="Node2D" parent="."]
+script = ExtResource("3_5orpk")
+TimeToWait = 5.0
+TimeRange = 2.0
+
+[node name="Stage4" type="Node2D" parent="."]
+script = ExtResource("3_5orpk")
+TimeToWait = 5.0
+TimeRange = 2.0
+bIncreaseFrame = true
+
+[node name="Stage5" type="Node2D" parent="."]
+script = ExtResource("3_5orpk")
+TimeToWait = 5.0
+TimeRange = 2.0
+ModeToUse = 2

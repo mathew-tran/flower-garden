@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PlantData" load_steps=4 format=3 uid="uid://ctsifafy4nsq2"]
+
+[ext_resource type="Texture2D" uid="uid://da1o66vu1qi1r" path="res://Art/GameFlowers/Sunflower_Full.svg" id="1_57e8i"]
+[ext_resource type="PackedScene" uid="uid://chkby85lhgh0m" path="res://Prefabs/Flowers/Sunflower.tscn" id="2_4dkl3"]
+[ext_resource type="Script" path="res://Scripts/ResourceTypes/PlantData.gd" id="3_kxo5w"]
+
+[resource]
+script = ExtResource("3_kxo5w")
+PlantScene = ExtResource("2_4dkl3")
+PlantPicture = ExtResource("1_57e8i")
+FlowerName = "Sunflower"
+FlowerDescription = "Sunflowers track the sun all day, turning their heads to follow its path, then reset at night to greet the sunrise!"
+UnlockID = "012"

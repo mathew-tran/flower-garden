@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PlantOrderResource" load_steps=3 format=3 uid="uid://nhenvaas16c"]
+
+[ext_resource type="Resource" uid="uid://ctsifafy4nsq2" path="res://Resources/Plants/Plant_Sunflower.tres" id="1_p5dqw"]
+[ext_resource type="Script" path="res://Scripts/ResourceTypes/PlantOrder.gd" id="2_dbak0"]
+
+[resource]
+script = ExtResource("2_dbak0")
+flowers = Array[Resource("res://Scripts/ResourceTypes/PlantData.gd")]([ExtResource("1_p5dqw"), ExtResource("1_p5dqw"), ExtResource("1_p5dqw")])
+greeting = "Wondering if I can get some sunflowers for my place? Feel like it'd brighten things up!"
+thanks = "Beautiful! Later!"
