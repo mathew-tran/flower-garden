@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="PlantOrderResource" load_steps=3 format=3 uid="uid://cfo7plgk50vd1"]
 
-[ext_resource type="Resource" uid="uid://c7tj01f857xgc" path="res://Resources/Plants/Aloe_Vera_Plant.tres" id="1_vucoi"]
+[ext_resource type="Resource" uid="uid://c7tj01f857xgc" path="res://Resources/Plants/Plant_Aloe_Vera.tres" id="1_vucoi"]
 [ext_resource type="Script" path="res://Scripts/ResourceTypes/PlantOrder.gd" id="2_wrgdn"]
 
 [resource]
