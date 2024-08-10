@@ -35,6 +35,10 @@ func HasBeenViewed():
 		return data["viewed"]
 		
 func SetHasBeenViewed():
+	if HasBeenViewed():
+		return
+		
 	Progression.UpdateKey(GetUnlockID(), {
 		"viewed" : true
 	})
+	Game.GiveXP.emit(100)
