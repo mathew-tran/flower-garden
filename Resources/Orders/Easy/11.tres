@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PlantOrderResource" load_steps=3 format=3 uid="uid://cfo7plgk50vd1"]
+
+[ext_resource type="Resource" uid="uid://c7tj01f857xgc" path="res://Resources/Plants/Aloe_Vera_Plant.tres" id="1_vucoi"]
+[ext_resource type="Script" path="res://Scripts/ResourceTypes/PlantOrder.gd" id="2_wrgdn"]
+
+[resource]
+script = ExtResource("2_wrgdn")
+flowers = Array[Resource("res://Scripts/ResourceTypes/PlantData.gd")]([ExtResource("1_vucoi"), null, null, ExtResource("1_vucoi"), null, ExtResource("1_vucoi")])
+greeting = "Could I get some Aloe Vera? Someone I know just got some burns!"
+thanks = "Wow that's quick!"

@@ -19,4 +19,21 @@ func GetUnlockID():
 	return "FLOWER" + UnlockID
 
 func Unlock():
-	Progression.UpdateKey(GetUnlockID(), true)
+	if IsUnlocked():
+		return
+	Progression.UpdateKey(GetUnlockID(), {
+		"viewed" : false
+	})
+	Game.NewFlowerFound.emit()
+
+func HasBeenViewed():
+	var data = Progression.GetKeyValue(GetUnlockID())
+	if data == null:
+		return false
+	else:
+		return data["viewed"]
+		
+func SetHasBeenViewed():
+	Progression.UpdateKey(GetUnlockID(), {
+		"viewed" : true
+	})

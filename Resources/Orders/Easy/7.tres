@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="PlantOrder" load_steps=2 format=3 uid="uid://bxuqjw6mnnlc7"]
+[gd_resource type="Resource" script_class="PlantOrderResource" load_steps=3 format=3 uid="uid://bxuqjw6mnnlc7"]
 
+[ext_resource type="Resource" uid="uid://jajjntohk3q8" path="res://Resources/Plants/Plant_Rose.tres" id="1_7lrxc"]
 [ext_resource type="Script" path="res://Scripts/ResourceTypes/PlantOrder.gd" id="1_yhpvu"]
 
 [resource]
 script = ExtResource("1_yhpvu")
-flowers = [-1, -1, 0, -1, -1, -1]
-greeting = "A single rose will do. I will pay extra for it!"
-thanks = "Here's the money. Keep the rest!"
+flowers = Array[Resource("res://Scripts/ResourceTypes/PlantData.gd")]([ExtResource("1_7lrxc")])
+greeting = "A single rose will do"
+thanks = "Thanks!"

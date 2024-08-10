@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PlantOrderResource" load_steps=3 format=3 uid="uid://m3p74y2gqvau"]
+
+[ext_resource type="Resource" uid="uid://blirt15621oh" path="res://Resources/Plants/Plant_Fragipani.tres" id="1_jjcgk"]
+[ext_resource type="Script" path="res://Scripts/ResourceTypes/PlantOrder.gd" id="2_l03ry"]
+
+[resource]
+script = ExtResource("2_l03ry")
+flowers = Array[Resource("res://Scripts/ResourceTypes/PlantData.gd")]([ExtResource("1_jjcgk"), null, null, ExtResource("1_jjcgk"), null, ExtResource("1_jjcgk")])
+greeting = "Surprise me!"
+thanks = "Woah, never saw these before. Thanks alot!"

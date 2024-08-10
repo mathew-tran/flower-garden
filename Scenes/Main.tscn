@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://crwrlpdt4wmra" path="res://Art/Background/Ground.svg" id="2_ukplx"]
 [ext_resource type="Texture2D" uid="uid://1phe7w6c7x3p" path="res://Art/Background/Wall.svg" id="3_wir30"]
 [ext_resource type="PackedScene" uid="uid://dhhpqkdyq4klf" path="res://Prefabs/InGame/Mouse.tscn" id="6_evbl1"]
-[ext_resource type="Texture2D" uid="uid://camvumrcn7fxq" path="res://Art/UI/PlantBook.svg" id="6_m3lqj"]
+[ext_resource type="PackedScene" uid="uid://dlihmeeetlrwq" path="res://Prefabs/UI/PlantBookButton.tscn" id="6_r5v06"]
 [ext_resource type="PackedScene" uid="uid://b0d6wacengpqb" path="res://Prefabs/InGame/Bouquet.tscn" id="7_5kcj8"]
 [ext_resource type="PackedScene" uid="uid://oywjhu62v5hd" path="res://Prefabs/UI/Screens/PlantBook/PlantBookUI.tscn" id="7_uos31"]
 [ext_resource type="PackedScene" uid="uid://dn8dtqoegkyrk" path="res://Prefabs/InGame/Message.tscn" id="8_3a82k"]
@@ -70,13 +70,11 @@ offset_right = 1002.0
 offset_bottom = 1010.0
 scale = Vector2(1.5, 1.5)
 
-[node name="PlantBookButton" type="Button" parent="CanvasLayer"]
-offset_left = 35.0
-offset_top = 932.0
-offset_right = 226.0
-offset_bottom = 1105.0
-scale = Vector2(0.5, 0.5)
-icon = ExtResource("6_m3lqj")
+[node name="PlantBookButton" parent="CanvasLayer" instance=ExtResource("6_r5v06")]
+offset_left = 13.0
+offset_top = 828.0
+offset_right = 204.0
+offset_bottom = 1001.0
 
 [node name="Clock" parent="CanvasLayer" instance=ExtResource("8_gl4gd")]
 anchors_preset = 3

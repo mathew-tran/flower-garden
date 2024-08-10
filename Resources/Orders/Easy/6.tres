@@ -1,9 +1,12 @@
-[gd_resource type="Resource" script_class="PlantOrder" load_steps=2 format=3 uid="uid://bj3tm86qosj7d"]
+[gd_resource type="Resource" script_class="PlantOrderResource" load_steps=5 format=3 uid="uid://bj3tm86qosj7d"]
 
 [ext_resource type="Script" path="res://Scripts/ResourceTypes/PlantOrder.gd" id="1_in4xf"]
+[ext_resource type="Resource" uid="uid://bvscphaqqvuwf" path="res://Resources/Plants/Plant_Daisy_Blue.tres" id="1_isrwu"]
+[ext_resource type="Resource" uid="uid://durnprqy5cvtv" path="res://Resources/Plants/Plant_Daffodil.tres" id="2_p6x5j"]
+[ext_resource type="Resource" uid="uid://dqfhmrekmy07k" path="res://Resources/Plants/Plant_Lavender.tres" id="3_gsn0f"]
 
 [resource]
 script = ExtResource("1_in4xf")
-flowers = [1, 5, 1, 5, 1, 5]
+flowers = Array[Resource("res://Scripts/ResourceTypes/PlantData.gd")]([ExtResource("1_isrwu"), ExtResource("2_p6x5j"), ExtResource("3_gsn0f")])
 greeting = "Want some quick flowers. I forgot to buy them earlier today!"
 thanks = "Great service. Later!"

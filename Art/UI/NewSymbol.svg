@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="18.738327"
+   height="18.738329"
+   viewBox="0 0 4.9578489 4.9578495"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   sodipodi:docname="Frangipani_Scene.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:zoom="5.6568543"
+     inkscape:cx="66.821591"
+     inkscape:cy="59.662135"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-7"
+     inkscape:window-y="-7"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g75">
+    <inkscape:grid
+       id="grid1"
+       units="px"
+       originx="8.9334831"
+       originy="-1.0932997"
+       spacingx="8.4666666"
+       spacingy="8.4666666"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       dotted="false"
+       gridanglex="30"
+       gridanglez="30"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1 copy 1"
+     inkscape:groupmode="layer"
+     id="g75"
+     transform="matrix(-1.0624885,0,0,1.0624885,17.664685,-1.3578344)">
+    <circle
+       style="fill:#ffcc5d;fill-opacity:1;stroke:none;stroke-width:0.470592;stroke-dasharray:none"
+       id="path246"
+       cx="-14.292635"
+       cy="3.6111064"
+       r="2.3331308"
+       transform="scale(-1,1)" />
+    <g
+       id="g248">
+      <circle
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.470592;stroke-dasharray:none"
+         id="path248"
+         cx="-14.292635"
+         cy="4.8161907"
+         r="0.36317605"
+         transform="scale(-1,1)" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.470592;stroke-dasharray:none"
+         id="rect248"
+         width="0.70434141"
+         height="2.201067"
+         x="-14.655811"
+         y="2.042846"
+         transform="scale(-1,1)" />
+    </g>
+  </g>
+</svg>

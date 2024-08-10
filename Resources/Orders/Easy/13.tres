@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PlantOrderResource" load_steps=3 format=3 uid="uid://cgikbipx5tqg2"]
+
+[ext_resource type="Resource" uid="uid://dibj8cjqxjeoe" path="res://Resources/Plants/Plant_Snake_Plant.tres" id="1_1suci"]
+[ext_resource type="Script" path="res://Scripts/ResourceTypes/PlantOrder.gd" id="2_b3dqn"]
+
+[resource]
+script = ExtResource("2_b3dqn")
+flowers = Array[Resource("res://Scripts/ResourceTypes/PlantData.gd")]([ExtResource("1_1suci"), ExtResource("1_1suci"), ExtResource("1_1suci")])
+greeting = "Can you give me a snake plant? I heard it's good for air quality!"
+thanks = "Great stuff. See you again soon!"

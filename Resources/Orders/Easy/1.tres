@@ -5,6 +5,6 @@
 
 [resource]
 script = ExtResource("1_a8hd4")
-flowers = Array[Resource("res://Scripts/ResourceTypes/PlantData.gd")]([ExtResource("1_pb2n5"), null, ExtResource("1_pb2n5")])
-greeting = "I need some flowers for a birthday! Some roses should do!"
+flowers = Array[Resource("res://Scripts/ResourceTypes/PlantData.gd")]([ExtResource("1_pb2n5"), ExtResource("1_pb2n5"), ExtResource("1_pb2n5")])
+greeting = "I need some flowers for a birthday! Some dandelions should do!"
 thanks = "Thanks alot!"

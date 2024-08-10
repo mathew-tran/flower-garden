@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="PlantOrder" load_steps=2 format=3 uid="uid://gaoxlsbjkntq"]
+[gd_resource type="Resource" script_class="PlantOrderResource" load_steps=3 format=3 uid="uid://gaoxlsbjkntq"]
 
 [ext_resource type="Script" path="res://Scripts/ResourceTypes/PlantOrder.gd" id="1_bk83n"]
+[ext_resource type="Resource" uid="uid://cn6sj13afai6h" path="res://Resources/Plants/Plant_Spider_Plant.tres" id="1_uhhpr"]
 
 [resource]
 script = ExtResource("1_bk83n")
-flowers = [3, -1, 3, -1, -1, 3]
-greeting = "Going to visit my mother. I need some hydrangeas."
+flowers = Array[Resource("res://Scripts/ResourceTypes/PlantData.gd")]([ExtResource("1_uhhpr"), null, ExtResource("1_uhhpr"), ExtResource("1_uhhpr")])
+greeting = "Ever heard of Spider Plants? I want some to share with my friends!"
 thanks = "Quick! I'll remember to come back here next time I need something!"

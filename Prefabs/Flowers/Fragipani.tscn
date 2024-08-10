@@ -1,0 +1,76 @@
+[gd_scene load_steps=9 format=3 uid="uid://h57b61vekmwn"]
+
+[ext_resource type="Texture2D" uid="uid://dgudqy6tw4i08" path="res://Art/GameFlowers/Fragipani.svg" id="1_m6vte"]
+[ext_resource type="Script" path="res://Scripts/InGame/Plant.gd" id="2_ewfhn"]
+[ext_resource type="Script" path="res://Scripts/InGame/PlantStage.gd" id="3_cpqt8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xg4f3"]
+atlas = ExtResource("1_m6vte")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ubsdl"]
+atlas = ExtResource("1_m6vte")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ppxxt"]
+atlas = ExtResource("1_m6vte")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5h446"]
+atlas = ExtResource("1_m6vte")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_siid5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xg4f3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ubsdl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ppxxt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5h446")
+}],
+"loop": true,
+"name": &"grow",
+"speed": 5.0
+}]
+
+[node name="Fragipani" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_siid5")
+animation = &"grow"
+script = ExtResource("2_ewfhn")
+
+[node name="Stage" type="Node2D" parent="."]
+script = ExtResource("3_cpqt8")
+TimeRange = 0.5
+bIncreaseFrame = true
+
+[node name="Stage2" type="Node2D" parent="."]
+script = ExtResource("3_cpqt8")
+TimeToWait = 5.0
+TimeRange = 0.2
+
+[node name="Stage3" type="Node2D" parent="."]
+script = ExtResource("3_cpqt8")
+TimeToWait = 1.0
+TimeRange = 2.0
+ModeToUse = 1
+
+[node name="Stage6" type="Node2D" parent="."]
+script = ExtResource("3_cpqt8")
+TimeToWait = 6.0
+TimeRange = 0.2
+ModeToUse = 1
+bIncreaseFrame = true
+
+[node name="Stage4" type="Node2D" parent="."]
+script = ExtResource("3_cpqt8")
+TimeToWait = 1.0
+TimeRange = 0.5
+ModeToUse = 2
+bIncreaseFrame = true

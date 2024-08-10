@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="PlantOrder" load_steps=2 format=3 uid="uid://claah6p2xqjd0"]
+[gd_resource type="Resource" script_class="PlantOrderResource" load_steps=3 format=3 uid="uid://claah6p2xqjd0"]
 
 [ext_resource type="Script" path="res://Scripts/ResourceTypes/PlantOrder.gd" id="1_h6nm1"]
+[ext_resource type="Resource" uid="uid://dqfhmrekmy07k" path="res://Resources/Plants/Plant_Lavender.tres" id="1_lq11w"]
 
 [resource]
 script = ExtResource("1_h6nm1")
-flowers = [6, -1, 6, -1, -1, 6]
+flowers = Array[Resource("res://Scripts/ResourceTypes/PlantData.gd")]([ExtResource("1_lq11w"), null, ExtResource("1_lq11w"), null, ExtResource("1_lq11w"), ExtResource("1_lq11w")])
 greeting = "My wife loves lavender. Could I get some?"
 thanks = "Smells nice! I might get some more in a couple weeks!"

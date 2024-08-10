@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="PlantOrderResource" load_steps=2 format=3 uid="uid://c8snj0pxwhd05"]
+[gd_resource type="Resource" script_class="PlantOrderResource" load_steps=3 format=3 uid="uid://c8snj0pxwhd05"]
 
 [ext_resource type="Script" path="res://Scripts/ResourceTypes/PlantOrder.gd" id="1_0174y"]
+[ext_resource type="Resource" uid="uid://durnprqy5cvtv" path="res://Resources/Plants/Plant_Daffodil.tres" id="1_m25ec"]
 
 [resource]
 script = ExtResource("1_0174y")
-flowers = Array[Resource("res://Scripts/ResourceTypes/PlantData.gd")]([null, null, null, null, null])
+flowers = Array[Resource("res://Scripts/ResourceTypes/PlantData.gd")]([ExtResource("1_m25ec"), null, ExtResource("1_m25ec"), null, ExtResource("1_m25ec")])
 greeting = "Going to visit my grandma. Could I get some daffodils?"
 thanks = "My grandma will be really happy with these. Thanks!"
