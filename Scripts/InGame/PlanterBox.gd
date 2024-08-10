@@ -40,19 +40,25 @@ func CheckBoxesComplete():
 
 func OnUpdateGrowth(type):
 	$ActionHint.SetHint(type)
+	AnimateFlowerUp()
+	$AudioStreamPlayer2D.pitch_scale = randf_range(.8, 1.1)
+	$AudioStreamPlayer2D.play()
+
+func AnimateFlowerUp():
 	PushUpTween = get_tree().create_tween()
 	PushUpTween.tween_property(self, "position", StartPosition , .4)
 	PushUpTween.tween_property(self, "modulate", Color.WHITE, .4)
 	PushUpTween.play()
-	$AudioStreamPlayer2D.pitch_scale = randf_range(.8, 1.1)
-	$AudioStreamPlayer2D.play()
-
-func OnFinishGrowth():
-	$ActionHint.HideHint()
+	
+func AnimateFlowerDown():
 	PushDownTween = get_tree().create_tween()
 	PushDownTween.tween_property(self, "position", StartPosition + Vector2(0, 10), .4)
 	PushDownTween.tween_property(self, "modulate", Color.SILVER, .4)
 	PushDownTween.play()
+			
+func OnFinishGrowth():
+	$ActionHint.HideHint()
+	AnimateFlowerDown()
 
 func OnCompleted():
 	var bouquet = get_tree().get_nodes_in_group("Bouquet")
@@ -61,8 +67,10 @@ func OnCompleted():
 	if bouquet:
 		bouquet[0].AddFlower(Flower)
 		Flower = null
-	OnFinishGrowth()
+	
 	emit_signal("FlowerBoxComplete")
+	AnimateFlowerUp()
+	Game.GiveXP.emit(10 + randi_range(2, 4))
 	
 func Click():
 	print(name + " has been clicked")

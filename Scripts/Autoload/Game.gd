@@ -5,16 +5,13 @@ signal StartNewRound
 signal NewFlowerFound
 var CurrentOrder = null
 
-var bHasDoneTutorial = false
-
+signal GiveXP(amount)
 func ArePlanterBoxesCompleted():
 	var boxes = get_tree().get_nodes_in_group("PlanterBox")
 	for box in boxes:
 		if is_instance_valid(box.GetPlant()):
 			return false
 	return true
-
-
 
 func SetNewRound():
 	randomize()
@@ -27,6 +24,9 @@ func SetNewRound():
 	CurrentOrder = load(orders[randi() % len(orders)]) as PlantOrderResource
 	#CurrentOrder = load("res://Resources/Orders/Easy/5.tres") as PlantOrderResource
 	var boxes = get_tree().get_nodes_in_group("PlanterBox")
+	while CurrentOrder.flowers.size() < 5:
+		CurrentOrder.flowers.append(null)
+	CurrentOrder.flowers.shuffle()
 	for x in range(0, len(CurrentOrder.flowers)):
 		if is_instance_valid(CurrentOrder.flowers[x]):
 			boxes[x].SetPlant(CurrentOrder.flowers[x])

@@ -25,6 +25,7 @@ func Unlock():
 		"viewed" : false
 	})
 	Game.NewFlowerFound.emit()
+	Game.GiveXP.emit(50)
 
 func HasBeenViewed():
 	var data = Progression.GetKeyValue(GetUnlockID())

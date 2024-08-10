@@ -15,21 +15,6 @@ modulate_color = Color(1.44392e-07, 0.25356, 0.15321, 1)
 texture = ExtResource("1_jexjp")
 modulate_color = Color(0.473976, 0.473976, 0.473976, 1)
 
-[sub_resource type="Animation" id="Animation_ihyci"]
-resource_name = "animate"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.6, 0.8, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [0.0, -0.261799, 0.261799, 0.0]
-}
-
 [sub_resource type="Animation" id="Animation_hu6ye"]
 length = 0.001
 tracks/0/type = "value"
@@ -43,6 +28,21 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_ihyci"]
+resource_name = "animate"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.261799, 0.261799, 0.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_77r74"]

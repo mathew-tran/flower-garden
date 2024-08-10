@@ -24,6 +24,7 @@ func AttemptGrow():
 			if frame < frameCount:
 				frame += 1
 		IncrementStage()
+		Game.GiveXP.emit(2 + randi_range(2, 4))
 
 	else:
 		print("failed to activate")

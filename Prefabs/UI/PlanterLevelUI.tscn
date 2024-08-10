@@ -1,0 +1,141 @@
+[gd_scene load_steps=8 format=3 uid="uid://ugadjt1ykyn3"]
+
+[ext_resource type="FontFile" uid="uid://bgsqsl2uc60cx" path="res://Font/dina10px.ttf" id="1_38dmg"]
+[ext_resource type="Script" path="res://Scripts/UI/PlanterLevelUI.gd" id="1_643ir"]
+[ext_resource type="AudioStream" uid="uid://d4k34we8cwu5i" path="res://Audio/SFX/Slide_Sharp_02.mp3" id="3_8gvd1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tyc42"]
+bg_color = Color(0.0615282, 0.708379, 0.481433, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Animation" id="Animation_jxvgo"]
+resource_name = "animate"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer/ProgressBar:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.621598, 1, 0.476943, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_m77td"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer/ProgressBar:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kwb87"]
+_data = {
+"RESET": SubResource("Animation_m77td"),
+"animate": SubResource("Animation_jxvgo")
+}
+
+[node name="PlanterLevel" type="Control"]
+custom_minimum_size = Vector2(405, 50)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 405.0
+offset_bottom = 50.0
+script = ExtResource("1_643ir")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(410, 55)
+layout_mode = 0
+offset_left = -2.5
+offset_top = -2.5
+offset_right = 407.5
+offset_bottom = 52.5
+theme_override_styles/panel = SubResource("StyleBoxFlat_tyc42")
+
+[node name="VBoxContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(405, 50)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Level" type="Label" parent="VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_38dmg")
+theme_override_font_sizes/font_size = 35
+text = "999"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_38dmg")
+text = "Planter LV"
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer"]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+mouse_filter = 2
+value = 10.0
+show_percentage = false
+
+[node name="PlanterInfo" type="Panel" parent="."]
+visible = false
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 0
+offset_left = 2.0
+offset_top = 54.0
+offset_right = 402.0
+offset_bottom = 244.0
+mouse_filter = 2
+
+[node name="Level2" type="Label" parent="PlanterInfo"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -66.5
+offset_right = 200.0
+offset_bottom = 66.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_38dmg")
+theme_override_font_sizes/font_size = 35
+text = "The higher the Planter LV, the more kinds of plants you will encounter"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_8gvd1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_kwb87")
+}
+speed_scale = 3.0
+
+[connection signal="mouse_entered" from="Panel" to="." method="_on_panel_mouse_entered"]
+[connection signal="mouse_exited" from="Panel" to="." method="_on_panel_mouse_exited"]

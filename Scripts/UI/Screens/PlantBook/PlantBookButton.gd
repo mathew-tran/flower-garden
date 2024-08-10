@@ -29,3 +29,4 @@ func _on_button_up():
 	if Progression.GetKeyValue(Data.GetUnlockID()):
 		Data.SetHasBeenViewed()
 		Update()
+		Game.GiveXP.emit(100)

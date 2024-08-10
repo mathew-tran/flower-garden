@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://c82r4casfug7j"]
+[gd_scene load_steps=24 format=3 uid="uid://c82r4casfug7j"]
 
 [ext_resource type="Script" path="res://Scripts/InGame/Main.gd" id="1_1pe8g"]
 [ext_resource type="PackedScene" uid="uid://baf2w7kcqs61m" path="res://Prefabs/InGame/PlanterBox.tscn" id="1_30kj7"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://r4m63q77kcom" path="res://Prefabs/InGame/Clock.tscn" id="8_gl4gd"]
 [ext_resource type="Texture2D" uid="uid://ckhuqrd1wuufx" path="res://Art/Background/Sidewalk.svg" id="8_jcx78"]
 [ext_resource type="Texture2D" uid="uid://3rm8coa11p7n" path="res://Art/People/PersonPlaceholder.svg" id="9_kvmcc"]
+[ext_resource type="PackedScene" uid="uid://ugadjt1ykyn3" path="res://Prefabs/UI/PlanterLevelUI.tscn" id="10_dyydc"]
 [ext_resource type="Script" path="res://Scripts/People/Person.gd" id="10_qc5fs"]
 [ext_resource type="Texture2D" uid="uid://bntxtwgny1dpt" path="res://Art/Background/WindowCovering.svg" id="10_uffr6"]
 [ext_resource type="Texture2D" uid="uid://bvn8acnv1xqpx" path="res://Art/Background/Window.svg" id="11_a2p8j"]
@@ -89,6 +90,20 @@ grow_vertical = 0
 visible = false
 
 [node name="Mouse" parent="CanvasLayer" instance=ExtResource("6_evbl1")]
+
+[node name="PlanterLevel" parent="CanvasLayer" instance=ExtResource("10_dyydc")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -411.0
+offset_top = 7.0
+offset_right = -6.0
+offset_bottom = 57.0
+grow_horizontal = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="Bouquet" parent="." instance=ExtResource("7_5kcj8")]
 position = Vector2(1759, 787)
