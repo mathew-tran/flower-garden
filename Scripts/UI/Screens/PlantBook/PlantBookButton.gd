@@ -15,7 +15,7 @@ func _ready():
 func Update():
 	if is_instance_valid(Data):
 		if Progression.GetKeyValue(Data.GetUnlockID()):
-			text = Data.FlowerName
+			text = Data.FlowerName.to_upper()
 			if Data.HasBeenViewed() == false:
 				$TextureRect.visible = true
 			else:

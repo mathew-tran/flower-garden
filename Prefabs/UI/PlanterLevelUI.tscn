@@ -6,6 +6,11 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tyc42"]
 bg_color = Color(0.0615282, 0.708379, 0.481433, 1)
+skew = Vector2(0.2, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -60,7 +65,7 @@ custom_minimum_size = Vector2(410, 55)
 layout_mode = 0
 offset_left = -2.5
 offset_top = -2.5
-offset_right = 407.5
+offset_right = 412.5
 offset_bottom = 52.5
 theme_override_styles/panel = SubResource("StyleBoxFlat_tyc42")
 
