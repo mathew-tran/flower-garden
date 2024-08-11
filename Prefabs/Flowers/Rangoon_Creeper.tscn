@@ -1,0 +1,74 @@
+[gd_scene load_steps=9 format=3 uid="uid://dbkeaegifsfjd"]
+
+[ext_resource type="Texture2D" uid="uid://b8evlo0708aoj" path="res://Art/GameFlowers/Rangoon_Creeper.svg" id="1_1pywp"]
+[ext_resource type="Script" path="res://Scripts/InGame/Plant.gd" id="2_ef1gx"]
+[ext_resource type="Script" path="res://Scripts/InGame/PlantStage.gd" id="3_86xny"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hk548"]
+atlas = ExtResource("1_1pywp")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ipoy"]
+atlas = ExtResource("1_1pywp")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_myx6l"]
+atlas = ExtResource("1_1pywp")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8mo20"]
+atlas = ExtResource("1_1pywp")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_siid5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hk548")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ipoy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_myx6l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8mo20")
+}],
+"loop": true,
+"name": &"grow",
+"speed": 5.0
+}]
+
+[node name="RangoonCreeper" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_siid5")
+animation = &"grow"
+offset = Vector2(0, -16.625)
+script = ExtResource("2_ef1gx")
+
+[node name="Stage" type="Node2D" parent="."]
+script = ExtResource("3_86xny")
+TimeToWait = 3.0
+TimeRange = 2.0
+bIncreaseFrame = true
+
+[node name="Stage2" type="Node2D" parent="."]
+script = ExtResource("3_86xny")
+TimeToWait = 5.0
+bIncreaseFrame = true
+
+[node name="Stage3" type="Node2D" parent="."]
+script = ExtResource("3_86xny")
+TimeToWait = 5.0
+TimeRange = 2.0
+
+[node name="Stage4" type="Node2D" parent="."]
+script = ExtResource("3_86xny")
+ModeToUse = 1
+bIncreaseFrame = true
+
+[node name="Stage5" type="Node2D" parent="."]
+script = ExtResource("3_86xny")
+TimeToWait = 5.0
+TimeRange = 2.0
+ModeToUse = 2

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PlantOrderResource" load_steps=3 format=3 uid="uid://mmosbfyvbenl"]
+
+[ext_resource type="Resource" uid="uid://tikwvsmt2r3r" path="res://Resources/Plants/Plant_Rangoon_Creeper.tres" id="1_po4jo"]
+[ext_resource type="Script" path="res://Scripts/ResourceTypes/PlantOrder.gd" id="2_dqiyj"]
+
+[resource]
+script = ExtResource("2_dqiyj")
+flowers = Array[Resource("res://Scripts/ResourceTypes/PlantData.gd")]([ExtResource("1_po4jo"), ExtResource("1_po4jo")])
+greeting = "Could you grow some Rangoon creepers for me? Their lovely scent and color changes always remind me of warm summer nights!"
+thanks = "Nice! Can't wait to bring these home!"

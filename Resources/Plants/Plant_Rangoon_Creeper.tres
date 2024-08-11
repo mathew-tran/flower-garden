@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PlantData" load_steps=4 format=3 uid="uid://tikwvsmt2r3r"]
+
+[ext_resource type="Texture2D" uid="uid://bfu1at4glsb71" path="res://Art/GameFlowers/Rangoon_Creeper_Full.svg" id="1_0u13f"]
+[ext_resource type="PackedScene" uid="uid://dbkeaegifsfjd" path="res://Prefabs/Flowers/Rangoon_Creeper.tscn" id="2_x4le3"]
+[ext_resource type="Script" path="res://Scripts/ResourceTypes/PlantData.gd" id="3_g1tg2"]
+
+[resource]
+script = ExtResource("3_g1tg2")
+PlantScene = ExtResource("2_x4le3")
+PlantPicture = ExtResource("1_0u13f")
+FlowerName = "Rangoon Creeper"
+FlowerDescription = "Rangoon creepers have a sweet, intoxicating scent that fills the air at night, making them a natural evening perfume for your garden!"
+UnlockID = "019"
