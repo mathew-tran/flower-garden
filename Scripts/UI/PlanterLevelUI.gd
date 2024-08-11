@@ -2,7 +2,7 @@ extends Control
 
 @onready var LevelText = $VBoxContainer/VBoxContainer/Level
 @onready var LevelProgress = $VBoxContainer/Control/ProgressBar
-
+@onready var XPText = $VBoxContainer/Control/ProgressBar/Label
 var MaxEXP = 300
 func _ready():
 	UpdateData()
@@ -30,6 +30,7 @@ func UpdateData():
 	LevelText.text = str(GetLevel())	
 	LevelProgress.max_value = MaxEXP
 	LevelProgress.value = GetEXP()
+	XPText.text = str(GetEXP()) + "/" + str(MaxEXP)
 	
 func GetLevel():
 	var level = Progression.GetKeyValue("LevellingData")
