@@ -1,0 +1,71 @@
+[gd_scene load_steps=9 format=3 uid="uid://cff6n6itd2bl8"]
+
+[ext_resource type="Texture2D" uid="uid://luag01bww31g" path="res://Art/GameFlowers/Wild_Columbine.svg" id="1_13e7s"]
+[ext_resource type="Script" path="res://Scripts/InGame/Plant.gd" id="2_hs4bm"]
+[ext_resource type="Script" path="res://Scripts/InGame/PlantStage.gd" id="3_d3nhm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0rkbt"]
+atlas = ExtResource("1_13e7s")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2u61"]
+atlas = ExtResource("1_13e7s")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8c0gh"]
+atlas = ExtResource("1_13e7s")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4j8y"]
+atlas = ExtResource("1_13e7s")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_siid5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0rkbt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j2u61")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8c0gh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o4j8y")
+}],
+"loop": true,
+"name": &"grow",
+"speed": 5.0
+}]
+
+[node name="WildColumbine" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_siid5")
+animation = &"grow"
+offset = Vector2(0, -20)
+script = ExtResource("2_hs4bm")
+
+[node name="Stage" type="Node2D" parent="."]
+script = ExtResource("3_d3nhm")
+TimeRange = 2.0
+bIncreaseFrame = true
+
+[node name="Stage2" type="Node2D" parent="."]
+script = ExtResource("3_d3nhm")
+TimeToWait = 1.0
+TimeRange = 2.0
+bIncreaseFrame = true
+
+[node name="Stage3" type="Node2D" parent="."]
+script = ExtResource("3_d3nhm")
+TimeToWait = 3.0
+TimeRange = 2.0
+ModeToUse = 1
+bIncreaseFrame = true
+
+[node name="Stage4" type="Node2D" parent="."]
+script = ExtResource("3_d3nhm")
+TimeToWait = 5.0
+TimeRange = 2.0
+ModeToUse = 2

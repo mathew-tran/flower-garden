@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PlantData" load_steps=4 format=3 uid="uid://dydgjqvf2rc0e"]
+
+[ext_resource type="Texture2D" uid="uid://bnupvljmiqn0n" path="res://Art/GameFlowers/Wild_Columbine_Full.svg" id="1_saw66"]
+[ext_resource type="PackedScene" uid="uid://cff6n6itd2bl8" path="res://Prefabs/Flowers/WildColumbine.tscn" id="2_bpxjs"]
+[ext_resource type="Script" path="res://Scripts/ResourceTypes/PlantData.gd" id="3_njydm"]
+
+[resource]
+script = ExtResource("3_njydm")
+PlantScene = ExtResource("2_bpxjs")
+PlantPicture = ExtResource("1_saw66")
+FlowerName = "Wild Columbine"
+FlowerDescription = "Wild columbine’s spiky flowers look like tiny lanterns and attract hummingbirds with their nectar!"
+UnlockID = "015"

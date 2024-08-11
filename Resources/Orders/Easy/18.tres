@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PlantOrderResource" load_steps=3 format=3 uid="uid://gxmwe45rt0gn"]
+
+[ext_resource type="Resource" uid="uid://dydgjqvf2rc0e" path="res://Resources/Plants/Plant_Wild_Columbine.tres" id="1_6p514"]
+[ext_resource type="Script" path="res://Scripts/ResourceTypes/PlantOrder.gd" id="2_d8ywm"]
+
+[resource]
+script = ExtResource("2_d8ywm")
+flowers = Array[Resource("res://Scripts/ResourceTypes/PlantData.gd")]([ExtResource("1_6p514"), ExtResource("1_6p514"), ExtResource("1_6p514"), ExtResource("1_6p514")])
+greeting = "Could you grow some wild columbine for me? I’d love to attract hummingbirds to my porch—thanks a lot!"
+thanks = "Can't wait to see some hummingbirds!"
