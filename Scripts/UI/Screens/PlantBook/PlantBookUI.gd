@@ -57,10 +57,7 @@ func _input(event):
 	if event.is_action_pressed("escape"):
 		if visible:
 			Close()
-
-func _process(delta):
-	print(position)
-	
+				
 func _on_visibility_changed():
 	if is_visible_in_tree():
 		if visible:

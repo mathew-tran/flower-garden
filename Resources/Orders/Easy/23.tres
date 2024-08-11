@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PlantOrderResource" load_steps=3 format=3 uid="uid://wmsbpl3wm1ac"]
+
+[ext_resource type="Resource" uid="uid://c3lw5hta6nwdq" path="res://Resources/Plants/Plant_Bougainvillea.tres" id="1_5fqqc"]
+[ext_resource type="Script" path="res://Scripts/ResourceTypes/PlantOrder.gd" id="2_07o78"]
+
+[resource]
+script = ExtResource("2_07o78")
+flowers = Array[Resource("res://Scripts/ResourceTypes/PlantData.gd")]([ExtResource("1_5fqqc"), ExtResource("1_5fqqc"), ExtResource("1_5fqqc")])
+greeting = "Could you grow some Bougainvillea for me?"
+thanks = "Great! See you later~"
