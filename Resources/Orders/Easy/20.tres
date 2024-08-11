@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PlantOrderResource" load_steps=3 format=3 uid="uid://dj4ln55pu71a5"]
+
+[ext_resource type="Resource" uid="uid://cbitsuub54nw0" path="res://Resources/Plants/Plant_Lantana.tres" id="1_fsiba"]
+[ext_resource type="Script" path="res://Scripts/ResourceTypes/PlantOrder.gd" id="2_37c2f"]
+
+[resource]
+script = ExtResource("2_37c2f")
+flowers = Array[Resource("res://Scripts/ResourceTypes/PlantData.gd")]([ExtResource("1_fsiba"), ExtResource("1_fsiba"), ExtResource("1_fsiba")])
+greeting = "Could you grow some lantanas for me? Their changing colors remind me of my grandmother’s garden. Thanks!"
+thanks = "Thanks a bunch!"
