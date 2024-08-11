@@ -21,11 +21,11 @@ func PopulatePlantData():
 		PlantContainer.add_child(instance)
 		instance.PlantDataSelected.connect(OnPlantDataSelected)
 		
-	OnPlantDataSelected(PlantContainer.get_child(0).Data)
 	bIsSetup = true
 	
 func OnPlantDataSelected(plantData : PlantData):
 	$LeftSide.ShowPlantData(plantData)
+	$AudioStreamPlayer2D.play()
 	
 
 

@@ -1,7 +1,7 @@
 extends Control
 
 @onready var LevelText = $VBoxContainer/VBoxContainer/Level
-@onready var LevelProgress = $VBoxContainer/ProgressBar
+@onready var LevelProgress = $VBoxContainer/Control/ProgressBar
 
 var MaxEXP = 300
 func _ready():

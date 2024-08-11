@@ -25,13 +25,13 @@ func Update():
 			text = "???"
 		
 func _on_button_up():
-	PlantDataSelected.emit(Data)
-	if Progression.GetKeyValue(Data.GetUnlockID()):
-		Data.SetHasBeenViewed()
-		Update()
+	pass
 		
 		
 
 
 func _on_focus_entered():
-	_on_button_up()
+	PlantDataSelected.emit(Data)
+	if Progression.GetKeyValue(Data.GetUnlockID()):
+		Data.SetHasBeenViewed()
+		Update()

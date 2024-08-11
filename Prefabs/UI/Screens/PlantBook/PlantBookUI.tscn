@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://oywjhu62v5hd"]
+[gd_scene load_steps=13 format=3 uid="uid://oywjhu62v5hd"]
 
 [ext_resource type="Script" path="res://Scripts/UI/Screens/PlantBook/PlantBookUI.gd" id="1_xsqy3"]
 [ext_resource type="FontFile" uid="uid://bgsqsl2uc60cx" path="res://Font/dina10px.ttf" id="2_cqyc1"]
 [ext_resource type="PackedScene" uid="uid://cs8qb307piin4" path="res://Prefabs/UI/Screens/PlantBook/PlantBookInfo.tscn" id="2_gv8n7"]
 [ext_resource type="PackedScene" uid="uid://ds5ngunvt3pwy" path="res://Prefabs/UI/Screens/PlantBook/PlantBookButton.tscn" id="3_m7d50"]
 [ext_resource type="Resource" uid="uid://bk4packen4wut" path="res://Resources/Plants/Plant_Dandelion.tres" id="4_2agod"]
+[ext_resource type="AudioStream" uid="uid://epjfiokqud22" path="res://Audio/SFX/Click_Standard_00.mp3" id="6_suqlq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lg6wc"]
 bg_color = Color(0.87451, 0.788235, 0.52549, 1)
@@ -122,6 +123,9 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ra1kg")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_wmuq1")
 theme_override_styles/focus = SubResource("StyleBoxFlat_bdh4l")
 text = "CLOSE"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_suqlq")
 
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="button_up" from="Panel/Panel/CloseButton" to="." method="_on_close_button_button_up"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://ugadjt1ykyn3"]
+[gd_scene load_steps=10 format=3 uid="uid://ugadjt1ykyn3"]
 
 [ext_resource type="FontFile" uid="uid://bgsqsl2uc60cx" path="res://Font/dina10px.ttf" id="1_38dmg"]
 [ext_resource type="Script" path="res://Scripts/UI/PlanterLevelUI.gd" id="1_643ir"]
@@ -16,12 +16,20 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d5uym"]
+bg_color = Color(0, 0, 0, 1)
+skew = Vector2(0.2, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2pvsl"]
+bg_color = Color(1, 1, 1, 1)
+skew = Vector2(0.2, 0)
+
 [sub_resource type="Animation" id="Animation_m77td"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("VBoxContainer/ProgressBar:modulate")
+tracks/0/path = NodePath("VBoxContainer/Control/ProgressBar:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -36,7 +44,7 @@ resource_name = "animate"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("VBoxContainer/ProgressBar:modulate")
+tracks/0/path = NodePath("VBoxContainer/Control/ProgressBar:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -95,10 +103,21 @@ theme_override_fonts/font = ExtResource("1_38dmg")
 text = "Planter LV"
 horizontal_alignment = 1
 
-[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer"]
-custom_minimum_size = Vector2(300, 50)
+[node name="Control" type="Control" parent="VBoxContainer"]
 layout_mode = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer/Control"]
+custom_minimum_size = Vector2(290, 40)
+layout_mode = 2
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 294.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_d5uym")
+theme_override_styles/fill = SubResource("StyleBoxFlat_2pvsl")
 value = 10.0
 show_percentage = false
 
