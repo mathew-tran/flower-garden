@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://oywjhu62v5hd"]
+[gd_scene load_steps=19 format=3 uid="uid://oywjhu62v5hd"]
 
 [ext_resource type="Script" path="res://Scripts/UI/Screens/PlantBook/PlantBookUI.gd" id="1_xsqy3"]
 [ext_resource type="FontFile" uid="uid://bgsqsl2uc60cx" path="res://Font/dina10px.ttf" id="2_cqyc1"]
@@ -12,6 +12,32 @@ bg_color = Color(0.87451, 0.788235, 0.52549, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iqp6a"]
 bg_color = Color(0.87451, 0.788235, 0.52549, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nhkki"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0es61"]
+bg_color = Color(0.739288, 0.739288, 0.739288, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1s2eg"]
+bg_color = Color(0.230315, 0.230315, 0.230315, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sdl45"]
+content_margin_left = 40.0
+content_margin_top = 0.0
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bbjnt"]
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+
+[sub_resource type="Theme" id="Theme_5b4m0"]
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_nhkki")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_0es61")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_1s2eg")
+VScrollBar/styles/scroll = SubResource("StyleBoxFlat_sdl45")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxFlat_bbjnt")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qwdx3"]
 bg_color = Color(5.0056e-06, 0.7112, 0.464554, 1)
@@ -56,6 +82,7 @@ custom_minimum_size = Vector2(810, 800)
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+theme = SubResource("Theme_5b4m0")
 follow_focus = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel/Panel/ScrollContainer"]

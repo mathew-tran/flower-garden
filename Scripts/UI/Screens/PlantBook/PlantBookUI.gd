@@ -2,6 +2,7 @@ extends Panel
 
 @onready var PlantButtonClass = preload("res://Prefabs/UI/Screens/PlantBook/PlantBookButton.tscn")
 @onready var PlantContainer = $Panel/Panel/ScrollContainer/VBoxContainer
+@onready var ScrollingContainer = $Panel/Panel/ScrollContainer
 
 var bIsSetup = false
 var bIsAnimating = false
@@ -9,6 +10,7 @@ var bIsAnimating = false
 func _ready():
 	PopulatePlantData()
 	position = Vector2(-2000,0)
+	ScrollingContainer.get_v_scroll_bar().size.x = 100
 	
 func PopulatePlantData():
 	for child in PlantContainer.get_children():
