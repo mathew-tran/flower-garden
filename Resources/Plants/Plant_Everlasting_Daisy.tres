@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PlantData" load_steps=4 format=3 uid="uid://didh5iu2cxbq1"]
+
+[ext_resource type="Texture2D" uid="uid://b00pj8fmmxayl" path="res://Art/GameFlowers/Everlasting_Daisy_Full.svg" id="1_fo45w"]
+[ext_resource type="PackedScene" uid="uid://ovjwhotoiobe" path="res://Prefabs/Flowers/EverlastingDaisy.tscn" id="2_yr32p"]
+[ext_resource type="Script" path="res://Scripts/ResourceTypes/PlantData.gd" id="3_0k7ev"]
+
+[resource]
+script = ExtResource("3_0k7ev")
+PlantScene = ExtResource("2_yr32p")
+PlantPicture = ExtResource("1_fo45w")
+FlowerName = "Everlasting Daisy"
+FlowerDescription = "Everlasting daisies stay vibrant and hold their shape for years, making them a quirky choice for both dried arrangements and charming, long-lasting decorations!"
+UnlockID = "016"

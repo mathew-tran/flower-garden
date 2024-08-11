@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PlantOrderResource" load_steps=3 format=3 uid="uid://bqxdo30naagev"]
+
+[ext_resource type="Resource" uid="uid://didh5iu2cxbq1" path="res://Resources/Plants/Plant_Everlasting_Daisy.tres" id="1_gw7is"]
+[ext_resource type="Script" path="res://Scripts/ResourceTypes/PlantOrder.gd" id="2_o4vo8"]
+
+[resource]
+script = ExtResource("2_o4vo8")
+flowers = Array[Resource("res://Scripts/ResourceTypes/PlantData.gd")]([ExtResource("1_gw7is"), ExtResource("1_gw7is")])
+greeting = "Could you grow some everlasting daisies for me? I’d love to have their cheerful blooms around to brighten my days!"
+thanks = "Can't wait to bring these home! Thanks alot! Later!"
