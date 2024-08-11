@@ -31,3 +31,7 @@ func _on_button_up():
 		Update()
 		
 		
+
+
+func _on_focus_entered():
+	_on_button_up()

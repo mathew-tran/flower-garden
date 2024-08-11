@@ -21,3 +21,4 @@ offset_bottom = 60.0
 texture = ExtResource("3_rgbgd")
 
 [connection signal="button_up" from="." to="." method="_on_button_up"]
+[connection signal="focus_entered" from="." to="." method="_on_focus_entered"]

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PlantOrderResource" load_steps=3 format=3 uid="uid://c2x42t8mawawt"]
+
+[ext_resource type="Resource" uid="uid://c3xtdsaehsfun" path="res://Resources/Plants/Plant_Gaillardia.tres" id="1_v7oly"]
+[ext_resource type="Script" path="res://Scripts/ResourceTypes/PlantOrder.gd" id="2_ynytc"]
+
+[resource]
+script = ExtResource("2_ynytc")
+flowers = Array[Resource("res://Scripts/ResourceTypes/PlantData.gd")]([ExtResource("1_v7oly"), ExtResource("1_v7oly"), ExtResource("1_v7oly")])
+greeting = "Could you grow some Gaillardia for me? I love how they attract butterflies!"
+thanks = "—thank you so much!"

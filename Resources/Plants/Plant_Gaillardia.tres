@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PlantData" load_steps=4 format=3 uid="uid://c3xtdsaehsfun"]
+
+[ext_resource type="Texture2D" uid="uid://do37wxh586ftm" path="res://Art/GameFlowers/Gaillardia_Full.svg" id="1_md7sl"]
+[ext_resource type="PackedScene" uid="uid://c55kabwv45hxx" path="res://Prefabs/Flowers/Gaillardia.tscn" id="2_52hti"]
+[ext_resource type="Script" path="res://Scripts/ResourceTypes/PlantData.gd" id="3_wroq6"]
+
+[resource]
+script = ExtResource("3_wroq6")
+PlantScene = ExtResource("2_52hti")
+PlantPicture = ExtResource("1_md7sl")
+FlowerName = "Gaillardia"
+FlowerDescription = "Gaillardia, also known as \"blanket flower,\" blooms in fiery reds, oranges, and yellows, and it’s so hardy that it seems to thrive on neglect, blooming even in poor, dry soil!"
+UnlockID = "014"
