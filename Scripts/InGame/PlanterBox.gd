@@ -76,6 +76,7 @@ func Click():
 	print(name + " has been clicked")
 	if is_instance_valid(GetPlant()):
 		GetPlant().AttemptGrow()
+	_on_button_focus_entered()
 		
 func GetPlant():
 	return Flower

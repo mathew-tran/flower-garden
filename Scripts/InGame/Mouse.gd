@@ -23,6 +23,7 @@ func OnModeChange(type):
 		
 func IsSwitchButtonPressed():
 	return Input.is_action_just_pressed("f1") or Input.is_action_just_pressed("f2") or Input.is_action_just_pressed("f3")
+
 func _process(_delta):
 	
 	if CurrentType != InputManager.INPUT_MODE.MOVE:
@@ -31,15 +32,25 @@ func _process(_delta):
 		global_position = get_global_mouse_position() - Vector2(1,1) * 52
 	
 	if IsSwitchButtonPressed():
+		
 		var event_lmb = InputEventMouseButton.new()
 		event_lmb.pressed = true
 		event_lmb.button_index = MOUSE_BUTTON_LEFT
 		event_lmb.position = get_global_mouse_position()
 		Input.parse_input_event(event_lmb)
 		await get_tree().process_frame
+		await get_tree().process_frame
 		event_lmb.pressed = false
 		Input.parse_input_event(event_lmb)
+		var boxes = get_tree().get_nodes_in_group("PlanterBox")
+		var chosenBox = boxes[0]
+		for box in boxes:
+			if box.global_position.distance_to(get_global_mouse_position()) < chosenBox.global_position.distance_to(get_global_mouse_position()):
+				chosenBox = box
 		
+		if chosenBox.global_position.distance_to(get_global_mouse_position()) < 100:
+			chosenBox.Click()
+			
 	if Input.is_action_just_pressed("mouse_left_click") or IsSwitchButtonPressed():
 		
 		if visible == false:
