@@ -73,7 +73,6 @@ func OnCompleted():
 	Game.GiveXP.emit(10 + randi_range(2, 4))
 	
 func Click():
-	print(name + " has been clicked")
 	if is_instance_valid(GetPlant()):
 		GetPlant().AttemptGrow()
 	_on_button_focus_entered()

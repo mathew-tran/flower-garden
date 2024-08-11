@@ -4,6 +4,10 @@ extends Panel
 @onready var FlowerTitle = $Panel/FlowerTitle
 @onready var FlowerDescription = $Panel2/FlowerDescription
 
+func _ready():
+	FlowerImage.texture = null
+	FlowerTitle.text = ""
+	FlowerDescription.text = "Select a plant to know more about it!"
 func ShowPlantData(plantData : PlantData):
 	var tween = get_tree().create_tween()
 	tween.tween_property(self, "scale", Vector2(1,0), .1)
