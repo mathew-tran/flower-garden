@@ -24,3 +24,4 @@ func SetMessage(message):
 	await timer.timeout
 	var tween = get_tree().create_tween()
 	tween.tween_property($Label, "visible_ratio", 1, 1)
+	

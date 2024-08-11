@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("2_d8ywm")
 flowers = Array[Resource("res://Scripts/ResourceTypes/PlantData.gd")]([ExtResource("1_6p514"), ExtResource("1_6p514"), ExtResource("1_6p514"), ExtResource("1_6p514")])
-greeting = "Could you grow some wild columbine for me? I’d love to attract hummingbirds to my porch—thanks a lot!"
+greeting = "Could you grow some wild columbine for me? I’d love to attract hummingbirds to my porch!!"
 thanks = "Can't wait to see some hummingbirds!"
