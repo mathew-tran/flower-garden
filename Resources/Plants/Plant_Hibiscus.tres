@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PlantData" load_steps=4 format=3 uid="uid://cvbrh8g5skhk"]
+
+[ext_resource type="Texture2D" uid="uid://cgsxow7kxwehj" path="res://Art/GameFlowers/Hibiscus_Full.svg" id="1_m05sq"]
+[ext_resource type="PackedScene" uid="uid://drox6prw34nul" path="res://Prefabs/Flowers/Hibiscus.tscn" id="2_37pk2"]
+[ext_resource type="Script" path="res://Scripts/ResourceTypes/PlantData.gd" id="3_gt5w3"]
+
+[resource]
+script = ExtResource("3_gt5w3")
+PlantScene = ExtResource("2_37pk2")
+PlantPicture = ExtResource("1_m05sq")
+FlowerName = "Hibiscus"
+FlowerDescription = "Hibiscus flowers bloom for just one day, but their large, bold petals make such a statement that they leave a lasting impression!"
+UnlockID = "018"

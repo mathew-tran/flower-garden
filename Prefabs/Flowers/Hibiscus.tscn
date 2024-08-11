@@ -1,0 +1,74 @@
+[gd_scene load_steps=9 format=3 uid="uid://drox6prw34nul"]
+
+[ext_resource type="Texture2D" uid="uid://dr30t6552yb5f" path="res://Art/GameFlowers/Hibiscus.svg" id="1_iq60p"]
+[ext_resource type="Script" path="res://Scripts/InGame/Plant.gd" id="2_i7mdv"]
+[ext_resource type="Script" path="res://Scripts/InGame/PlantStage.gd" id="3_fo8tx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vwqyr"]
+atlas = ExtResource("1_iq60p")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gkh3n"]
+atlas = ExtResource("1_iq60p")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yypda"]
+atlas = ExtResource("1_iq60p")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1s5ol"]
+atlas = ExtResource("1_iq60p")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_siid5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vwqyr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gkh3n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yypda")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1s5ol")
+}],
+"loop": true,
+"name": &"grow",
+"speed": 5.0
+}]
+
+[node name="Hibiscus" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_siid5")
+animation = &"grow"
+offset = Vector2(0, -13.135)
+script = ExtResource("2_i7mdv")
+
+[node name="Stage" type="Node2D" parent="."]
+script = ExtResource("3_fo8tx")
+TimeToWait = 3.0
+TimeRange = 0.5
+ModeToUse = 1
+bIncreaseFrame = true
+
+[node name="Stage2" type="Node2D" parent="."]
+script = ExtResource("3_fo8tx")
+TimeToWait = 3.0
+TimeRange = 0.2
+bIncreaseFrame = true
+
+[node name="Stage5" type="Node2D" parent="."]
+script = ExtResource("3_fo8tx")
+TimeToWait = 1.0
+TimeRange = 2.0
+ModeToUse = 1
+bIncreaseFrame = true
+
+[node name="Stage4" type="Node2D" parent="."]
+script = ExtResource("3_fo8tx")
+TimeToWait = 0.25
+TimeRange = 0.0
+ModeToUse = 2
+bIncreaseFrame = true

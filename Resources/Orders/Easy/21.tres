@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PlantOrderResource" load_steps=3 format=3 uid="uid://dk42basmf0l0j"]
+
+[ext_resource type="Resource" uid="uid://cvbrh8g5skhk" path="res://Resources/Plants/Plant_Hibiscus.tres" id="1_01gk0"]
+[ext_resource type="Script" path="res://Scripts/ResourceTypes/PlantOrder.gd" id="2_cwo4h"]
+
+[resource]
+script = ExtResource("2_cwo4h")
+flowers = Array[Resource("res://Scripts/ResourceTypes/PlantData.gd")]([ExtResource("1_01gk0"), ExtResource("1_01gk0")])
+greeting = "Could you grow some hibiscus for me? Their bold flowers always remind me of my favorite summer memories!"
+thanks = "Good stuff. Later!"
