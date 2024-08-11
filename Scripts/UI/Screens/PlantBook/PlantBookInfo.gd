@@ -5,7 +5,7 @@ extends Panel
 @onready var FlowerDescription = $Panel2/FlowerDescription
 
 func _ready():
-	FlowerImage.texture = null
+	FlowerImage.texture = preload("res://Art/MagnifyingGlass.svg")
 	FlowerTitle.text = ""
 	FlowerDescription.text = "Select a plant to know more about it!"
 func ShowPlantData(plantData : PlantData):

@@ -24,9 +24,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="5.6568543"
-     inkscape:cx="78.842406"
-     inkscape:cy="58.778251"
+     inkscape:zoom="11.313709"
+     inkscape:cx="140.3607"
+     inkscape:cy="75.793008"
      inkscape:window-width="1920"
      inkscape:window-height="1001"
      inkscape:window-x="-7"
@@ -6777,7 +6777,7 @@
        x="7.7312517"
        y="11.356647"
        transform="matrix(1.0624885,0,0,1.0624885,0.26453492,-0.26453461)"
-       inkscape:export-filename="Wild_Columbine_Full.svg"
+       inkscape:export-filename="Everlasting_Daisy_Full.svg"
        inkscape:export-xdpi="44.636486"
        inkscape:export-ydpi="44.636486" />
   </g>
@@ -6793,7 +6793,7 @@
        height="7.9687138"
        x="0.24897645"
        y="0.24897645"
-       inkscape:export-filename="Wild_Columbine.svg"
+       inkscape:export-filename="Everlasting_Daidy.svg"
        inkscape:export-xdpi="44.636486"
        inkscape:export-ydpi="44.636486" />
     <path
@@ -7600,5 +7600,41 @@
          r="0.43202978"
          transform="scale(-1,1)" />
     </g>
+    <rect
+       style="fill:#4b4d6c;fill-opacity:1;stroke:none;stroke-width:0.0490242;stroke-dasharray:none"
+       id="rect1068"
+       width="0.77961123"
+       height="4.1961427"
+       x="7.3435316"
+       y="18.529305"
+       transform="matrix(-0.80542649,0.59269569,0.59269569,0.80542649,0,0)"
+       ry="0.38980561"
+       inkscape:export-filename="..\MagnifyingGlass.svg"
+       inkscape:export-xdpi="44.636486"
+       inkscape:export-ydpi="44.636486" />
+    <ellipse
+       style="fill:#4b4d6c;fill-opacity:1;stroke:none;stroke-width:0.0490242;stroke-dasharray:none"
+       id="path1068"
+       cx="-3.5420277"
+       cy="18.313793"
+       transform="scale(-1,1)"
+       rx="2.07131"
+       ry="1.9861875" />
+    <circle
+       style="fill:#4bdbbe;fill-opacity:1;stroke:none;stroke-width:0.068634;stroke-dasharray:none"
+       id="path1069"
+       cx="-3.5460818"
+       cy="18.313791"
+       r="1.7591949"
+       transform="scale(-1,1)" />
+    <rect
+       style="fill:#c1ffc7;fill-opacity:1;stroke:none;stroke-width:0.0490242;stroke-dasharray:none"
+       id="rect1069"
+       width="1.1025367"
+       height="0.29184797"
+       x="-15.07725"
+       y="9.9331017"
+       transform="matrix(-0.74558415,-0.66641149,-0.66641149,0.74558415,0,0)"
+       ry="0.14592399" />
   </g>
 </svg>

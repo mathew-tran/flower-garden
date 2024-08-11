@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="64.000015"
+   height="64.000008"
+   viewBox="0 0 16.933337 16.933335"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   sodipodi:docname="Everlasting_Daisy_Scene.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:zoom="11.313709"
+     inkscape:cx="140.3607"
+     inkscape:cy="75.793008"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-7"
+     inkscape:window-y="-7"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g956">
+    <inkscape:grid
+       id="grid1"
+       units="px"
+       originx="-43.110992"
+       originy="-16.904413"
+       spacingx="8.4666666"
+       spacingy="8.4666666"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       dotted="false"
+       gridanglex="30"
+       gridanglez="30"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1 copy 1"
+     inkscape:groupmode="layer"
+     id="g956"
+     transform="matrix(-1.0624885,0,0,1.0624885,-0.51312528,-17.168948)">
+    <g
+       id="g1070"
+       transform="matrix(1.36589,0,0,1.36589,-14.909592,-2.3010285)">
+      <rect
+         style="fill:#4b4d6c;fill-opacity:1;stroke:none;stroke-width:0.0490242;stroke-dasharray:none"
+         id="rect1068"
+         width="0.77961123"
+         height="4.1961427"
+         x="7.3435316"
+         y="18.529305"
+         transform="matrix(-0.80542649,0.59269569,0.59269569,0.80542649,0,0)"
+         ry="0.38980561"
+         inkscape:export-filename="..\MagnifyingGlass.svg"
+         inkscape:export-xdpi="44.636486"
+         inkscape:export-ydpi="44.636486" />
+      <ellipse
+         style="fill:#4b4d6c;fill-opacity:1;stroke:none;stroke-width:0.0490242;stroke-dasharray:none"
+         id="path1068"
+         cx="-3.5420277"
+         cy="18.313793"
+         transform="scale(-1,1)"
+         rx="2.07131"
+         ry="1.9861875" />
+      <circle
+         style="fill:#4bdbbe;fill-opacity:1;stroke:none;stroke-width:0.068634;stroke-dasharray:none"
+         id="path1069"
+         cx="-3.5460818"
+         cy="18.313791"
+         r="1.7591949"
+         transform="scale(-1,1)" />
+      <rect
+         style="fill:#c1ffc7;fill-opacity:1;stroke:none;stroke-width:0.0490242;stroke-dasharray:none"
+         id="rect1069"
+         width="1.1025367"
+         height="0.29184797"
+         x="-15.07725"
+         y="9.9331017"
+         transform="matrix(-0.74558415,-0.66641149,-0.66641149,0.74558415,0,0)"
+         ry="0.14592399" />
+    </g>
+    <rect
+       style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.450735;stroke-dasharray:none"
+       id="rect1070"
+       width="15.937428"
+       height="15.937428"
+       x="0.48294994"
+       y="16.159185"
+       transform="scale(-1,1)"
+       ry="1.5937427" />
+  </g>
+</svg>
