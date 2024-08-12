@@ -23,7 +23,7 @@ func SetNewRound():
 		print(order)
 	CurrentOrder = load(orders[randi() % len(orders)]) as PlantOrderResource
 	##CurrentOrder = load("res://Resources/Orders/Easy/5.tres") as PlantOrderResource
-	CurrentOrder = load("res://Resources/Orders/Easy/25.tres") as PlantOrderResource
+	#CurrentOrder = load("res://Resources/Orders/Easy/26.tres") as PlantOrderResource
 	var boxes = get_tree().get_nodes_in_group("PlanterBox")
 	while CurrentOrder.flowers.size() < 5:
 		CurrentOrder.flowers.append(null)

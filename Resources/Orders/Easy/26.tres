@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PlantOrderResource" load_steps=3 format=3 uid="uid://dibhnep6c43wx"]
+
+[ext_resource type="Resource" uid="uid://cpdtvcmiesqhf" path="res://Resources/Plants/Plant_Angels_Trumpet.tres" id="1_08a7g"]
+[ext_resource type="Script" path="res://Scripts/ResourceTypes/PlantOrder.gd" id="2_qjkgs"]
+
+[resource]
+script = ExtResource("2_qjkgs")
+flowers = Array[Resource("res://Scripts/ResourceTypes/PlantData.gd")]([ExtResource("1_08a7g"), ExtResource("1_08a7g"), ExtResource("1_08a7g")])
+greeting = "Hey! Can I get some Angel's Trumpet's? I think they look very pretty!"
+thanks = "Thank you."
