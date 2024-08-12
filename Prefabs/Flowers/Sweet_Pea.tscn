@@ -1,0 +1,74 @@
+[gd_scene load_steps=9 format=3 uid="uid://q8l6w6e0sher"]
+
+[ext_resource type="Texture2D" uid="uid://bp60r7p6ar1pm" path="res://Art/GameFlowers/Sweet_Pea.svg" id="1_w074j"]
+[ext_resource type="Script" path="res://Scripts/InGame/Plant.gd" id="2_6wnhf"]
+[ext_resource type="Script" path="res://Scripts/InGame/PlantStage.gd" id="3_hffa0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_emdos"]
+atlas = ExtResource("1_w074j")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qs0y6"]
+atlas = ExtResource("1_w074j")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c3ovm"]
+atlas = ExtResource("1_w074j")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bwk3l"]
+atlas = ExtResource("1_w074j")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_siid5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_emdos")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qs0y6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c3ovm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bwk3l")
+}],
+"loop": true,
+"name": &"grow",
+"speed": 5.0
+}]
+
+[node name="Sweet Pea" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_siid5")
+animation = &"grow"
+offset = Vector2(0, -20.49)
+script = ExtResource("2_6wnhf")
+
+[node name="Stage" type="Node2D" parent="."]
+script = ExtResource("3_hffa0")
+TimeToWait = 5.0
+TimeRange = 2.0
+bIncreaseFrame = true
+
+[node name="Stage2" type="Node2D" parent="."]
+script = ExtResource("3_hffa0")
+TimeToWait = 8.0
+TimeRange = 2.0
+bIncreaseFrame = true
+
+[node name="Stage3" type="Node2D" parent="."]
+script = ExtResource("3_hffa0")
+TimeRange = 2.0
+
+[node name="Stage4" type="Node2D" parent="."]
+script = ExtResource("3_hffa0")
+TimeRange = 2.0
+bIncreaseFrame = true
+
+[node name="Stage5" type="Node2D" parent="."]
+script = ExtResource("3_hffa0")
+TimeToWait = 5.0
+TimeRange = 2.0
+ModeToUse = 2

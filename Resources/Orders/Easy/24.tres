@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PlantOrderResource" load_steps=3 format=3 uid="uid://c7figc2740hp8"]
+
+[ext_resource type="Resource" uid="uid://beqv0othg5ewf" path="res://Resources/Plants/Plant_Sweet_Pea.tres" id="1_owx4g"]
+[ext_resource type="Script" path="res://Scripts/ResourceTypes/PlantOrder.gd" id="2_botbu"]
+
+[resource]
+script = ExtResource("2_botbu")
+flowers = Array[Resource("res://Scripts/ResourceTypes/PlantData.gd")]([ExtResource("1_owx4g"), ExtResource("1_owx4g"), ExtResource("1_owx4g")])
+greeting = "Could I get some Sweet Peas??"
+thanks = "Thanks! I'd bet these would help my place smell great!"
