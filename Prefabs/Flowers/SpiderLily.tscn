@@ -1,0 +1,72 @@
+[gd_scene load_steps=9 format=3 uid="uid://wai35jhwg3cd"]
+
+[ext_resource type="Texture2D" uid="uid://dobtpoqc06u8v" path="res://Art/GameFlowers/Spider_Lily.svg" id="1_rmoaf"]
+[ext_resource type="Script" path="res://Scripts/InGame/Plant.gd" id="2_xk1wj"]
+[ext_resource type="Script" path="res://Scripts/InGame/PlantStage.gd" id="3_uqfek"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_id2px"]
+atlas = ExtResource("1_rmoaf")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_muahx"]
+atlas = ExtResource("1_rmoaf")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o3bjv"]
+atlas = ExtResource("1_rmoaf")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hygkf"]
+atlas = ExtResource("1_rmoaf")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_siid5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_id2px")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_muahx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o3bjv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hygkf")
+}],
+"loop": true,
+"name": &"grow",
+"speed": 5.0
+}]
+
+[node name="SpiderLily" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_siid5")
+animation = &"grow"
+offset = Vector2(0, -20.755)
+script = ExtResource("2_xk1wj")
+
+[node name="Stage" type="Node2D" parent="."]
+script = ExtResource("3_uqfek")
+TimeToWait = 3.0
+TimeRange = 0.5
+bIncreaseFrame = true
+
+[node name="Stage2" type="Node2D" parent="."]
+script = ExtResource("3_uqfek")
+TimeToWait = 3.0
+TimeRange = 0.2
+
+[node name="Stage3" type="Node2D" parent="."]
+script = ExtResource("3_uqfek")
+TimeToWait = 3.0
+TimeRange = 0.2
+ModeToUse = 1
+bIncreaseFrame = true
+
+[node name="Stage4" type="Node2D" parent="."]
+script = ExtResource("3_uqfek")
+TimeToWait = 0.25
+TimeRange = 0.0
+ModeToUse = 2
+bIncreaseFrame = true

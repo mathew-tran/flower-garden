@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PlantOrderResource" load_steps=3 format=3 uid="uid://woob5vihqk0j"]
+
+[ext_resource type="Resource" uid="uid://c15cv8thdxoya" path="res://Resources/Plants/Plant_Spider_Lily.tres" id="1_je0tg"]
+[ext_resource type="Script" path="res://Scripts/ResourceTypes/PlantOrder.gd" id="2_y803r"]
+
+[resource]
+script = ExtResource("2_y803r")
+flowers = Array[Resource("res://Scripts/ResourceTypes/PlantData.gd")]([ExtResource("1_je0tg"), ExtResource("1_je0tg"), ExtResource("1_je0tg")])
+greeting = "Can you give me some Spider Lily's. I heard they look like fireworks!"
+thanks = "They DO look like fireworks! Thanks! Can't wait to show my friends!"
