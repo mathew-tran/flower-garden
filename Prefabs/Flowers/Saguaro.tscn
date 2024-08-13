@@ -1,0 +1,75 @@
+[gd_scene load_steps=9 format=3 uid="uid://bobs80lr3h6ka"]
+
+[ext_resource type="Texture2D" uid="uid://cbkqh8nilirb7" path="res://Art/GameFlowers/Saguaro.svg" id="1_8ckad"]
+[ext_resource type="Script" path="res://Scripts/InGame/Plant.gd" id="2_m4nd5"]
+[ext_resource type="Script" path="res://Scripts/InGame/PlantStage.gd" id="3_rj0r8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6iijh"]
+atlas = ExtResource("1_8ckad")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jqoo5"]
+atlas = ExtResource("1_8ckad")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7mqb8"]
+atlas = ExtResource("1_8ckad")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_72n5d"]
+atlas = ExtResource("1_8ckad")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_siid5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6iijh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jqoo5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7mqb8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_72n5d")
+}],
+"loop": true,
+"name": &"grow",
+"speed": 5.0
+}]
+
+[node name="Saguaro" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_siid5")
+animation = &"grow"
+offset = Vector2(0, -25.035)
+script = ExtResource("2_m4nd5")
+
+[node name="Stage" type="Node2D" parent="."]
+script = ExtResource("3_rj0r8")
+TimeToWait = 2.5
+TimeRange = 0.5
+ModeToUse = 2
+bIncreaseFrame = true
+
+[node name="Stage2" type="Node2D" parent="."]
+script = ExtResource("3_rj0r8")
+TimeToWait = 1.5
+TimeRange = 0.2
+ModeToUse = 2
+bIncreaseFrame = true
+
+[node name="Stage4" type="Node2D" parent="."]
+script = ExtResource("3_rj0r8")
+TimeToWait = 2.5
+TimeRange = 0.0
+ModeToUse = 2
+bIncreaseFrame = true
+
+[node name="Stage5" type="Node2D" parent="."]
+script = ExtResource("3_rj0r8")
+TimeToWait = 1.2
+TimeRange = 0.0
+ModeToUse = 2
+bIncreaseFrame = true

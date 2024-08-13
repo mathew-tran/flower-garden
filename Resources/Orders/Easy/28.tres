@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PlantOrderResource" load_steps=3 format=3 uid="uid://dm8ja0rg03vlm"]
+
+[ext_resource type="Resource" uid="uid://djrtnfmbps4fl" path="res://Resources/Plants/Plant_Saguaro.tres" id="1_0chdy"]
+[ext_resource type="Script" path="res://Scripts/ResourceTypes/PlantOrder.gd" id="2_tobaw"]
+
+[resource]
+script = ExtResource("2_tobaw")
+flowers = Array[Resource("res://Scripts/ResourceTypes/PlantData.gd")]([ExtResource("1_0chdy")])
+greeting = "Hey! Can you grow me a Saguaro Cactus? Heard you can grow plants quick!"
+thanks = "That's crazy quick! Thanks!"
