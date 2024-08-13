@@ -43,7 +43,7 @@ animations = [{
 [node name="Saguaro" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_siid5")
 animation = &"grow"
-offset = Vector2(0, -25.035)
+offset = Vector2(0, -22.56)
 script = ExtResource("2_m4nd5")
 
 [node name="Stage" type="Node2D" parent="."]
@@ -51,9 +51,28 @@ script = ExtResource("3_rj0r8")
 TimeToWait = 2.5
 TimeRange = 0.5
 ModeToUse = 2
-bIncreaseFrame = true
 
 [node name="Stage2" type="Node2D" parent="."]
+script = ExtResource("3_rj0r8")
+TimeToWait = 1.5
+TimeRange = 0.2
+ModeToUse = 2
+bIncreaseFrame = true
+
+[node name="Stage3" type="Node2D" parent="."]
+script = ExtResource("3_rj0r8")
+TimeToWait = 1.5
+TimeRange = 0.2
+ModeToUse = 2
+bIncreaseFrame = true
+
+[node name="Stage6" type="Node2D" parent="."]
+script = ExtResource("3_rj0r8")
+TimeToWait = 1.5
+TimeRange = 0.2
+ModeToUse = 2
+
+[node name="Stage7" type="Node2D" parent="."]
 script = ExtResource("3_rj0r8")
 TimeToWait = 1.5
 TimeRange = 0.2
