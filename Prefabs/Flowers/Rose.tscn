@@ -53,15 +53,10 @@ TimeRange = 4.0
 
 [node name="Stage2" type="Node2D" parent="."]
 script = ExtResource("3_idiwr")
-TimeToWait = 10.0
+TimeToWait = 4.0
 TimeRange = 3.0
 ModeToUse = 1
 bIncreaseFrame = true
-
-[node name="Stage3" type="Node2D" parent="."]
-script = ExtResource("3_idiwr")
-TimeToWait = 15.0
-TimeRange = 3.0
 
 [node name="Stage5" type="Node2D" parent="."]
 script = ExtResource("3_idiwr")
@@ -74,13 +69,6 @@ script = ExtResource("3_idiwr")
 TimeToWait = 0.1
 TimeRange = 0.1
 ModeToUse = 1
-
-[node name="Stage7" type="Node2D" parent="."]
-script = ExtResource("3_idiwr")
-TimeToWait = 0.1
-TimeRange = 0.1
-ModeToUse = 1
-bIncreaseFrame = true
 
 [node name="Stage8" type="Node2D" parent="."]
 script = ExtResource("3_idiwr")
@@ -97,7 +85,7 @@ bIncreaseFrame = true
 
 [node name="Stage4" type="Node2D" parent="."]
 script = ExtResource("3_idiwr")
-TimeToWait = 20.0
+TimeToWait = 5.0
 TimeRange = 10.0
 ModeToUse = 2
 bIncreaseFrame = true

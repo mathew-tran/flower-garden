@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PlantData" load_steps=4 format=3 uid="uid://bediytie1a30h"]
+
+[ext_resource type="Texture2D" uid="uid://brgw1qcp2ge37" path="res://Art/GameFlowers/Chrysanthemum_Full.svg" id="1_480l2"]
+[ext_resource type="PackedScene" uid="uid://bv68smvrfki5f" path="res://Prefabs/Flowers/Chrysanthemum.tscn" id="2_rqbf1"]
+[ext_resource type="Script" path="res://Scripts/ResourceTypes/PlantData.gd" id="3_3l5xs"]
+
+[resource]
+script = ExtResource("3_3l5xs")
+PlantScene = ExtResource("2_rqbf1")
+PlantPicture = ExtResource("1_480l2")
+FlowerName = "Chrysanthemum"
+FlowerDescription = "Chrysanthemums are known for their versatility—they can bloom in almost every color of the rainbow, and some varieties even change color as they mature!"
+UnlockID = "024"

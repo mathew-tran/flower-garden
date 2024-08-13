@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PlantOrderResource" load_steps=3 format=3 uid="uid://bmuwy2tdu7hfy"]
+
+[ext_resource type="Resource" uid="uid://bediytie1a30h" path="res://Resources/Plants/Plant_Chrysanthemum.tres" id="1_micdx"]
+[ext_resource type="Script" path="res://Scripts/ResourceTypes/PlantOrder.gd" id="2_qxgdq"]
+
+[resource]
+script = ExtResource("2_qxgdq")
+flowers = Array[Resource("res://Scripts/ResourceTypes/PlantData.gd")]([ExtResource("1_micdx"), ExtResource("1_micdx"), ExtResource("1_micdx")])
+greeting = "Hi! Can I get some Chrysanthemums? Been looking around for them!"
+thanks = "Wow these are beautiful!"
