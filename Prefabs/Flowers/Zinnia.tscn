@@ -1,0 +1,74 @@
+[gd_scene load_steps=9 format=3 uid="uid://d31qxvvyvwf68"]
+
+[ext_resource type="Texture2D" uid="uid://i6yhm84pyb48" path="res://Art/GameFlowers/Zinnia.svg" id="1_nvo06"]
+[ext_resource type="Script" path="res://Scripts/InGame/Plant.gd" id="2_03bok"]
+[ext_resource type="Script" path="res://Scripts/InGame/PlantStage.gd" id="3_kubgt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w4u7b"]
+atlas = ExtResource("1_nvo06")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ko2wq"]
+atlas = ExtResource("1_nvo06")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_puguq"]
+atlas = ExtResource("1_nvo06")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1r7cu"]
+atlas = ExtResource("1_nvo06")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_siid5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w4u7b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ko2wq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_puguq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1r7cu")
+}],
+"loop": true,
+"name": &"grow",
+"speed": 5.0
+}]
+
+[node name="Zinnia" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_siid5")
+animation = &"grow"
+offset = Vector2(0, -23.165)
+script = ExtResource("2_03bok")
+
+[node name="Stage" type="Node2D" parent="."]
+script = ExtResource("3_kubgt")
+TimeToWait = 5.0
+TimeRange = 2.0
+bIncreaseFrame = true
+
+[node name="Stage2" type="Node2D" parent="."]
+script = ExtResource("3_kubgt")
+TimeToWait = 8.0
+TimeRange = 2.0
+bIncreaseFrame = true
+
+[node name="Stage3" type="Node2D" parent="."]
+script = ExtResource("3_kubgt")
+TimeRange = 2.0
+
+[node name="Stage4" type="Node2D" parent="."]
+script = ExtResource("3_kubgt")
+TimeRange = 2.0
+bIncreaseFrame = true
+
+[node name="Stage5" type="Node2D" parent="."]
+script = ExtResource("3_kubgt")
+TimeToWait = 5.0
+TimeRange = 2.0
+ModeToUse = 2
