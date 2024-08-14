@@ -1,0 +1,72 @@
+[gd_scene load_steps=9 format=3 uid="uid://yq27fgat0ay2"]
+
+[ext_resource type="Texture2D" uid="uid://hb60jn5rcfry" path="res://Art/GameFlowers/FoxGlove.svg" id="1_3fmaj"]
+[ext_resource type="Script" path="res://Scripts/InGame/Plant.gd" id="2_pm1m4"]
+[ext_resource type="Script" path="res://Scripts/InGame/PlantStage.gd" id="3_dg6e6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y6p1l"]
+atlas = ExtResource("1_3fmaj")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y5wfk"]
+atlas = ExtResource("1_3fmaj")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ccxxb"]
+atlas = ExtResource("1_3fmaj")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t61y6"]
+atlas = ExtResource("1_3fmaj")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_siid5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y6p1l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y5wfk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ccxxb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t61y6")
+}],
+"loop": true,
+"name": &"grow",
+"speed": 5.0
+}]
+
+[node name="FoxGlove" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_siid5")
+animation = &"grow"
+offset = Vector2(0, -22.52)
+script = ExtResource("2_pm1m4")
+
+[node name="Stage" type="Node2D" parent="."]
+script = ExtResource("3_dg6e6")
+TimeRange = 2.0
+bIncreaseFrame = true
+
+[node name="Stage3" type="Node2D" parent="."]
+script = ExtResource("3_dg6e6")
+TimeToWait = 1.0
+TimeRange = 2.0
+bIncreaseFrame = true
+
+[node name="Stage8" type="Node2D" parent="."]
+script = ExtResource("3_dg6e6")
+TimeToWait = 0.1
+TimeRange = 0.1
+ModeToUse = 1
+bIncreaseFrame = true
+
+[node name="Stage4" type="Node2D" parent="."]
+script = ExtResource("3_dg6e6")
+TimeToWait = 5.0
+TimeRange = 10.0
+ModeToUse = 2
+bIncreaseFrame = true

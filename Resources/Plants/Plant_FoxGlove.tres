@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PlantData" load_steps=4 format=3 uid="uid://de84rafp27kkk"]
+
+[ext_resource type="Texture2D" uid="uid://cqa50a8331w70" path="res://Art/GameFlowers/FoxGlove_Full.svg" id="1_j7vk7"]
+[ext_resource type="PackedScene" uid="uid://yq27fgat0ay2" path="res://Prefabs/Flowers/FoxGlove.tscn" id="2_lat80"]
+[ext_resource type="Script" path="res://Scripts/ResourceTypes/PlantData.gd" id="3_isxj4"]
+
+[resource]
+script = ExtResource("3_isxj4")
+PlantScene = ExtResource("2_lat80")
+PlantPicture = ExtResource("1_j7vk7")
+FlowerName = "Foxglove"
+FlowerDescription = "Foxglove flowers are beautiful but deceptive—they’re toxic and have been historically used in heart medicine, giving them a reputation as both a healer and a poisoner!"
+UnlockID = "026"
